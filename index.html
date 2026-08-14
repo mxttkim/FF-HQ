@@ -10,9 +10,6 @@
 <meta name="apple-mobile-web-app-title" content="Draft HQ">
 <meta name="theme-color" content="#12151C">
 <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACS0lEQVR42u3dsU7CUBSA4YvhCUgYSGAjcXLB+BCSOOro4srE6AM4OrmyMMJIog9BdHEyYWPgNRzclEp7hUp7v28kp5i0fw4lAWy02t0A25w4BYgDcSAOxMF/av58qNPrOy8J2qxXNgd/2BxZHVFXWa8VNgduSBEH4kAciANxIA7EgThIV9MpiPP2dJF/eDBa2hzK2M+8OFIpo7p9iANxIA7EgTgQB+JAHIgDcSAOEAfiQByIA3EgDsSBOBAH4gBxIA7EgTgQB+JAHIiD2qn/73NcPd7lH16MJ5pIZXMUKiNiXhyplKEP9xyIA3EgDsSBOBAH4qCm/Lz1cXm+uc0/PJxNbQ5l7GdeHKmUUUIf4kAciANxIA7EgTgQB+JAHIgDxIE4EAfiQByIA3FQdcf1AePL+3n+4ZeHa9cvlc1RqIyIeaoaR9yV1od7DsSBOBAH4kAciAPEgTgQB+JAHIgDcSAOxIE4QByIA3EgDsSBOBAH4kAciANxgDgQB+JAHIgDcSAOxIE4EAeIA3EgDsSBOBAH4kAciANxgDgQB+JAHIgDcSAOxIE4EEd54v4x/e9HLcaTiOfcedRgtIx42p1HDWfTiKeNO6p6m6NoH3nmi/aRc75oHznni17pg5YRQmi02t1vD3V6/RDCZr2yVxORdcXdc5CpWeYfOz07d8YP7eP91bsVvJUlkZeVPW48bA7EgTgQB+JAHIgDxIE4EAfiQByIA3EgDsSBOEAciANxIA7KlPnp86+vyGFzwBZbvkgNNgfiQByIA3FwBD4BSnJQFIl+Gb8AAAAASUVORK5CYII=">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#12151C; --ink2:#181D27; --ink3:#1F2532;
@@ -25,7 +22,7 @@
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0;overscroll-behavior-y:contain}
 body{background:var(--ink);color:var(--paper);
-  font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:14px;line-height:1.45;
+  font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.45;
   padding-top:env(safe-area-inset-top);
   padding-bottom:calc(70px + env(safe-area-inset-bottom));
   -webkit-font-smoothing:antialiased}
@@ -34,8 +31,8 @@ body{background:var(--ink);color:var(--paper);
   padding-right:calc(14px + env(safe-area-inset-right))}
 
 header{padding:20px 0 0}
-h1{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;
-  font-size:clamp(26px,7vw,38px);line-height:.95;margin:0;letter-spacing:-.025em}
+h1{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-weight:800;
+  font-size:clamp(26px,7vw,38px);line-height:.95;margin:0;letter-spacing:-.035em}
 h1 em{font-style:normal;color:var(--amber)}
 .sub{color:var(--dimmer);font-size:11px;margin-top:7px;letter-spacing:.02em}
 
@@ -43,14 +40,14 @@ h1 em{font-style:normal;color:var(--amber)}
 .sections{display:flex;gap:0;margin-top:16px;border-bottom:1px solid var(--rule)}
 .sec{flex:1;background:none;border:0;border-bottom:2px solid transparent;
   color:var(--dimmer);padding:11px 2px;cursor:pointer;
-  font:700 11px/1 'JetBrains Mono',monospace;letter-spacing:.04em;text-transform:uppercase}
+  font:700 11px/1 ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;letter-spacing:.04em;text-transform:uppercase}
 .sec[aria-selected="true"]{color:var(--paper);border-bottom-color:var(--amber)}
 .sec:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
 
 .bar{display:flex;gap:6px;overflow-x:auto;padding:11px 0;scrollbar-width:none}
 .bar::-webkit-scrollbar{display:none}
 .chip{flex:0 0 auto;background:transparent;color:var(--dim);border:1px solid var(--rule);
-  border-radius:2px;padding:6px 11px;font:500 11.5px/1 'JetBrains Mono',monospace;
+  border-radius:2px;padding:6px 11px;font:500 11.5px/1 ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;
   letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:700}
 .chip:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
@@ -58,7 +55,7 @@ h1 em{font-style:normal;color:var(--amber)}
 .bar.sec2 .chip{border-radius:999px;padding:5px 12px}
 
 .meta{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0 8px;gap:12px}
-.meta h2{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0}
+.meta h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-weight:600;font-size:15px;margin:0}
 .meta .unit{font-size:10px;color:var(--dimmer);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 
 /* ---- lines rows ---- */
@@ -79,10 +76,10 @@ h1 em{font-style:normal;color:var(--amber)}
 /* ---- rankings ---- */
 .listbar{display:flex;gap:7px;align-items:center;padding:11px 0;flex-wrap:wrap}
 select{background:var(--ink2);color:var(--paper);border:1px solid var(--rule);border-radius:2px;
-  padding:7px 9px;font:500 12px 'JetBrains Mono',monospace;flex:1;min-width:120px}
+  padding:7px 9px;font:500 12px ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;flex:1;min-width:120px}
 select:focus{outline:2px solid var(--amber);outline-offset:-1px}
 .mini{background:transparent;color:var(--dim);border:1px solid var(--rule);border-radius:2px;
-  padding:7px 10px;font:500 11px 'JetBrains Mono',monospace;cursor:pointer;letter-spacing:.04em;text-transform:uppercase}
+  padding:7px 10px;font:500 11px ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;cursor:pointer;letter-spacing:.04em;text-transform:uppercase}
 .mini:hover{color:var(--paper);border-color:var(--rule2)}
 .mini.warn:hover{color:var(--down);border-color:var(--down)}
 .mini:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
@@ -93,7 +90,7 @@ select:focus{outline:2px solid var(--amber);outline-offset:-1px}
 .rrow.drag{background:var(--ink3);border-radius:3px;box-shadow:0 6px 20px rgba(0,0,0,.5);
   border-bottom-color:transparent;position:relative;z-index:5}
 .rrow.ghost{opacity:.28}
-.rno{font:700 13px 'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;
+.rno{font:700 13px ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums;
   color:var(--amber);text-align:right}
 .rmid{min-width:0}
 .rnm{font-weight:500;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -125,7 +122,7 @@ details.bk summary::-webkit-details-marker{display:none}
 details.bk .bd{padding:0 12px 12px}
 textarea{width:100%;min-height:90px;background:var(--ink);color:var(--paper);
   border:1px solid var(--rule);border-radius:2px;padding:9px;
-  font:400 11px/1.5 'JetBrains Mono',monospace;resize:vertical}
+  font:400 11px/1.5 ui-monospace,'SF Mono',SFMono-Regular,Menlo,monospace;resize:vertical}
 
 .note{font-size:11px;line-height:1.6;margin:11px 0;color:var(--dim)}
 .note.ok{color:var(--up)} .note.err{color:var(--down)}
@@ -133,19 +130,157 @@ textarea{width:100%;min-height:90px;background:var(--ink);color:var(--paper);
   padding:10px 12px;font-size:11px;line-height:1.65;color:var(--dim);border-radius:2px;margin:12px 0}
 footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;border-top:1px solid var(--rule);margin-top:24px}
 .hide{display:none}
+.tm{border-bottom:1px solid var(--rule);padding:12px 0}
+.tmTop{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tmNm{font-weight:700;font-size:14.5px}
+.tmSub{font-size:9.5px;color:var(--dimmer);letter-spacing:.05em;text-transform:uppercase;margin-top:3px}
+.tmVal{font:700 15px ui-monospace,monospace;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tmBody{font-size:11.5px;line-height:1.65;color:var(--dim);margin-top:8px}
+.tmBody b{color:var(--paper)}
+.tmUp{color:var(--up)} .tmRisk{color:var(--down)}
+.pill2{display:inline-block;border:1px solid var(--rule);border-radius:2px;padding:1px 6px;
+  font-size:9px;letter-spacing:.06em;text-transform:uppercase;margin-right:5px;color:var(--dimmer)}
+.pill2.ov{border-color:var(--down);color:var(--down)}
+.pill2.hi{border-color:var(--amber);color:var(--amber)}
+/* recovery strip: sits directly under the header so a mis-tap is undone where
+   your eye already is, not 40 rows down the page */
+#lastPick{position:sticky;top:0;z-index:60;background:var(--ink);
+  border:1px solid var(--up);border-left-width:3px;border-radius:3px;
+  padding:9px 11px;margin:2px 0 10px;display:none;
+  align-items:center;justify-content:space-between;gap:10px}
+#lastPick.on{display:flex}
+#lastPick .lpTxt{min-width:0;font-size:11.5px;line-height:1.45}
+#lastPick .lpTxt b{display:block;font-size:13.5px;font-weight:700;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#lastPick .lpTxt span{color:var(--dimmer);font-size:10px;letter-spacing:.05em;text-transform:uppercase}
+#undoBig{flex:0 0 auto;background:var(--up);color:var(--ink);border:0;border-radius:3px;
+  padding:11px 15px;font:700 12px ui-monospace,monospace;letter-spacing:.06em;cursor:pointer}
+#undoBig:active{opacity:.75}
+#sheet{position:fixed;inset:0;z-index:800;background:rgba(8,10,14,.72);
+  display:none;align-items:flex-end;justify-content:center}
+#sheet.on{display:flex}
+.sheetCard{background:var(--ink);border-top:2px solid var(--amber);width:100%;max-width:820px;
+  max-height:86vh;overflow:auto;border-radius:10px 10px 0 0;
+  padding:16px 16px calc(24px + env(safe-area-inset-bottom))}
+.sheetHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;
+  padding-bottom:10px;border-bottom:1px solid var(--rule);margin-bottom:12px}
+.sheetHead h3{font-size:19px;margin:0 0 4px;letter-spacing:-.02em;font-weight:700}
+.sheetHead .sub2{font-size:10.5px;color:var(--dimmer);letter-spacing:.05em;text-transform:uppercase}
+.xbtn{background:none;border:1px solid var(--rule);color:var(--dim);border-radius:2px;
+  padding:7px 11px;font:700 12px ui-monospace,monospace;cursor:pointer;flex:0 0 auto}
+.grp{margin-bottom:14px}
+.grp h4{font:700 10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);margin:0 0 7px}
+.kv{display:grid;grid-template-columns:1fr auto;gap:3px 12px;font-size:12px;padding:4px 0;
+  border-bottom:1px solid var(--ink3)}
+.kv span:first-child{color:var(--dim)}
+.kv span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
+.kv.pos2 span:last-child{color:var(--up)} .kv.neg span:last-child{color:var(--down)}
+.stars{color:var(--amber);letter-spacing:2px}
+.cliff{display:flex;gap:6px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:none}
+.cliff::-webkit-scrollbar{display:none}
+.tier{flex:0 0 auto;border:1px solid var(--rule);border-radius:2px;padding:7px 9px;min-width:78px}
+.tier .tp{font:700 10px ui-monospace,monospace;letter-spacing:.06em;color:var(--dimmer)}
+.tier .tn{font:700 17px ui-monospace,monospace;margin-top:2px}
+.tier .tl{font-size:9px;color:var(--dimmer);letter-spacing:.04em}
+.tier.warn{border-color:var(--amber)} .tier.warn .tn{color:var(--amber)}
+.tier.crit{border-color:var(--down)} .tier.crit .tn{color:var(--down)}
+.run{border:1px solid var(--rule);border-left:2px solid var(--down);background:var(--ink2);
+  padding:9px 11px;font-size:11px;line-height:1.6;color:var(--dim);border-radius:2px;margin:8px 0}
+.pick{display:grid;grid-template-columns:30px 1fr auto;gap:0 8px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule)}
+.pick .pn{font:700 12px ui-monospace,monospace;color:var(--amber);text-align:right;font-variant-numeric:tabular-nums}
+.btn2{background:transparent;color:var(--dim);border:1px solid var(--rule);border-radius:2px;
+  padding:7px 9px;font:700 10px ui-monospace,monospace;letter-spacing:.04em;cursor:pointer;margin-left:5px}
+.btn2.mine{color:var(--up);border-color:var(--up)}
+.slot{display:grid;grid-template-columns:44px 1fr auto;gap:0 9px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--rule)}
+.slot.empty .snm{color:var(--dimmer);font-style:italic}
+.slotTag{font:700 10px ui-monospace,monospace;letter-spacing:.06em;color:var(--dimmer);
+  text-align:right;text-transform:uppercase}
+.slotTag.start{color:var(--amber)}
+.snm{font-weight:500;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.smeta{font-size:9.5px;color:var(--dimmer);letter-spacing:.04em;margin-top:2px;text-transform:uppercase}
+.slot select{flex:0 0 auto;min-width:74px;padding:5px 6px;font-size:11px}
+.byegrid{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}
+.bye{border:1px solid var(--rule);border-radius:2px;padding:5px 7px;font-size:10.5px;
+  color:var(--dim);min-width:52px;text-align:center}
+.bye b{display:block;font-size:13px;color:var(--paper);font-weight:700}
+.bye.warn{border-color:var(--amber);color:var(--amber)} .bye.warn b{color:var(--amber)}
+.bye.bad{border-color:var(--down);color:var(--down)} .bye.bad b{color:var(--down)}
+.srch{width:100%;background:var(--ink2);color:var(--paper);border:1px solid var(--rule);
+  border-radius:2px;padding:10px;font:400 13px ui-monospace,monospace;margin-top:4px}
+.srch:focus{outline:2px solid var(--amber);outline-offset:-1px}
+.hit{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:9px 0;border-bottom:1px solid var(--rule);cursor:pointer}
+.hit:active{background:var(--ink2)}
+.hit .add{color:var(--amber);font-weight:700;font-size:16px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
+<div id="crash" style="display:none;position:fixed;inset:0;z-index:9999;background:#12151C;
+  color:#E8E6E1;padding:20px;overflow:auto;font:12px/1.6 ui-monospace,Menlo,monospace">
+  <div style="color:#C86B7A;font-weight:700;letter-spacing:.08em;margin-bottom:10px">SCRIPT ERROR</div>
+  <div id="crashMsg" style="white-space:pre-wrap;word-break:break-word"></div>
+  <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+    <button onclick="location.reload()" style="background:#E8E6E1;color:#12151C;border:0;border-radius:2px;padding:9px 14px;font:700 11px ui-monospace,monospace">RELOAD</button>
+    <button onclick="ccHardReset()" style="background:none;color:#E0A951;border:1px solid #E0A951;border-radius:2px;padding:9px 14px;font:700 11px ui-monospace,monospace">CLEAR CACHE &amp; RELOAD</button>
+  </div>
+  <div style="margin-top:14px;color:#7C8797">Screenshot this and send it to Claude.</div>
+</div>
+<script>
+function ccShowCrash(m){
+  var d=document.getElementById('crash'),t=document.getElementById('crashMsg');
+  if(!d||!t)return; t.textContent=m; d.style.display='block';
+}
+window.addEventListener('error',function(e){
+  ccShowCrash((e.message||'error')+'\n\nat line '+(e.lineno||'?')+', col '+(e.colno||'?')
+    +(e.error&&e.error.stack?'\n\n'+e.error.stack:''));
+});
+window.addEventListener('unhandledrejection',function(e){
+  var r=e.reason, m=((r&&r.message)||String(r));
+  // storage problems are reported in-app, never as a fatal screen
+  if(/storage|quota|exceeded|response type/i.test(m)){
+    try{console.warn('storage:',m);}catch(_){}
+    var s=document.getElementById('saveStat');
+    if(s){s.className='status err';var sp=s.querySelector('span');if(sp)sp.textContent='NOT SAVED — '+m;}
+    e.preventDefault(); return;
+  }
+  if(window.__ccBooted) { try{console.warn(m);}catch(_){} return; }
+  ccShowCrash('Unhandled promise rejection:\n'+m+((r&&r.stack)?'\n\n'+r.stack:''));
+});
+async function ccKillOldSW(){
+  try{ if('serviceWorker' in navigator){
+    var rs=await navigator.serviceWorker.getRegistrations();
+    for(var i=0;i<rs.length;i++) await rs[i].unregister();
+  }}catch(e){}
+  try{ var ks=await caches.keys(); for(var j=0;j<ks.length;j++) await caches.delete(ks[j]); }catch(e){}
+}
+if(location.search.indexOf('reset')>=0){ ccKillOldSW().then(()=>location.replace(location.pathname)); }
+else { ccKillOldSW(); }
+async function ccHardReset(){
+  try{ if('serviceWorker' in navigator){
+    var rs=await navigator.serviceWorker.getRegistrations();
+    for(var i=0;i<rs.length;i++) await rs[i].unregister();
+  }}catch(e){}
+  try{ var ks=await caches.keys(); for(var j=0;j<ks.length;j++) await caches.delete(ks[j]); }catch(e){}
+  location.reload(true);
+}
+</script>
 <div class="wrap">
 
 <header>
   <h1>Command<br><em>Center</em></h1>
-  <div class="sub">DraftKings season O/U · Aug 9 2026 &nbsp;·&nbsp; FantasyPros PPR consensus</div>
+  <div class="sub"><span id="seasonPill" style="display:inline-block;border:1px solid #E0A951;color:#E0A951;
+  border-radius:2px;padding:2px 7px;font-weight:700;letter-spacing:.06em">2026 · DRAFT</span><br>
+  <span id="buildStamp" style="color:#5A6473">build 11 · loading…</span></div>
   <div class="sections" role="tablist">
     <button class="sec" id="tabLines" role="tab" aria-selected="true">Lines</button>
     <button class="sec" id="tabRanks" role="tab" aria-selected="false">Ranks</button>
-    <button class="sec" id="tabOL" role="tab" aria-selected="false">O-Line</button>
+    <button class="sec" id="tabDraft" role="tab" aria-selected="false">Draft</button>
+    <button class="sec" id="tabTeam" role="tab" aria-selected="false">Team</button>
+    <button class="sec" id="tabOL" role="tab" aria-selected="false">Teams</button>
     <button class="sec" id="tabData" role="tab" aria-selected="false">Data</button>
   </div>
 </header>
@@ -168,6 +303,11 @@ footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;
     <button class="mini" id="renameList">Rename</button>
     <button class="mini warn" id="delList">Delete</button>
   </div>
+  <div class="listbar hide" id="nameBar">
+    <input class="srch" id="nameInput" placeholder="List name" autocomplete="off" style="margin:0">
+    <button class="mini" id="nameOk">Save</button>
+    <button class="mini" id="nameCancel">Cancel</button>
+  </div>
   <div class="bar sec2" id="rposBar"></div>
   <div class="meta">
     <h2 id="rTitle">My board</h2>
@@ -183,15 +323,73 @@ footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;
   <div class="note" id="rNote"></div>
 </section>
 
+<section id="secDraft" class="hide">
+  <div id="lastPick">
+    <div class="lpTxt"><b id="lpName"></b><span id="lpWho"></span></div>
+    <button id="undoBig">UNDO</button>
+  </div>
+  <div class="meta"><h2 id="dTitle">Best available</h2><div class="unit" id="dUnit"></div></div>
+  <div id="runNote"></div>
+  <div class="bar sec2" id="dPosBar"></div>
+  <div id="draftBoard"></div>
+  <div class="listbar">
+    <button class="mini" id="undoPick">Undo last pick</button>
+    <button class="mini warn" id="resetDraft">Reset draft</button>
+  </div>
+  <div class="note" id="draftNote"></div>
+  <div class="meta"><h2>Off the board</h2><div class="unit">tap ✕ to put back</div></div>
+  <div id="pickLog"></div>
+</section>
+
+<section id="secTeam" class="hide">
+  <div class="bar sec2" id="teamModeBar"></div>
+
+  <div id="teamRosterWrap">
+    <div class="meta"><h2 id="teamTitle">Starters</h2><div class="unit" id="teamUnit"></div></div>
+    <div id="lineupBoard"></div>
+
+    <div class="meta"><h2>Bench</h2><div class="unit" id="benchUnit"></div></div>
+    <div id="benchBoard"></div>
+
+    <div class="meta"><h2>Add players</h2><div class="unit">tap to roster</div></div>
+    <input class="srch" id="teamSearch" placeholder="Search a player, or type a K/DST name" autocomplete="off" spellcheck="false">
+    <div id="searchHits"></div>
+  </div>
+
+  <div id="teamByeWrap" class="hide">
+    <div class="meta"><h2>Bye weeks</h2><div class="unit">starters unavailable</div></div>
+    <div class="byegrid" id="byeGrid"></div>
+    <div class="callout" id="byeNote"></div>
+  </div>
+
+  <div id="teamSetWrap" class="hide">
+    <div class="meta"><h2>Roster slots</h2><div class="unit">match your league</div></div>
+    <div id="slotEditor"></div>
+    <div class="listbar"><button class="mini warn" id="clearRoster">Clear roster</button></div>
+  </div>
+  <div class="note" id="teamNote"></div>
+</section>
+
 <section id="secOL" class="hide">
   <div class="bar sec2" id="olSortBar"></div>
-  <div class="meta"><h2>2026 offensive lines</h2><div class="unit" id="olUnit">composite of 2 rankings</div></div>
+  <div class="meta"><h2 id="olTitle">2026 offensive lines</h2><div class="unit" id="olUnit">composite of 2 rankings</div></div>
   <div id="olBoard"></div>
+  <div id="scopeNote2"></div>
   <div class="callout"><strong>How this is built.</strong> Composite of two independent 2026 rankings — Sharp Football Analysis (staff panel, Jun 30) and StatRankings (Jul 23) — averaged, then re-ranked. The two agree closely: the largest disagreement anywhere is five spots. Supporting columns are 2025 outcomes, not projections: pressure rate allowed, POE (pressure rate over expected, scheme-adjusted), and ARBY (adjusted run-blocking yards, which strips out the back's contribution). A line can grade well on ARBY and badly on POE — Baltimore and Miami both do.</div>
 </section>
 
 <section id="secData" class="hide">
-  <div class="meta"><h2>Datasets</h2><div class="unit">what's loaded now</div></div>
+  <div class="meta"><h2>Season</h2><div class="unit">archive &amp; active week</div></div>
+  <div class="listbar">
+    <select id="seasonSel" aria-label="Season"></select>
+    <select id="weekSel" aria-label="Week"></select>
+  </div>
+  <div class="listbar">
+    <button class="mini" id="newWeek">New week</button>
+    <button class="mini" id="newSeason">New season</button>
+  </div>
+
+  <div class="meta"><h2>Datasets</h2><div class="unit" id="dsUnit">this week</div></div>
   <div id="dsCards"></div>
 
   <div class="meta"><h2>Import</h2><div class="unit">paste, preview, apply</div></div>
@@ -203,6 +401,16 @@ footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;
     <button class="mini" id="impClear">Clear</button>
   </div>
   <div id="impOut"></div>
+
+  <div class="meta"><h2>Durability</h2><div class="unit">where this lives</div></div>
+  <div id="durCard"></div>
+  <div class="listbar">
+    <button class="mini" id="exportFile">Export file</button>
+    <label class="mini" for="importFile" style="display:inline-block">Import file</label>
+    <input id="importFile" type="file" accept=".json,application/json" style="display:none">
+    <button class="mini" id="sleeperTest">Test Sleeper API</button>
+  </div>
+  <div id="durOut"></div>
 
   <div class="meta"><h2>Maintenance</h2><div class="unit">restore &amp; backup</div></div>
   <div class="listbar"><button class="mini warn" id="dsReset">Reset data to built-in</button></div>
@@ -220,6 +428,8 @@ footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;
   <div class="note" id="dataNote"></div>
 </section>
 
+<div id="sheet" role="dialog" aria-modal="true"><div class="sheetCard" id="sheetCard"></div></div>
+
 <footer>
   Lines are a market consensus, not a forecast you own. Rankings are expert consensus, not truth.<br>
   Your custom lists are stored on this device only.
@@ -227,8 +437,12 @@ footer{padding:24px 0 10px;color:var(--dimmer);font-size:10.5px;line-height:1.7;
 </div>
 
 <script>
+const RANKS=[{"rk":1,"t":1,"n":"Ja'Marr Chase","tm":"CIN","p":"WR","pr":1,"b":"6","up":5,"bu":1,"sos":4,"e":"+2"},{"rk":2,"t":1,"n":"Puka Nacua","tm":"LAR","p":"WR","pr":2,"b":"11","up":5,"bu":2,"sos":1,"e":"+2"},{"rk":3,"t":1,"n":"Jahmyr Gibbs","tm":"DET","p":"RB","pr":1,"b":"6","up":5,"bu":1,"sos":5,"e":"-2"},{"rk":4,"t":1,"n":"Bijan Robinson","tm":"ATL","p":"RB","pr":2,"b":"11","up":5,"bu":1,"sos":2,"e":"-2"},{"rk":5,"t":1,"n":"Jaxon Smith-Njigba","tm":"SEA","p":"WR","pr":3,"b":"11","up":5,"bu":2,"sos":3,"e":"+1"},{"rk":6,"t":1,"n":"Amon-Ra St. Brown","tm":"DET","p":"WR","pr":4,"b":"6","up":5,"bu":1,"sos":4,"e":"+2"},{"rk":7,"t":2,"n":"Christian McCaffrey","tm":"SF","p":"RB","pr":3,"b":"8","up":4,"bu":4,"sos":2,"e":"-2"},{"rk":8,"t":2,"n":"CeeDee Lamb","tm":"DAL","p":"WR","pr":5,"b":"14","up":4,"bu":2,"sos":2,"e":"+4"},{"rk":9,"t":2,"n":"Justin Jefferson","tm":"MIN","p":"WR","pr":6,"b":"6","up":5,"bu":2,"sos":5,"e":"+4"},{"rk":10,"t":2,"n":"Jonathan Taylor","tm":"IND","p":"RB","pr":4,"b":"13","up":4,"bu":3,"sos":4,"e":"-3"},{"rk":11,"t":2,"n":"Drake London","tm":"ATL","p":"WR","pr":7,"b":"11","up":4,"bu":2,"sos":3,"e":"+6"},{"rk":12,"t":3,"n":"A.J. Brown","tm":"NE","p":"WR","pr":8,"b":"11","up":5,"bu":2,"sos":2,"e":"+9"},{"rk":13,"t":3,"n":"Nico Collins","tm":"HOU","p":"WR","pr":9,"b":"8","up":4,"bu":3,"sos":3,"e":"+14"},{"rk":14,"t":3,"n":"Ashton Jeanty","tm":"LV","p":"RB","pr":5,"b":"13","up":5,"bu":2,"sos":2,"e":"-3"},{"rk":15,"t":3,"n":"James Cook","tm":"BUF","p":"RB","pr":6,"b":"7","up":4,"bu":2,"sos":2,"e":"-6"},{"rk":16,"t":3,"n":"Chase Brown","tm":"CIN","p":"RB","pr":7,"b":"6","up":5,"bu":2,"sos":2,"e":"-1"},{"rk":17,"t":3,"n":"George Pickens","tm":"DAL","p":"WR","pr":10,"b":"14","up":4,"bu":3,"sos":2,"e":"+8"},{"rk":18,"t":3,"n":"Trey McBride","tm":"ARI","p":"TE","pr":1,"b":"14","up":4,"bu":3,"sos":2,"e":"+1"},{"rk":19,"t":3,"n":"Brock Bowers","tm":"LV","p":"TE","pr":2,"b":"13","up":5,"bu":2,"sos":3,"e":"+3"},{"rk":20,"t":3,"n":"R. Rice","tm":"KC","p":"WR","pr":11,"b":"5","up":5,"bu":4,"sos":2,"e":"+4"},{"rk":21,"t":3,"n":"De'Von Achane","tm":"MIA","p":"RB","pr":8,"b":"6","up":4,"bu":4,"sos":3,"e":"-11"},{"rk":22,"t":3,"n":"Chris Olave","tm":"NO","p":"WR","pr":12,"b":"8","up":4,"bu":4,"sos":3,"e":"+6"},{"rk":23,"t":4,"n":"DeVonta Smith","tm":"PHI","p":"WR","pr":13,"b":"10","up":4,"bu":2,"sos":4,"e":"+11"},{"rk":24,"t":4,"n":"Omarion Hampton","tm":"LAC","p":"RB","pr":9,"b":"7","up":5,"bu":2,"sos":3,"e":"-8"},{"rk":25,"t":4,"n":"Saquon Barkley","tm":"PHI","p":"RB","pr":10,"b":"10","up":4,"bu":3,"sos":4,"e":"-11"},{"rk":26,"t":4,"n":"Josh Allen","tm":"BUF","p":"QB","pr":1,"b":"7","up":5,"bu":2,"sos":3,"e":"0"},{"rk":27,"t":4,"n":"Zay Flowers","tm":"BAL","p":"WR","pr":14,"b":"13","up":4,"bu":2,"sos":4,"e":"+8"},{"rk":28,"t":4,"n":"Kenneth Walker III","tm":"KC","p":"RB","pr":11,"b":"5","up":4,"bu":4,"sos":3,"e":"-8"},{"rk":29,"t":4,"n":"Garrett Wilson","tm":"NYJ","p":"WR","pr":15,"b":"13","up":4,"bu":4,"sos":4,"e":"+10"},{"rk":30,"t":4,"n":"M. Nabers","tm":"NYG","p":"WR","pr":16,"b":"8","up":4,"bu":4,"sos":4,"e":"-1"},{"rk":31,"t":4,"n":"Lamar Jackson","tm":"BAL","p":"QB","pr":2,"b":"13","up":5,"bu":3,"sos":3,"e":"+11"},{"rk":32,"t":4,"n":"Tetairoa McMillan","tm":"CAR","p":"WR","pr":17,"b":"5","up":4,"bu":3,"sos":2,"e":"+8"},{"rk":33,"t":4,"n":"Ladd McConkey","tm":"LAC","p":"WR","pr":18,"b":"7","up":4,"bu":3,"sos":2,"e":"+13"},{"rk":34,"t":4,"n":"Tee Higgins","tm":"CIN","p":"WR","pr":19,"b":"6","up":5,"bu":2,"sos":4,"e":"+7"},{"rk":35,"t":5,"n":"Derrick Henry","tm":"BAL","p":"RB","pr":12,"b":"13","up":4,"bu":2,"sos":3,"e":"-17"},{"rk":36,"t":5,"n":"Colston Loveland","tm":"CHI","p":"TE","pr":3,"b":"10","up":5,"bu":2,"sos":2,"e":"+7"},{"rk":37,"t":5,"n":"Emeka Egbuka","tm":"TB","p":"WR","pr":20,"b":"10","up":4,"bu":3,"sos":4,"e":"+1"},{"rk":38,"t":5,"n":"Jaylen Waddle","tm":"DEN","p":"WR","pr":21,"b":"10","up":4,"bu":3,"sos":2,"e":"+9"},{"rk":39,"t":5,"n":"Jeremiyah Love","tm":"ARI","p":"RB","pr":13,"b":"14","up":5,"bu":2,"sos":2,"e":"-16"},{"rk":40,"t":5,"n":"Drake Maye","tm":"NE","p":"QB","pr":3,"b":"11","up":5,"bu":2,"sos":2,"e":"+12"},{"rk":41,"t":5,"n":"Breece Hall","tm":"NYJ","p":"RB","pr":14,"b":"13","up":4,"bu":3,"sos":3,"e":"-9"},{"rk":42,"t":5,"n":"Kyren Williams","tm":"LAR","p":"RB","pr":15,"b":"11","up":4,"bu":2,"sos":5,"e":"-11"},{"rk":43,"t":5,"n":"J. Jacobs","tm":"GB","p":"RB","pr":16,"b":"11","up":4,"bu":3,"sos":4,"e":"-13"},{"rk":44,"t":5,"n":"Terry McLaurin","tm":"WAS","p":"WR","pr":22,"b":"7","up":4,"bu":2,"sos":2,"e":"+9"},{"rk":45,"t":5,"n":"L. Burden III","tm":"CHI","p":"WR","pr":23,"b":"10","up":4,"bu":3,"sos":3,"e":"+3"},{"rk":46,"t":5,"n":"Joe Burrow","tm":"CIN","p":"QB","pr":4,"b":"6","up":4,"bu":3,"sos":3,"e":"+10"},{"rk":47,"t":5,"n":"Javonte Williams","tm":"DAL","p":"RB","pr":17,"b":"14","up":4,"bu":3,"sos":4,"e":"-14"},{"rk":48,"t":5,"n":"Travis Etienne Jr.","tm":"NO","p":"RB","pr":18,"b":"8","up":4,"bu":3,"sos":3,"e":"-11"},{"rk":49,"t":5,"n":"Davante Adams","tm":"LAR","p":"WR","pr":24,"b":"11","up":4,"bu":4,"sos":1,"e":"0"},{"rk":50,"t":5,"n":"Jayden Daniels","tm":"WAS","p":"QB","pr":5,"b":"7","up":5,"bu":4,"sos":2,"e":"+10"},{"rk":51,"t":5,"n":"Mike Evans","tm":"SF","p":"WR","pr":25,"b":"8","up":4,"bu":3,"sos":2,"e":"+11"},{"rk":52,"t":5,"n":"DJ Moore","tm":"BUF","p":"WR","pr":26,"b":"7","up":4,"bu":3,"sos":4,"e":"+5"},{"rk":53,"t":6,"n":"Cameron Skattebo","tm":"NYG","p":"RB","pr":19,"b":"8","up":4,"bu":3,"sos":4,"e":"-17"},{"rk":54,"t":6,"n":"Tyler Warren","tm":"IND","p":"TE","pr":4,"b":"13","up":4,"bu":2,"sos":3,"e":"-4"},{"rk":55,"t":6,"n":"Jameson Williams","tm":"DET","p":"WR","pr":27,"b":"6","up":4,"bu":4,"sos":4,"e":"+3"},{"rk":56,"t":6,"n":"Christian Watson","tm":"GB","p":"WR","pr":28,"b":"11","up":4,"bu":4,"sos":5,"e":"+11"},{"rk":57,"t":6,"n":"Jalen Hurts","tm":"PHI","p":"QB","pr":6,"b":"10","up":4,"bu":3,"sos":5,"e":"+7"},{"rk":58,"t":6,"n":"Rome Odunze","tm":"CHI","p":"WR","pr":29,"b":"10","up":4,"bu":2,"sos":3,"e":"+3"},{"rk":59,"t":6,"n":"B. Irving","tm":"TB","p":"RB","pr":20,"b":"10","up":3,"bu":4,"sos":2,"e":"-15"},{"rk":60,"t":6,"n":"D'Andre Swift","tm":"CHI","p":"RB","pr":21,"b":"10","up":3,"bu":3,"sos":2,"e":"-5"},{"rk":61,"t":6,"n":"Quinshon Judkins","tm":"CLE","p":"RB","pr":22,"b":"11","up":4,"bu":4,"sos":3,"e":"-16"},{"rk":62,"t":6,"n":"David Montgomery","tm":"HOU","p":"RB","pr":23,"b":"8","up":4,"bu":2,"sos":4,"e":"-8"},{"rk":63,"t":6,"n":"TreVeyon Henderson","tm":"NE","p":"RB","pr":24,"b":"11","up":4,"bu":3,"sos":2,"e":"-12"},{"rk":64,"t":6,"n":"Carnell Tate","tm":"TEN","p":"WR","pr":30,"b":"9","up":4,"bu":2,"sos":3,"e":"+2"},{"rk":65,"t":6,"n":"Caleb Williams","tm":"CHI","p":"QB","pr":7,"b":"10","up":5,"bu":2,"sos":3,"e":"+14"},{"rk":66,"t":6,"n":"Bhayshul Tuten","tm":"JAC","p":"RB","pr":25,"b":"7","up":4,"bu":3,"sos":4,"e":"-7"},{"rk":67,"t":6,"n":"Justin Herbert","tm":"LAC","p":"QB","pr":8,"b":"7","up":4,"bu":2,"sos":2,"e":"+21"},{"rk":68,"t":6,"n":"Marvin Harrison Jr.","tm":"ARI","p":"WR","pr":31,"b":"14","up":3,"bu":4,"sos":2,"e":"+2"},{"rk":69,"t":6,"n":"Harold Fannin Jr.","tm":"CLE","p":"TE","pr":5,"b":"11","up":4,"bu":3,"sos":3,"e":"-4"},{"rk":70,"t":6,"n":"Tucker Kraft","tm":"GB","p":"TE","pr":6,"b":"11","up":4,"bu":2,"sos":2,"e":"-1"},{"rk":71,"t":7,"n":"Jaylen Warren","tm":"PIT","p":"RB","pr":26,"b":"9","up":4,"bu":4,"sos":2,"e":"0"},{"rk":72,"t":7,"n":"Parker Washington","tm":"JAC","p":"WR","pr":32,"b":"7","up":4,"bu":3,"sos":4,"e":"+12"},{"rk":73,"t":7,"n":"Brian Thomas Jr.","tm":"JAC","p":"WR","pr":33,"b":"7","up":3,"bu":4,"sos":4,"e":"+2"},{"rk":74,"t":7,"n":"DK Metcalf","tm":"PIT","p":"WR","pr":34,"b":"9","up":4,"bu":3,"sos":3,"e":"+3"},{"rk":75,"t":7,"n":"Jadarian Price","tm":"SEA","p":"RB","pr":27,"b":"11","up":4,"bu":3,"sos":4,"e":"-12"},{"rk":76,"t":7,"n":"Trevor Lawrence","tm":"JAC","p":"QB","pr":9,"b":"7","up":5,"bu":1,"sos":4,"e":"+13"},{"rk":77,"t":7,"n":"Dak Prescott","tm":"DAL","p":"QB","pr":10,"b":"14","up":4,"bu":2,"sos":2,"e":"-1"},{"rk":78,"t":7,"n":"Kyle Pitts","tm":"ATL","p":"TE","pr":7,"b":"11","up":4,"bu":4,"sos":3,"e":"-10"},{"rk":79,"t":7,"n":"Chris Godwin","tm":"TB","p":"WR","pr":35,"b":"10","up":3,"bu":4,"sos":4,"e":"+18"},{"rk":80,"t":7,"n":"Rhamondre Stevenson","tm":"NE","p":"RB","pr":28,"b":"11","up":4,"bu":3,"sos":2,"e":"+2"},{"rk":81,"t":7,"n":"Michael Pittman Jr.","tm":"PIT","p":"WR","pr":36,"b":"9","up":3,"bu":3,"sos":3,"e":"+14"},{"rk":82,"t":7,"n":"A. Pierce","tm":"IND","p":"WR","pr":37,"b":"13","up":4,"bu":4,"sos":4,"e":"-2"},{"rk":83,"t":7,"n":"Tony Pollard","tm":"TEN","p":"RB","pr":29,"b":"9","up":3,"bu":3,"sos":3,"e":"-9"},{"rk":84,"t":7,"n":"Courtland Sutton","tm":"DEN","p":"WR","pr":38,"b":"10","up":2,"bu":4,"sos":2,"e":"-11"},{"rk":85,"t":7,"n":"Sam LaPorta","tm":"DET","p":"TE","pr":8,"b":"6","up":4,"bu":2,"sos":3,"e":"-13"},{"rk":86,"t":7,"n":"Chuba Hubbard","tm":"CAR","p":"RB","pr":30,"b":"5","up":2,"bu":4,"sos":1,"e":"-3"},{"rk":87,"t":7,"n":"Josh Downs","tm":"IND","p":"WR","pr":39,"b":"13","up":3,"bu":3,"sos":4,"e":"+26"},{"rk":88,"t":7,"n":"Wan'Dale Robinson","tm":"TEN","p":"WR","pr":40,"b":"9","up":3,"bu":4,"sos":3,"e":"+3"},{"rk":89,"t":7,"n":"Jordyn Tyson","tm":"NO","p":"WR","pr":41,"b":"8","up":4,"bu":4,"sos":3,"e":"-4"},{"rk":90,"t":7,"n":"Rico Dowdle","tm":"PIT","p":"RB","pr":31,"b":"9","up":4,"bu":4,"sos":2,"e":"-9"},{"rk":91,"t":7,"n":"Michael Wilson","tm":"ARI","p":"WR","pr":42,"b":"14","up":null,"bu":null,"sos":2,"e":"-4"},{"rk":92,"t":7,"n":"Jaxson Dart","tm":"NYG","p":"QB","pr":11,"b":"8","up":4,"bu":4,"sos":4,"e":"-6"},{"rk":93,"t":7,"n":"RJ Harvey","tm":"DEN","p":"RB","pr":32,"b":"10","up":2,"bu":4,"sos":2,"e":"-15"},{"rk":94,"t":7,"n":"Brock Purdy","tm":"SF","p":"QB","pr":12,"b":"8","up":4,"bu":2,"sos":1,"e":"+8"},{"rk":95,"t":7,"n":"Travis Kelce","tm":"KC","p":"TE","pr":9,"b":"5","up":3,"bu":3,"sos":4,"e":"+5"},{"rk":96,"t":8,"n":"Jakobi Meyers","tm":"JAC","p":"WR","pr":43,"b":"7","up":2,"bu":3,"sos":4,"e":"+2"},{"rk":97,"t":8,"n":"K. Gainwell","tm":"TB","p":"RB","pr":33,"b":"10","up":4,"bu":3,"sos":2,"e":"+4"},{"rk":98,"t":8,"n":"Quentin Johnston","tm":"LAC","p":"WR","pr":44,"b":"7","up":4,"bu":4,"sos":2,"e":"+7"},{"rk":99,"t":8,"n":"M. Lemon","tm":"PHI","p":"WR","pr":45,"b":"10","up":4,"bu":3,"sos":4,"e":"-3"},{"rk":100,"t":8,"n":"Bo Nix","tm":"DEN","p":"QB","pr":13,"b":"10","up":4,"bu":2,"sos":3,"e":"+14"}];
 const LINES=[{"n":"A.J. Brown","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1124.5","ct":"7.5"},{"n":"Aaron Jones","p":"","py":"","pt":"","ry":"549.5","rt":"","cy":"","ct":""},{"n":"Aaron Rodgers","p":"","py":"3149.5","pt":"21.5","ry":"","rt":"","cy":"","ct":""},{"n":"Amon-Ra St. Brown","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1249.5","ct":"9.5"},{"n":"Ashton Jeanty","p":"RB","py":"","pt":"","ry":"974.5","rt":"7.5","cy":"","ct":""},{"n":"Baker Mayfield","p":"","py":"3599.5","pt":"25.5","ry":"","rt":"","cy":"","ct":""},{"n":"Bhayshul Tuten","p":"RB","py":"","pt":"","ry":"724.5","rt":"","cy":"","ct":""},{"n":"Bijan Robinson","p":"RB","py":"","pt":"","ry":"1174.5","rt":"8.5","cy":"574.5","ct":"3.5"},{"n":"Blake Corum","p":"","py":"","pt":"","ry":"674.5","rt":"","cy":"","ct":""},{"n":"Bo Nix","p":"QB","py":"3499.5","pt":"24.5","ry":"","rt":"","cy":"","ct":""},{"n":"Breece Hall","p":"RB","py":"","pt":"","ry":"899.5","rt":"5.5","cy":"","ct":""},{"n":"Brian Thomas Jr.","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"724.5","ct":"4.5"},{"n":"Brock Bowers","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"924.5","ct":"7.5"},{"n":"Brock Purdy","p":"QB","py":"3799.5","pt":"27.5","ry":"","rt":"","cy":"","ct":""},{"n":"Bryce Young","p":"","py":"2924.5","pt":"20.5","ry":"","rt":"","cy":"","ct":""},{"n":"C.J. Stroud","p":"","py":"3599.5","pt":"22.5","ry":"","rt":"","cy":"","ct":""},{"n":"Caleb Williams","p":"QB","py":"3649.5","pt":"24.5","ry":"","rt":"","cy":"","ct":""},{"n":"Cameron Skattebo","p":"RB","py":"","pt":"","ry":"824.5","rt":"6.5","cy":"","ct":""},{"n":"Cameron Ward","p":"","py":"3299.5","pt":"19.5","ry":"","rt":"","cy":"","ct":""},{"n":"Carnell Tate","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"4.5"},{"n":"CeeDee Lamb","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1199.5","ct":"7.5"},{"n":"Chase Brown","p":"RB","py":"","pt":"","ry":"824.5","rt":"5.5","cy":"","ct":""},{"n":"Chris Godwin","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":"4.5"},{"n":"Chris Olave","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1024.5","ct":"5.5"},{"n":"Christian McCaffrey","p":"RB","py":"","pt":"","ry":"949.5","rt":"8.5","cy":"574.5","ct":"4.5"},{"n":"Christian Watson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"6.5"},{"n":"Chuba Hubbard","p":"RB","py":"","pt":"","ry":"699.5","rt":"","cy":"","ct":""},{"n":"Colston Loveland","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"5.5"},{"n":"Courtland Sutton","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"6.5"},{"n":"D'Andre Swift","p":"RB","py":"","pt":"","ry":"799.5","rt":"6.5","cy":"","ct":""},{"n":"DJ Moore","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"6.5"},{"n":"DK Metcalf","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"5.5"},{"n":"Dak Prescott","p":"QB","py":"3999.5","pt":"27.5","ry":"","rt":"","cy":"","ct":""},{"n":"Dallas Goedert","p":"","py":"","pt":"","ry":"","rt":"","cy":"574.5","ct":"4.5"},{"n":"Dalton Kincaid","p":"","py":"","pt":"","ry":"","rt":"","cy":"549.5","ct":"3.5"},{"n":"Davante Adams","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"9.5"},{"n":"David Montgomery","p":"RB","py":"","pt":"","ry":"824.5","rt":"7.5","cy":"","ct":""},{"n":"De'Von Achane","p":"RB","py":"","pt":"","ry":"974.5","rt":"5.5","cy":"","ct":""},{"n":"DeVonta Smith","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1049.5","ct":"5.5"},{"n":"Denzel Boston","p":"","py":"","pt":"","ry":"","rt":"","cy":"499.5","ct":""},{"n":"Derrick Henry","p":"RB","py":"","pt":"","ry":"1249.5","rt":"12.5","cy":"","ct":""},{"n":"Drake London","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1099.5","ct":"7.5"},{"n":"Drake Maye","p":"QB","py":"3799.5","pt":"26.5","ry":"424.5","rt":"3.5","cy":"","ct":""},{"n":"Emeka Egbuka","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"924.5","ct":"6.5"},{"n":"Garrett Wilson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"999.5","ct":"4.5"},{"n":"George Kittle","p":"","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":"5.5"},{"n":"George Pickens","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"999.5","ct":"6.5"},{"n":"Harold Fannin Jr.","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":""},{"n":"J.K. Dobbins","p":"","py":"","pt":"","ry":"674.5","rt":"","cy":"","ct":""},{"n":"Ja'Marr Chase","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1324.5","ct":"10.5"},{"n":"Jacory Croskey-Merritt","p":"","py":"","pt":"","ry":"599.5","rt":"","cy":"","ct":""},{"n":"Jadarian Price","p":"RB","py":"","pt":"","ry":"724.5","rt":"","cy":"","ct":""},{"n":"Jahmyr Gibbs","p":"RB","py":"","pt":"","ry":"1199.5","rt":"12.5","cy":"449.5","ct":"4.5"},{"n":"Jake Ferguson","p":"","py":"","pt":"","ry":"","rt":"","cy":"524.5","ct":"4.5"},{"n":"Jakobi Meyers","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":""},{"n":"Jalen Hurts","p":"QB","py":"3249.5","pt":"22.5","ry":"424.5","rt":"8.5","cy":"","ct":""},{"n":"James Cook","p":"RB","py":"","pt":"","ry":"1224.5","rt":"10.5","cy":"","ct":""},{"n":"Jameson Williams","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"899.5","ct":"5.5"},{"n":"Jared Goff","p":"","py":"4099.5","pt":"29.5","ry":"","rt":"","cy":"","ct":""},{"n":"Javonte Williams","p":"RB","py":"","pt":"","ry":"949.5","rt":"9.5","cy":"","ct":""},{"n":"Jaxon Smith-Njigba","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1324.5","ct":"8.5"},{"n":"Jaxson Dart","p":"QB","py":"3150.5","pt":"19.5","ry":"449.5","rt":"5.5","cy":"","ct":""},{"n":"Jayden Daniels","p":"QB","py":"3249.5","pt":"21.5","ry":"549.5","rt":"","cy":"","ct":""},{"n":"Jayden Higgins","p":"","py":"","pt":"","ry":"","rt":"","cy":"574.5","ct":""},{"n":"Jayden Reed","p":"","py":"","pt":"","ry":"","rt":"","cy":"649.5","ct":""},{"n":"Jaylen Waddle","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"899.5","ct":"5.5"},{"n":"Jaylen Warren","p":"RB","py":"","pt":"","ry":"624.5","rt":"","cy":"","ct":""},{"n":"Jeremiyah Love","p":"RB","py":"","pt":"","ry":"824.5","rt":"5.5","cy":"","ct":""},{"n":"Jerry Jeudy","p":"","py":"","pt":"","ry":"","rt":"","cy":"624.5","ct":""},{"n":"Joe Burrow","p":"QB","py":"3999.5","pt":"32.5","ry":"","rt":"","cy":"","ct":""},{"n":"Jonathan Taylor","p":"RB","py":"","pt":"","ry":"1249.5","rt":"11.5","cy":"","ct":""},{"n":"Jordan Addison","p":"","py":"","pt":"","ry":"","rt":"","cy":"674.5","ct":""},{"n":"Jordan Love","p":"","py":"3549.5","pt":"24.5","ry":"","rt":"","cy":"","ct":""},{"n":"Jordan Mason","p":"","py":"","pt":"","ry":"649.5","rt":"","cy":"","ct":""},{"n":"Jordyn Tyson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"4.5"},{"n":"Josh Allen","p":"QB","py":"3624.5","pt":"24.5","ry":"499.5","rt":"11.5","cy":"","ct":""},{"n":"Josh Downs","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":""},{"n":"Justin Herbert","p":"QB","py":"3650.5","pt":"25.5","ry":"","rt":"","cy":"","ct":""},{"n":"Justin Jefferson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1149.5","ct":"6.5"},{"n":"Juwan Johnson","p":"","py":"","pt":"","ry":"","rt":"","cy":"574.5","ct":""},{"n":"KC Concepcion","p":"","py":"","pt":"","ry":"","rt":"","cy":"599.5","ct":""},{"n":"Kenneth Walker III","p":"RB","py":"","pt":"","ry":"949.5","rt":"7.5","cy":"","ct":""},{"n":"Khalil Shakir","p":"","py":"","pt":"","ry":"","rt":"","cy":"624.5","ct":""},{"n":"Kyle Monangai","p":"","py":"","pt":"","ry":"649.5","rt":"","cy":"","ct":""},{"n":"Kyle Pitts","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"4.5"},{"n":"Kyren Williams","p":"RB","py":"","pt":"","ry":"999.5","rt":"9.5","cy":"","ct":""},{"n":"Ladd McConkey","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"899.5","ct":"5.5"},{"n":"Lamar Jackson","p":"QB","py":"3249.5","pt":"24.5","ry":"574.5","rt":"3.5","cy":"","ct":""},{"n":"Malik Willis","p":"","py":"2949.5","pt":"14.5","ry":"","rt":"","cy":"","ct":""},{"n":"Mark Andrews","p":"","py":"","pt":"","ry":"","rt":"","cy":"499.5","ct":"6.5"},{"n":"Marvin Harrison Jr.","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"5.5"},{"n":"Matthew Golden","p":"","py":"","pt":"","ry":"","rt":"","cy":"649.5","ct":""},{"n":"Matthew Stafford","p":"","py":"3949.5","pt":"30.5","ry":"","rt":"","cy":"","ct":""},{"n":"Michael Pittman Jr.","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"749.5","ct":"4.5"},{"n":"Michael Wilson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"724.5","ct":""},{"n":"Mike Evans","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"6.5"},{"n":"Nico Collins","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1074.5","ct":"6.5"},{"n":"Omar Cooper Jr.","p":"","py":"","pt":"","ry":"","rt":"","cy":"499.5","ct":""},{"n":"Omarion Hampton","p":"RB","py":"","pt":"","ry":"949.5","rt":"7.5","cy":"","ct":""},{"n":"Parker Washington","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"799.5","ct":""},{"n":"Puka Nacua","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"1324.5","ct":"7.5"},{"n":"Quentin Johnston","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"649.5","ct":""},{"n":"Quinshon Judkins","p":"RB","py":"","pt":"","ry":"899.5","rt":"","cy":"","ct":""},{"n":"Rashid Shaheed","p":"","py":"","pt":"","ry":"","rt":"","cy":"499.5","ct":""},{"n":"Rhamondre Stevenson","p":"RB","py":"","pt":"","ry":"624.5","rt":"5.5","cy":"","ct":""},{"n":"Rico Dowdle","p":"RB","py":"","pt":"","ry":"699.5","rt":"","cy":"","ct":""},{"n":"Rome Odunze","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"824.5","ct":"5.5"},{"n":"Romeo Doubs","p":"","py":"","pt":"","ry":"","rt":"","cy":"649.5","ct":"4.5"},{"n":"Sam Darnold","p":"","py":"3699.5","pt":"23.5","ry":"","rt":"","cy":"","ct":""},{"n":"Sam LaPorta","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"624.5","ct":"4.5"},{"n":"Saquon Barkley","p":"RB","py":"","pt":"","ry":"1099.5","rt":"7.5","cy":"","ct":""},{"n":"Stefon Diggs","p":"","py":"","pt":"","ry":"","rt":"","cy":"799.5","ct":"4.5"},{"n":"Tee Higgins","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"874.5","ct":"8.5"},{"n":"Terry McLaurin","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"924.5","ct":"5.5"},{"n":"Tetairoa McMillan","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"949.5","ct":"6.5"},{"n":"Tony Pollard","p":"RB","py":"","pt":"","ry":"799.5","rt":"5.5","cy":"","ct":""},{"n":"Travis Etienne Jr.","p":"RB","py":"","pt":"","ry":"799.5","rt":"","cy":"","ct":""},{"n":"Travis Kelce","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"674.5","ct":"4.5"},{"n":"Tre Tucker","p":"","py":"","pt":"","ry":"","rt":"","cy":"574.5","ct":""},{"n":"TreVeyon Henderson","p":"RB","py":"","pt":"","ry":"699.5","rt":"6.5","cy":"","ct":""},{"n":"Trevor Lawrence","p":"QB","py":"3774.5","pt":"25.5","ry":"","rt":"","cy":"","ct":""},{"n":"Trey McBride","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"999.5","ct":"6.5"},{"n":"Tucker Kraft","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":""},{"n":"Tyler Shough","p":"","py":"3449.5","pt":"20.5","ry":"","rt":"","cy":"","ct":""},{"n":"Tyler Warren","p":"TE","py":"","pt":"","ry":"","rt":"","cy":"774.5","ct":"5.5"},{"n":"Wan'Dale Robinson","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"699.5","ct":""},{"n":"Xavier Worthy","p":"","py":"","pt":"","ry":"","rt":"","cy":"649.5","ct":""},{"n":"Zay Flowers","p":"WR","py":"","pt":"","ry":"","rt":"","cy":"999.5","ct":"5.5"}];
-const RANKS=[{"rk":1,"t":1,"n":"Ja'Marr Chase","tm":"CIN","p":"WR","pr":1,"b":"6","e":"+2"},{"rk":2,"t":1,"n":"Puka Nacua","tm":"LAR","p":"WR","pr":2,"b":"11","e":"+2"},{"rk":3,"t":1,"n":"Jahmyr Gibbs","tm":"DET","p":"RB","pr":1,"b":"6","e":"-2"},{"rk":4,"t":1,"n":"Bijan Robinson","tm":"ATL","p":"RB","pr":2,"b":"11","e":"-2"},{"rk":5,"t":1,"n":"Jaxon Smith-Njigba","tm":"SEA","p":"WR","pr":3,"b":"11","e":"+1"},{"rk":6,"t":1,"n":"Amon-Ra St. Brown","tm":"DET","p":"WR","pr":4,"b":"6","e":"+2"},{"rk":7,"t":2,"n":"Christian McCaffrey","tm":"SF","p":"RB","pr":3,"b":"8","e":"-2"},{"rk":8,"t":2,"n":"CeeDee Lamb","tm":"DAL","p":"WR","pr":5,"b":"14","e":"+4"},{"rk":9,"t":2,"n":"Justin Jefferson","tm":"MIN","p":"WR","pr":6,"b":"6","e":"+4"},{"rk":10,"t":2,"n":"Jonathan Taylor","tm":"IND","p":"RB","pr":4,"b":"13","e":"-3"},{"rk":11,"t":2,"n":"Drake London","tm":"ATL","p":"WR","pr":7,"b":"11","e":"+6"},{"rk":12,"t":3,"n":"A.J. Brown","tm":"NE","p":"WR","pr":8,"b":"11","e":"+9"},{"rk":13,"t":3,"n":"Nico Collins","tm":"HOU","p":"WR","pr":9,"b":"8","e":"+14"},{"rk":14,"t":3,"n":"Ashton Jeanty","tm":"LV","p":"RB","pr":5,"b":"13","e":"-3"},{"rk":15,"t":3,"n":"James Cook","tm":"BUF","p":"RB","pr":6,"b":"7","e":"-6"},{"rk":16,"t":3,"n":"Chase Brown","tm":"CIN","p":"RB","pr":7,"b":"6","e":"-1"},{"rk":17,"t":3,"n":"George Pickens","tm":"DAL","p":"WR","pr":10,"b":"14","e":"+8"},{"rk":18,"t":3,"n":"Trey McBride","tm":"ARI","p":"TE","pr":1,"b":"14","e":"+1"},{"rk":19,"t":3,"n":"Brock Bowers","tm":"LV","p":"TE","pr":2,"b":"13","e":"+3"},{"rk":20,"t":3,"n":"R. Rice","tm":"KC","p":"WR","pr":11,"b":"5","e":"+4"},{"rk":21,"t":3,"n":"De'Von Achane","tm":"MIA","p":"RB","pr":8,"b":"6","e":"-11"},{"rk":22,"t":3,"n":"Chris Olave","tm":"NO","p":"WR","pr":12,"b":"8","e":"+6"},{"rk":23,"t":4,"n":"DeVonta Smith","tm":"PHI","p":"WR","pr":13,"b":"10","e":"+11"},{"rk":24,"t":4,"n":"Omarion Hampton","tm":"LAC","p":"RB","pr":9,"b":"7","e":"-8"},{"rk":25,"t":4,"n":"Saquon Barkley","tm":"PHI","p":"RB","pr":10,"b":"10","e":"-11"},{"rk":26,"t":4,"n":"Josh Allen","tm":"BUF","p":"QB","pr":1,"b":"7","e":"0"},{"rk":27,"t":4,"n":"Zay Flowers","tm":"BAL","p":"WR","pr":14,"b":"13","e":"+8"},{"rk":28,"t":4,"n":"Kenneth Walker III","tm":"KC","p":"RB","pr":11,"b":"5","e":"-8"},{"rk":29,"t":4,"n":"Garrett Wilson","tm":"NYJ","p":"WR","pr":15,"b":"13","e":"+10"},{"rk":30,"t":4,"n":"M. Nabers","tm":"NYG","p":"WR","pr":16,"b":"8","e":"-1"},{"rk":31,"t":4,"n":"Lamar Jackson","tm":"BAL","p":"QB","pr":2,"b":"13","e":"+11"},{"rk":32,"t":4,"n":"Tetairoa McMillan","tm":"CAR","p":"WR","pr":17,"b":"5","e":"+8"},{"rk":33,"t":4,"n":"Ladd McConkey","tm":"LAC","p":"WR","pr":18,"b":"7","e":"+13"},{"rk":34,"t":4,"n":"Tee Higgins","tm":"CIN","p":"WR","pr":19,"b":"6","e":"+7"},{"rk":35,"t":5,"n":"Derrick Henry","tm":"BAL","p":"RB","pr":12,"b":"13","e":"-17"},{"rk":36,"t":5,"n":"Colston Loveland","tm":"CHI","p":"TE","pr":3,"b":"10","e":"+7"},{"rk":37,"t":5,"n":"Emeka Egbuka","tm":"TB","p":"WR","pr":20,"b":"10","e":"+1"},{"rk":38,"t":5,"n":"Jaylen Waddle","tm":"DEN","p":"WR","pr":21,"b":"10","e":"+9"},{"rk":39,"t":5,"n":"Jeremiyah Love","tm":"ARI","p":"RB","pr":13,"b":"14","e":"-16"},{"rk":40,"t":5,"n":"Drake Maye","tm":"NE","p":"QB","pr":3,"b":"11","e":"+12"},{"rk":41,"t":5,"n":"Breece Hall","tm":"NYJ","p":"RB","pr":14,"b":"13","e":"-9"},{"rk":42,"t":5,"n":"Kyren Williams","tm":"LAR","p":"RB","pr":15,"b":"11","e":"-11"},{"rk":43,"t":5,"n":"J. Jacobs","tm":"GB","p":"RB","pr":16,"b":"11","e":"-13"},{"rk":44,"t":5,"n":"Terry McLaurin","tm":"WAS","p":"WR","pr":22,"b":"7","e":"+9"},{"rk":45,"t":5,"n":"L. Burden III","tm":"CHI","p":"WR","pr":23,"b":"10","e":"+3"},{"rk":46,"t":5,"n":"Joe Burrow","tm":"CIN","p":"QB","pr":4,"b":"6","e":"+10"},{"rk":47,"t":5,"n":"Javonte Williams","tm":"DAL","p":"RB","pr":17,"b":"14","e":"-14"},{"rk":48,"t":5,"n":"Travis Etienne Jr.","tm":"NO","p":"RB","pr":18,"b":"8","e":"-11"},{"rk":49,"t":5,"n":"Davante Adams","tm":"LAR","p":"WR","pr":24,"b":"11","e":"0"},{"rk":50,"t":5,"n":"Jayden Daniels","tm":"WAS","p":"QB","pr":5,"b":"7","e":"+10"},{"rk":51,"t":5,"n":"Mike Evans","tm":"SF","p":"WR","pr":25,"b":"8","e":"+11"},{"rk":52,"t":5,"n":"DJ Moore","tm":"BUF","p":"WR","pr":26,"b":"7","e":"+5"},{"rk":53,"t":6,"n":"Cameron Skattebo","tm":"NYG","p":"RB","pr":19,"b":"8","e":"-17"},{"rk":54,"t":6,"n":"Tyler Warren","tm":"IND","p":"TE","pr":4,"b":"13","e":"-4"},{"rk":55,"t":6,"n":"Jameson Williams","tm":"DET","p":"WR","pr":27,"b":"6","e":"+3"},{"rk":56,"t":6,"n":"Christian Watson","tm":"GB","p":"WR","pr":28,"b":"11","e":"+11"},{"rk":57,"t":6,"n":"Jalen Hurts","tm":"PHI","p":"QB","pr":6,"b":"10","e":"+7"},{"rk":58,"t":6,"n":"Rome Odunze","tm":"CHI","p":"WR","pr":29,"b":"10","e":"+3"},{"rk":59,"t":6,"n":"B. Irving","tm":"TB","p":"RB","pr":20,"b":"10","e":"-15"},{"rk":60,"t":6,"n":"D'Andre Swift","tm":"CHI","p":"RB","pr":21,"b":"10","e":"-5"},{"rk":61,"t":6,"n":"Quinshon Judkins","tm":"CLE","p":"RB","pr":22,"b":"11","e":"-16"},{"rk":62,"t":6,"n":"David Montgomery","tm":"HOU","p":"RB","pr":23,"b":"8","e":"-8"},{"rk":63,"t":6,"n":"TreVeyon Henderson","tm":"NE","p":"RB","pr":24,"b":"11","e":"-12"},{"rk":64,"t":6,"n":"Carnell Tate","tm":"TEN","p":"WR","pr":30,"b":"9","e":"+2"},{"rk":65,"t":6,"n":"Caleb Williams","tm":"CHI","p":"QB","pr":7,"b":"10","e":"+14"},{"rk":66,"t":6,"n":"Bhayshul Tuten","tm":"JAC","p":"RB","pr":25,"b":"7","e":"-7"},{"rk":67,"t":6,"n":"Justin Herbert","tm":"LAC","p":"QB","pr":8,"b":"7","e":"+21"},{"rk":68,"t":6,"n":"Marvin Harrison Jr.","tm":"ARI","p":"WR","pr":31,"b":"14","e":"+2"},{"rk":69,"t":6,"n":"Harold Fannin Jr.","tm":"CLE","p":"TE","pr":5,"b":"11","e":"-4"},{"rk":70,"t":6,"n":"Tucker Kraft","tm":"GB","p":"TE","pr":6,"b":"11","e":"-1"},{"rk":71,"t":7,"n":"Jaylen Warren","tm":"PIT","p":"RB","pr":26,"b":"9","e":"0"},{"rk":72,"t":7,"n":"Parker Washington","tm":"JAC","p":"WR","pr":32,"b":"7","e":"+12"},{"rk":73,"t":7,"n":"Brian Thomas Jr.","tm":"JAC","p":"WR","pr":33,"b":"7","e":"+2"},{"rk":74,"t":7,"n":"DK Metcalf","tm":"PIT","p":"WR","pr":34,"b":"9","e":"+3"},{"rk":75,"t":7,"n":"Jadarian Price","tm":"SEA","p":"RB","pr":27,"b":"11","e":"-12"},{"rk":76,"t":7,"n":"Trevor Lawrence","tm":"JAC","p":"QB","pr":9,"b":"7","e":"+13"},{"rk":77,"t":7,"n":"Dak Prescott","tm":"DAL","p":"QB","pr":10,"b":"14","e":"-1"},{"rk":78,"t":7,"n":"Kyle Pitts","tm":"ATL","p":"TE","pr":7,"b":"11","e":"-10"},{"rk":79,"t":7,"n":"Chris Godwin","tm":"TB","p":"WR","pr":35,"b":"10","e":"+18"},{"rk":80,"t":7,"n":"Rhamondre Stevenson","tm":"NE","p":"RB","pr":28,"b":"11","e":"+2"},{"rk":81,"t":7,"n":"Michael Pittman Jr.","tm":"PIT","p":"WR","pr":36,"b":"9","e":"+14"},{"rk":82,"t":7,"n":"A. Pierce","tm":"IND","p":"WR","pr":37,"b":"13","e":"-2"},{"rk":83,"t":7,"n":"Tony Pollard","tm":"TEN","p":"RB","pr":29,"b":"9","e":"-9"},{"rk":84,"t":7,"n":"Courtland Sutton","tm":"DEN","p":"WR","pr":38,"b":"10","e":"-11"},{"rk":85,"t":7,"n":"Sam LaPorta","tm":"DET","p":"TE","pr":8,"b":"6","e":"-13"},{"rk":86,"t":7,"n":"Chuba Hubbard","tm":"CAR","p":"RB","pr":30,"b":"5","e":"-3"},{"rk":87,"t":7,"n":"Josh Downs","tm":"IND","p":"WR","pr":39,"b":"13","e":"+26"},{"rk":88,"t":7,"n":"Wan'Dale Robinson","tm":"TEN","p":"WR","pr":40,"b":"9","e":"+3"},{"rk":89,"t":7,"n":"Jordyn Tyson","tm":"NO","p":"WR","pr":41,"b":"8","e":"-4"},{"rk":90,"t":7,"n":"Rico Dowdle","tm":"PIT","p":"RB","pr":31,"b":"9","e":"-9"},{"rk":91,"t":7,"n":"Michael Wilson","tm":"ARI","p":"WR","pr":42,"b":"14","e":"-4"},{"rk":92,"t":7,"n":"Jaxson Dart","tm":"NYG","p":"QB","pr":11,"b":"8","e":"-6"},{"rk":93,"t":7,"n":"RJ Harvey","tm":"DEN","p":"RB","pr":32,"b":"10","e":"-15"},{"rk":94,"t":7,"n":"Brock Purdy","tm":"SF","p":"QB","pr":12,"b":"8","e":"+8"},{"rk":95,"t":7,"n":"Travis Kelce","tm":"KC","p":"TE","pr":9,"b":"5","e":"+5"},{"rk":96,"t":8,"n":"Jakobi Meyers","tm":"JAC","p":"WR","pr":43,"b":"7","e":"+2"},{"rk":97,"t":8,"n":"K. Gainwell","tm":"TB","p":"RB","pr":33,"b":"10","e":"+4"},{"rk":98,"t":8,"n":"Quentin Johnston","tm":"LAC","p":"WR","pr":44,"b":"7","e":"+7"},{"rk":99,"t":8,"n":"M. Lemon","tm":"PHI","p":"WR","pr":45,"b":"10","e":"-3"},{"rk":100,"t":8,"n":"Bo Nix","tm":"DEN","p":"QB","pr":13,"b":"10","e":"+14"}];const OL=[{"tm":"DEN","nm":"Broncos","s":1,"r":1,"avg":1.0,"gap":0,"pr":8,"poe":10,"arby":7,"rk":1},{"tm":"PHI","nm":"Eagles","s":2,"r":2,"avg":2.0,"gap":0,"pr":14,"poe":8,"arby":30,"rk":2},{"tm":"BUF","nm":"Bills","s":3,"r":6,"avg":4.5,"gap":3,"pr":4,"poe":4,"arby":3,"rk":3},{"tm":"CHI","nm":"Bears","s":6,"r":3,"avg":4.5,"gap":3,"pr":25,"poe":15,"arby":1,"rk":4},{"tm":"TB","nm":"Buccaneers","s":4,"r":5,"avg":4.5,"gap":1,"pr":15,"poe":17,"arby":20,"rk":5},{"tm":"LAR","nm":"Rams","s":5,"r":4,"avg":4.5,"gap":1,"pr":2,"poe":1,"arby":2,"rk":6},{"tm":"LAC","nm":"Chargers","s":8,"r":9,"avg":8.5,"gap":1,"pr":31,"poe":32,"arby":27,"rk":7},{"tm":"SF","nm":"49ers","s":7,"r":11,"avg":9.0,"gap":4,"pr":3,"poe":2,"arby":21,"rk":8},{"tm":"IND","nm":"Colts","s":11,"r":7,"avg":9.0,"gap":4,"pr":5,"poe":9,"arby":13,"rk":9},{"tm":"CAR","nm":"Panthers","s":12,"r":8,"avg":10.0,"gap":4,"pr":21,"poe":26,"arby":5,"rk":10},{"tm":"SEA","nm":"Seahawks","s":9,"r":14,"avg":11.5,"gap":5,"pr":6,"poe":7,"arby":22,"rk":11},{"tm":"ATL","nm":"Falcons","s":10,"r":13,"avg":11.5,"gap":3,"pr":10,"poe":14,"arby":14,"rk":12},{"tm":"DET","nm":"Lions","s":14,"r":10,"avg":12.0,"gap":4,"pr":16,"poe":23,"arby":19,"rk":13},{"tm":"MIN","nm":"Vikings","s":13,"r":12,"avg":12.5,"gap":1,"pr":30,"poe":29,"arby":9,"rk":14},{"tm":"NE","nm":"Patriots","s":15,"r":15,"avg":15.0,"gap":0,"pr":24,"poe":12,"arby":26,"rk":15},{"tm":"NO","nm":"Saints","s":16,"r":18,"avg":17.0,"gap":2,"pr":12,"poe":18,"arby":25,"rk":16},{"tm":"DAL","nm":"Cowboys","s":18,"r":16,"avg":17.0,"gap":2,"pr":22,"poe":11,"arby":4,"rk":17},{"tm":"JAC","nm":"Jaguars","s":17,"r":21,"avg":19.0,"gap":4,"pr":7,"poe":5,"arby":23,"rk":18},{"tm":"PIT","nm":"Steelers","s":21,"r":17,"avg":19.0,"gap":4,"pr":1,"poe":3,"arby":12,"rk":19},{"tm":"NYG","nm":"Giants","s":20,"r":20,"avg":20.0,"gap":0,"pr":27,"poe":24,"arby":24,"rk":20},{"tm":"NYJ","nm":"Jets","s":19,"r":22,"avg":20.5,"gap":3,"pr":23,"poe":28,"arby":11,"rk":21},{"tm":"KC","nm":"Chiefs","s":23,"r":19,"avg":21.0,"gap":4,"pr":20,"poe":22,"arby":17,"rk":22},{"tm":"WAS","nm":"Commanders","s":22,"r":25,"avg":23.5,"gap":3,"pr":28,"poe":21,"arby":15,"rk":23},{"tm":"BAL","nm":"Ravens","s":24,"r":23,"avg":23.5,"gap":1,"pr":29,"poe":30,"arby":6,"rk":24},{"tm":"ARI","nm":"Cardinals","s":26,"r":24,"avg":25.0,"gap":2,"pr":18,"poe":16,"arby":28,"rk":25},{"tm":"LV","nm":"Raiders","s":25,"r":26,"avg":25.5,"gap":1,"pr":26,"poe":19,"arby":32,"rk":26},{"tm":"GB","nm":"Packers","s":27,"r":28,"avg":27.5,"gap":1,"pr":9,"poe":6,"arby":18,"rk":27},{"tm":"CIN","nm":"Bengals","s":28,"r":27,"avg":27.5,"gap":1,"pr":17,"poe":25,"arby":10,"rk":28},{"tm":"MIA","nm":"Dolphins","s":29,"r":29,"avg":29.0,"gap":0,"pr":11,"poe":27,"arby":8,"rk":29},{"tm":"TEN","nm":"Titans","s":30,"r":31,"avg":30.5,"gap":1,"pr":19,"poe":13,"arby":16,"rk":30},{"tm":"HOU","nm":"Texans","s":31,"r":30,"avg":30.5,"gap":1,"pr":13,"poe":20,"arby":29,"rk":31},{"tm":"CLE","nm":"Browns","s":32,"r":32,"avg":32.0,"gap":0,"pr":32,"poe":31,"arby":31,"rk":32}];
+const OL_SEED=[{"tm":"DEN","nm":"Broncos","s":1,"r":1,"avg":1.0,"gap":0,"pr":8,"poe":10,"arby":7,"rk":1},{"tm":"PHI","nm":"Eagles","s":2,"r":2,"avg":2.0,"gap":0,"pr":14,"poe":8,"arby":30,"rk":2},{"tm":"BUF","nm":"Bills","s":3,"r":6,"avg":4.5,"gap":3,"pr":4,"poe":4,"arby":3,"rk":3},{"tm":"CHI","nm":"Bears","s":6,"r":3,"avg":4.5,"gap":3,"pr":25,"poe":15,"arby":1,"rk":4},{"tm":"TB","nm":"Buccaneers","s":4,"r":5,"avg":4.5,"gap":1,"pr":15,"poe":17,"arby":20,"rk":5},{"tm":"LAR","nm":"Rams","s":5,"r":4,"avg":4.5,"gap":1,"pr":2,"poe":1,"arby":2,"rk":6},{"tm":"LAC","nm":"Chargers","s":8,"r":9,"avg":8.5,"gap":1,"pr":31,"poe":32,"arby":27,"rk":7},{"tm":"SF","nm":"49ers","s":7,"r":11,"avg":9.0,"gap":4,"pr":3,"poe":2,"arby":21,"rk":8},{"tm":"IND","nm":"Colts","s":11,"r":7,"avg":9.0,"gap":4,"pr":5,"poe":9,"arby":13,"rk":9},{"tm":"CAR","nm":"Panthers","s":12,"r":8,"avg":10.0,"gap":4,"pr":21,"poe":26,"arby":5,"rk":10},{"tm":"SEA","nm":"Seahawks","s":9,"r":14,"avg":11.5,"gap":5,"pr":6,"poe":7,"arby":22,"rk":11},{"tm":"ATL","nm":"Falcons","s":10,"r":13,"avg":11.5,"gap":3,"pr":10,"poe":14,"arby":14,"rk":12},{"tm":"DET","nm":"Lions","s":14,"r":10,"avg":12.0,"gap":4,"pr":16,"poe":23,"arby":19,"rk":13},{"tm":"MIN","nm":"Vikings","s":13,"r":12,"avg":12.5,"gap":1,"pr":30,"poe":29,"arby":9,"rk":14},{"tm":"NE","nm":"Patriots","s":15,"r":15,"avg":15.0,"gap":0,"pr":24,"poe":12,"arby":26,"rk":15},{"tm":"NO","nm":"Saints","s":16,"r":18,"avg":17.0,"gap":2,"pr":12,"poe":18,"arby":25,"rk":16},{"tm":"DAL","nm":"Cowboys","s":18,"r":16,"avg":17.0,"gap":2,"pr":22,"poe":11,"arby":4,"rk":17},{"tm":"JAC","nm":"Jaguars","s":17,"r":21,"avg":19.0,"gap":4,"pr":7,"poe":5,"arby":23,"rk":18},{"tm":"PIT","nm":"Steelers","s":21,"r":17,"avg":19.0,"gap":4,"pr":1,"poe":3,"arby":12,"rk":19},{"tm":"NYG","nm":"Giants","s":20,"r":20,"avg":20.0,"gap":0,"pr":27,"poe":24,"arby":24,"rk":20},{"tm":"NYJ","nm":"Jets","s":19,"r":22,"avg":20.5,"gap":3,"pr":23,"poe":28,"arby":11,"rk":21},{"tm":"KC","nm":"Chiefs","s":23,"r":19,"avg":21.0,"gap":4,"pr":20,"poe":22,"arby":17,"rk":22},{"tm":"WAS","nm":"Commanders","s":22,"r":25,"avg":23.5,"gap":3,"pr":28,"poe":21,"arby":15,"rk":23},{"tm":"BAL","nm":"Ravens","s":24,"r":23,"avg":23.5,"gap":1,"pr":29,"poe":30,"arby":6,"rk":24},{"tm":"ARI","nm":"Cardinals","s":26,"r":24,"avg":25.0,"gap":2,"pr":18,"poe":16,"arby":28,"rk":25},{"tm":"LV","nm":"Raiders","s":25,"r":26,"avg":25.5,"gap":1,"pr":26,"poe":19,"arby":32,"rk":26},{"tm":"GB","nm":"Packers","s":27,"r":28,"avg":27.5,"gap":1,"pr":9,"poe":6,"arby":18,"rk":27},{"tm":"CIN","nm":"Bengals","s":28,"r":27,"avg":27.5,"gap":1,"pr":17,"poe":25,"arby":10,"rk":28},{"tm":"MIA","nm":"Dolphins","s":29,"r":29,"avg":29.0,"gap":0,"pr":11,"poe":27,"arby":8,"rk":29},{"tm":"TEN","nm":"Titans","s":30,"r":31,"avg":30.5,"gap":1,"pr":19,"poe":13,"arby":16,"rk":30},{"tm":"HOU","nm":"Texans","s":31,"r":30,"avg":30.5,"gap":1,"pr":13,"poe":20,"arby":29,"rk":31},{"tm":"CLE","nm":"Browns","s":32,"r":32,"avg":32.0,"gap":0,"pr":32,"poe":31,"arby":31,"rk":32}];
+const TALENT=[{"n":"Puka Nacua","rk":1,"dom":2.892,"p15":0.985,"d25":3.45,"d25r":1,"chg":0.36,"age":24.3,"rt":463,"yprr":3.7,"tprr":0.36,"fd":80,"fdr":0.173,"tg":166,"ry":1715},{"n":"Jaxon Smith-Njigba","rk":2,"dom":2.273,"p15":0.939,"d25":3.27,"d25r":2,"chg":2.59,"age":23.5,"rt":497,"yprr":3.61,"tprr":0.33,"fd":79,"fdr":0.159,"tg":163,"ry":1793},{"n":"Amon-Ra St. Brown","rk":3,"dom":1.796,"p15":0.746,"d25":2.02,"d25r":4,"chg":0.45,"age":25.9,"rt":567,"yprr":2.47,"tprr":0.3,"fd":71,"fdr":0.125,"tg":172,"ry":1401},{"n":"Ja'Marr Chase","rk":4,"dom":1.619,"p15":0.645,"d25":1.7,"d25r":7,"chg":0.46,"age":25.5,"rt":634,"yprr":2.23,"tprr":0.29,"fd":73,"fdr":0.115,"tg":185,"ry":1412},{"n":"Drake London","rk":5,"dom":1.334,"p15":0.557,"d25":1.67,"d25r":8,"chg":0.01,"age":24.1,"rt":396,"yprr":2.32,"tprr":0.28,"fd":46,"fdr":0.116,"tg":112,"ry":919},{"n":"Nico Collins","rk":6,"dom":1.292,"p15":0.449,"d25":1.29,"d25r":16,"chg":-0.82,"age":26.5,"rt":483,"yprr":2.31,"tprr":0.25,"fd":48,"fdr":0.099,"tg":120,"ry":1117},{"n":"George Pickens","rk":7,"dom":1.285,"p15":0.467,"d25":1.31,"d25r":15,"chg":0.48,"age":24.5,"rt":610,"yprr":2.34,"tprr":0.22,"fd":73,"fdr":0.12,"tg":137,"ry":1429},{"n":"Zay Flowers","rk":8,"dom":1.264,"p15":0.477,"d25":1.53,"d25r":11,"chg":0.26,"age":25.0,"rt":480,"yprr":2.52,"tprr":0.25,"fd":48,"fdr":0.1,"tg":118,"ry":1211},{"n":"A.J. Brown","rk":9,"dom":1.22,"p15":0.378,"d25":1.24,"d25r":17,"chg":-1.07,"age":28.2,"rt":484,"yprr":2.07,"tprr":0.25,"fd":47,"fdr":0.097,"tg":121,"ry":1003},{"n":"Chris Olave","rk":10,"dom":1.179,"p15":0.397,"d25":1.2,"d25r":19,"chg":0.09,"age":25.2,"rt":586,"yprr":1.98,"tprr":0.27,"fd":53,"fdr":0.09,"tg":156,"ry":1163},{"n":"Justin Jefferson","rk":11,"dom":1.022,"p15":0.296,"d25":1.05,"d25r":22,"chg":-0.2,"age":26.2,"rt":558,"yprr":1.88,"tprr":0.25,"fd":47,"fdr":0.084,"tg":141,"ry":1048},{"n":"CeeDee Lamb","rk":12,"dom":1.021,"p15":0.303,"d25":1.22,"d25r":18,"chg":-0.05,"age":26.4,"rt":454,"yprr":2.37,"tprr":0.26,"fd":43,"fdr":0.095,"tg":117,"ry":1077},{"n":"Stefon Diggs","rk":13,"dom":0.908,"p15":0.223,"d25":1.74,"d25r":5,"chg":0.71,"age":31.8,"rt":421,"yprr":2.41,"tprr":0.24,"fd":51,"fdr":0.121,"tg":102,"ry":1013},{"n":"Tetairoa McMillan","rk":14,"dom":0.868,"p15":0.317,"d25":0.92,"d25r":27,"chg":null,"age":22.4,"rt":553,"yprr":1.83,"tprr":0.22,"fd":55,"fdr":0.099,"tg":122,"ry":1014},{"n":"Josh Downs","rk":15,"dom":0.848,"p15":0.247,"d25":1.03,"d25r":23,"chg":-0.48,"age":24.1,"rt":381,"yprr":1.49,"tprr":0.23,"fd":36,"fdr":0.094,"tg":88,"ry":566},{"n":"DeVonta Smith","rk":16,"dom":0.793,"p15":0.185,"d25":0.82,"d25r":28,"chg":-0.34,"age":26.8,"rt":524,"yprr":1.92,"tprr":0.22,"fd":44,"fdr":0.084,"tg":113,"ry":1008},{"n":"Davante Adams","rk":17,"dom":0.762,"p15":0.149,"d25":1.51,"d25r":13,"chg":0.47,"age":32.7,"rt":409,"yprr":1.93,"tprr":0.28,"fd":51,"fdr":0.125,"tg":114,"ry":789},{"n":"Jaylen Waddle","rk":18,"dom":0.759,"p15":0.206,"d25":1.47,"d25r":14,"chg":1.31,"age":26.8,"rt":417,"yprr":2.18,"tprr":0.24,"fd":48,"fdr":0.115,"tg":100,"ry":910},{"n":"Wan'Dale Robinson","rk":19,"dom":0.665,"p15":0.165,"d25":0.81,"d25r":31,"chg":0.68,"age":24.7,"rt":543,"yprr":1.87,"tprr":0.26,"fd":39,"fdr":0.072,"tg":140,"ry":1014},{"n":"L. Burden III","rk":20,"dom":0.625,"p15":0.317,"d25":1.71,"d25r":6,"chg":null,"age":21.7,"rt":243,"yprr":2.68,"tprr":0.25,"fd":27,"fdr":0.111,"tg":60,"ry":652},{"n":"Jameson Williams","rk":21,"dom":0.603,"p15":0.143,"d25":0.42,"d25r":48,"chg":-0.24,"age":24.4,"rt":600,"yprr":1.86,"tprr":0.17,"fd":49,"fdr":0.082,"tg":102,"ry":1117},{"n":"Khalil Shakir","rk":22,"dom":0.594,"p15":0.131,"d25":0.81,"d25r":29,"chg":-0.12,"age":25.6,"rt":422,"yprr":1.7,"tprr":0.23,"fd":28,"fdr":0.066,"tg":95,"ry":719},{"n":"Brian Thomas Jr.","rk":23,"dom":0.589,"p15":0.136,"d25":0.24,"d25r":57,"chg":-1.05,"age":22.9,"rt":471,"yprr":1.5,"tprr":0.19,"fd":33,"fdr":0.07,"tg":91,"ry":707},{"n":"Ladd McConkey","rk":24,"dom":0.588,"p15":0.134,"d25":0.13,"d25r":61,"chg":-1.32,"age":23.8,"rt":562,"yprr":1.4,"tprr":0.19,"fd":35,"fdr":0.062,"tg":106,"ry":789},{"n":"Emeka Egbuka","rk":25,"dom":0.581,"p15":0.178,"d25":0.52,"d25r":41,"chg":null,"age":22.9,"rt":540,"yprr":1.74,"tprr":0.24,"fd":34,"fdr":0.063,"tg":127,"ry":938}];const SCHEME=[{"tm":"LAC","hc":"Jim Harbaugh","oc":"Mike McDaniel","tier":"high","fam":"Shanahan / wide zone","needP":3,"needR":2,"note":"Replaces Greg Roman's run-first, conservative design. Wide-zone runs, heavy pre-snap motion, condensed splits, quick game engineered for YAC. McDaniel calls his Herbert plan 'portion control' \u2014 scheme and easy completions over hero throws.","up":"Ladd McConkey, Justin Herbert, Omarion Hampton","risk":"Herbert was sacked relentlessly in 2025 after losing both starting tackles. A timing offense needs clean pockets; McDaniel's Miami units cratered under pressure.","kind":"reset","txt":"2025 is not this unit. Rashawn Slater tore his patellar tendon in August and missed the entire season; Joe Alt played six games before ankle surgery. Both were medically cleared for camp in late July. Herbert was pressured on an NFL-high 288 dropbacks and took 54 sacks behind Pipkins, Hart, Salyer and Deculus. Slater graded 2nd among tackles in 2024 (91.1); Alt was 6th in pass blocking (82.3) in his six starts and made the Pro Bowl anyway \u2014 the Chargers went 5-1 when he started. Biadasz replaces the retired Bozeman at centre, Cole Strange comes in for Becton at right guard. The 32nd-place pass-protection rank measures an absence, not a unit.","watch":"Slater will not have played in 611 days by Week 1, and there is no tackle depth behind him. Brandon Thorn also flags Jake Slaughter's move to guard. The projection is right to be optimistic; the risk is a re-injury, not a bad line.","runNote":"Both starting tackles were out \u2014 Slater all year, Alt after six games. The 27th-place run-block figure is depressed by absence, and Slater and Alt are back.","runFlag":"under"},{"tm":"BAL","hc":"Jesse Minter","oc":"Declan Doyle","tier":"overhaul","fam":"Ben Johnson tree / outside zone","needP":2,"needR":3,"note":"Boldest hire of the cycle: a 29-year-old who has never called an NFL play. Ben Johnson tree filtered through Sean Payton roots, with a run-game coordinator from the Falcons staff that led the league in outside-zone runs. Heavy motion, screen-and-quick-game base, shots off that rhythm.","up":"Zay Flowers, Lamar Jackson, Derrick Henry, Mark Andrews","risk":"First-time play-callers are streaky within and between games. New system on a veteran offense; if Lamar's mobility is compromised again the manufactured-touch scheme loses its improvisational edge.","kind":"split","txt":"30th in pass protection, 6th in run blocking. The same line supports opposite conclusions by position.","watch":"Outside-zone concepts fit Henry; Lamar throws behind bottom-three protection.","runNote":"6th in run blocking, 30th in pass protection. The run-game figure is the reliable half.","runFlag":"real"},{"tm":"PHI","hc":"Nick Sirianni","oc":"Sean Mannion","tier":"high","fam":"Shanahan-LaFleur / wide zone","needP":2,"needR":3,"note":"Play-calling handed to a first-timer from the Green Bay branch of the Shanahan tree. Wide-zone runs, dense motion, structural commitment to the back in the passing game. A real break from the previous staff. A.J. Brown traded to New England leaves DeVonta Smith uncontested.","up":"Saquon Barkley, DeVonta Smith, Jalen Hurts","risk":"Never called plays at this level. Hurts historically scrambles rather than checking down, which caps the receiving-back thesis the Barkley case rests on.","kind":"reset","txt":"Ranked 2nd overall on elite pass protection (8th in POE) while finishing 30th in adjusted run-block yards. Those were the actual starters, so the run-blocking figure is not an injury artifact the way the Chargers' is.","watch":"A wide-zone run scheme installed in front of the league's third-worst run-blocking grade is a genuine structural tension, not stale data.","runNote":"Ranked 30th in run blocking with healthy starters. This is not an injury artifact \u2014 it is the actual unit, and a wide-zone scheme is being installed in front of it.","runFlag":"real"},{"tm":"TEN","hc":"Robert Saleh","oc":"Brian Daboll","tier":"overhaul","fam":"Concept passing / RPO + play-action","needP":3,"needR":2,"note":"Saleh prioritised a teacher for his young quarterback and landed the best available. Daboll developed Josh Allen into an MVP and pulled a Pro Bowl from a rookie Nabers. RPOs and play-action verticals; his offenses have a long top-10 rushing history.","up":"Cam Ward, Calvin Ridley, Wan'Dale Robinson","risk":"Daboll's New York tenure unravelled once quarterback play cratered. His best work always depended on the man under centre taking a leap.","kind":"fade","txt":"13th in POE and 16th in ARBY last year, yet projected 30th \u2014 the panels expect this unit to get worse.","watch":"Daboll's scheme is quarterback-dependent and the line projection is falling."},{"tm":"NYG","hc":"John Harbaugh","oc":"Matt Nagy","tier":"overhaul","fam":"Andy Reid / West Coast spread","needP":2,"needR":2,"note":"Harbaugh built a staff stacked with former coordinators, Nagy calling plays after three years under Reid in Kansas City. West Coast spread principles, layered motion, back-friendly route concepts. Dart flashed dual-threat upside with 15 TDs to 5 INTs plus 487 rushing yards in 12 starts.","up":"Malik Nabers (if healthy), Jaxson Dart, Cam Skattebo","risk":"Shakiest scheme bet of the group. Nagy's Bears never produced a passing offense better than 21st. In KC he had Mahomes and Reid around him."},{"tm":"TB","hc":"Todd Bowles","oc":"Zac Robinson","tier":"high","fam":"McVay tree via Atlanta","needP":2,"needR":2,"note":"Brings the McVay tree by way of Atlanta, where his offense produced strong receiver numbers, fed the lead back heavily and revived the tight end. Core of a unit that ranked top five across the board in 2024 remains. Mike Evans gone opens the alpha role.","up":"Emeka Egbuka, Chris Godwin, Baker Mayfield","risk":"Backfield murky with Irving recovering from shoulder surgery. Losing a target-clearing alpha cuts both ways \u2014 it opens volume but removes the coverage attention that freed everyone else.","kind":"reset","txt":"Projected 5th after a middling 2025 (17th POE, 20th ARBY) \u2014 the panels are betting on a return to the 2024 form that had this offense top five across the board before injuries.","watch":"Health-dependent, like the ranking itself.","runNote":"2025 was injury-dragged; this unit ranked top five across the board in 2024 with most of the core intact.","runFlag":"under"},{"tm":"ATL","hc":"Raheem Morris","oc":"Kevin Stefanski","tier":"high","fam":"Run-heavy / play-action","needP":2,"needR":3,"note":"Stefanski's system fed running backs and tight ends heavily across six years in Cleveland \u2014 Chubb was a perennial fantasy star and both Chubb and Hunt finished top-12 in 2020.","up":"Bijan Robinson, Drake London","risk":"Run-heavy design compresses passing volume; the WR2 role thins out."},{"tm":"LV","hc":"Klint Kubiak","oc":"Klint Kubiak","tier":"overhaul","fam":"Shanahan / wide zone","needP":2,"needR":3,"note":"Replaces the Chip Kelly design entirely. Kubiak leads the move away from 11 personnel on early downs, favouring a fullback or second tight end over a third receiver.","up":"Ashton Jeanty, Brock Bowers","risk":"Fewer three-receiver sets suppresses WR3 volume; the offense concentrates in fewer hands."},{"tm":"MIA","hc":"Jeff Hafley","oc":"Bobby Slowik","tier":"overhaul","fam":"Shanahan / quick game","needP":3,"needR":2,"note":"Slowik promoted from passing-game coordinator. Roster stripped: Waddle, Hill and Waller all gone, Malik Willis in at quarterback.","up":"De'Von Achane","risk":"Arguably the worst roster in the league. Volume without efficiency.","runNote":"Graded 8th in run blocking last year but projected 29th overall for 2026 \u2014 the panels expect a decline.","runFlag":"over"},{"tm":"CLE","hc":"Todd Monken","oc":"Todd Monken","tier":"overhaul","fam":"Vertical play-action","needP":3,"needR":2,"note":"Full overhaul under Monken, who brings an aggressive downfield passing identity.","up":"Quinshon Judkins, Harold Fannin Jr.","risk":"Worst offensive line in the league by composite, and last in both pressure allowed and POE.","kind":"confirmed","txt":"Last or near-last in every measure, and projected 32nd. Nothing here is stale.","watch":"A vertical play-action scheme behind the worst line in football."},{"tm":"PIT","hc":"Mike McCarthy","oc":"Arthur Smith","tier":"overhaul","fam":"West Coast / condensed","needP":2,"needR":3,"note":"Complete staff turnover under McCarthy.","up":"DK Metcalf, Jaylen Warren","risk":"New terminology across the board; identity unsettled until games start."},{"tm":"ARI","hc":"Jonathan Gannon","oc":"Mike LaFleur","tier":"high","fam":"McVay / motion + play-action","needP":2,"needR":2,"note":"LaFleur arrives from the Rams, the league leader in both play-action rate (21.3%) and motion rate (62.8%).","up":"Trey McBride, Marvin Harrison Jr., Michael Wilson","risk":"Cardinals line grades 25th composite; motion-heavy timing needs a pocket.","kind":"fade","txt":"16th in POE but projected 25th.","watch":"Motion-heavy timing offense behind a line the panels expect to decline."},{"tm":"BUF","hc":"Joe Brady","oc":"Joe Brady","tier":"high","fam":"Spread / quick game","needP":2,"needR":2,"note":"Brady promoted from coordinator to head coach, retaining play-calling continuity.","up":"James Cook, Khalil Shakir, Dalton Kincaid","risk":"Receiver room thin; DJ Moore adjusting to a new scheme at 29."},{"tm":"WAS","hc":"Dan Quinn","oc":"David Blough","tier":"high","fam":"Motion / RPO","needP":2,"needR":2,"note":"Blough takes over play-calling. Stefon Diggs signed here on Aug 7, after most rankings were published.","up":"Terry McLaurin, Jayden Daniels, Stefon Diggs","risk":"First-time coordinator; Diggs is 32 and arrived too late to be priced in."},{"tm":"NYJ","hc":"Aaron Glenn","oc":"Frank Reich","tier":"high","fam":"West Coast / play-action","needP":2,"needR":2,"note":"Reich brings veteran structure to a young offense.","up":"Garrett Wilson, Breece Hall","risk":"Quarterback play remains the ceiling."},{"tm":"DEN","hc":"Sean Payton","oc":"Davis Webb","tier":"moderate","fam":"Payton / play-action","needP":2,"needR":2,"note":"Payton stayed in-house after firing Joe Lombardi, promoting his quarterbacks coach. Scheme continuity with the best offensive line in football by composite.","up":"Jaylen Waddle, J.K. Dobbins, Bo Nix","risk":"First-time coordinator, though Payton's system and voice remain."},{"tm":"CHI","hc":"Ben Johnson","oc":"Declan Doyle\u2192","tier":"moderate","fam":"Ben Johnson / motion","needP":2,"needR":3,"note":"Johnson retains play-calling. Chicago's line was No. 1 in adjusted run-block yards in 2025 while allowing pressure at the 25th-highest rate \u2014 an elite run-blocking unit that struggles to protect.","up":"D'Andre Swift, Rome Odunze, Colston Loveland","risk":"Pass protection is the weak link in a scheme that wants rhythm throws.","kind":"confirmed","txt":"1st in adjusted run-block yards, 25th in pressure allowed. Projection and results agree.","watch":"Pass protection is the weak link in a rhythm-throw scheme.","runNote":"1st in adjusted run-block yards. Projection and result agree.","runFlag":"real"},{"tm":"DAL","hc":"Brian Schottenheimer","oc":"Klayton Adams","tier":"continuity","fam":"Up-tempo spread","needP":2,"needR":2,"note":"Fastest offense in the league at 65.9 plays per game \u2014 raw volume lifts every skill position.","up":"George Pickens, CeeDee Lamb, Javonte Williams","risk":"Pace inflates counting stats but also gives the ball back quickly."},{"tm":"LAR","hc":"Sean McVay","oc":"Mike LaFleur\u2192","tier":"continuity","fam":"McVay / play-action + motion","needP":2,"needR":2,"note":"League leader in play-action (21.3%) and motion (62.8%), with the best pass-protection grade in football by POE and 2nd in run blocking.","up":"Puka Nacua, Davante Adams, Kyren Williams","risk":"LaFleur's departure to Arizona removes a voice, though McVay calls the plays."}];const RBTAL=[{"n":"Bijan Robinson","rk":1,"cr":1.05,"ctx":1.13,"t25":"ATL","t26":"ATL","moved":false,"age":23,"wt":215,"att":287,"yd":1478,"ypc":5.15,"yac":2.3,"bt":22,"btr":0.077,"rec":79,"ryac":10.8,"box":6.33,"sg":0.125,"elig":true},{"n":"De'Von Achane","rk":2,"cr":1.38,"ctx":1.66,"t25":"MIA","t26":"MIA","moved":false,"age":24,"wt":191,"att":238,"yd":1350,"ypc":5.67,"yac":3.0,"bt":22,"btr":0.092,"rec":67,"ryac":8.2,"box":6.52,"sg":0.269,"elig":true},{"n":"Kenneth Walker III","rk":3,"cr":0.92,"ctx":0.49,"t25":"SEA","t26":"KC","moved":true,"age":25,"wt":211,"att":221,"yd":1027,"ypc":4.65,"yac":1.8,"bt":23,"btr":0.104,"rec":31,"ryac":10.9,"box":6.45,"sg":0.19,"elig":true},{"n":"Derrick Henry","rk":4,"cr":0.36,"ctx":-0.17,"t25":"BAL","t26":"BAL","moved":false,"age":31,"wt":252,"att":307,"yd":1595,"ypc":5.2,"yac":2.4,"bt":13,"btr":0.042,"rec":15,"ryac":9.0,"box":7.03,"sg":0.251,"elig":true},{"n":"Jaylen Warren","rk":5,"cr":1.58,"ctx":-0.15,"t25":"PIT","t26":"PIT","moved":false,"age":27,"wt":215,"att":211,"yd":958,"ypc":4.54,"yac":2.4,"bt":23,"btr":0.109,"rec":40,"ryac":11.0,"box":6.72,"sg":0.351,"elig":true},{"n":"Jonathan Taylor","rk":6,"cr":0.94,"ctx":1.1,"t25":"IND","t26":"IND","moved":false,"age":26,"wt":226,"att":323,"yd":1585,"ypc":4.91,"yac":2.4,"bt":27,"btr":0.084,"rec":46,"ryac":9.4,"box":6.34,"sg":0.52,"elig":true},{"n":"B. Irving","rk":7,"cr":0.39,"ctx":-1.29,"t25":"TB","t26":"TB","moved":false,"age":23,"wt":194,"att":173,"yd":588,"ypc":3.4,"yac":1.6,"bt":10,"btr":0.058,"rec":30,"ryac":12.0,"box":6.38,"sg":0.306,"elig":true},{"n":"D'Andre Swift","rk":8,"cr":0.27,"ctx":0.31,"t25":"CHI","t26":"CHI","moved":false,"age":26,"wt":204,"att":223,"yd":1087,"ypc":4.87,"yac":1.9,"bt":11,"btr":0.049,"rec":34,"ryac":10.5,"box":6.52,"sg":0.211,"elig":true},{"n":"Jahmyr Gibbs","rk":9,"cr":-0.14,"ctx":0.4,"t25":"DET","t26":"DET","moved":false,"age":23,"wt":202,"att":243,"yd":1223,"ypc":5.03,"yac":1.7,"bt":18,"btr":0.074,"rec":77,"ryac":8.0,"box":6.37,"sg":0.214,"elig":true},{"n":"James Cook","rk":10,"cr":0.31,"ctx":0.65,"t25":"BUF","t26":"BUF","moved":false,"age":26,"wt":190,"att":309,"yd":1621,"ypc":5.25,"yac":2.2,"bt":21,"btr":0.068,"rec":33,"ryac":8.2,"box":6.84,"sg":0.188,"elig":true},{"n":"Breece Hall","rk":11,"cr":-0.16,"ctx":-0.18,"t25":"NYJ","t26":"NYJ","moved":false,"age":24,"wt":217,"att":243,"yd":1065,"ypc":4.38,"yac":1.8,"bt":12,"btr":0.049,"rec":36,"ryac":8.9,"box":6.6,"sg":0.481,"elig":true},{"n":"Rhamondre Stevenson","rk":12,"cr":1.56,"ctx":-0.06,"t25":"NE","t26":"NE","moved":false,"age":27,"wt":227,"att":130,"yd":603,"ypc":4.64,"yac":2.8,"bt":16,"btr":0.123,"rec":32,"ryac":8.2,"box":6.9,"sg":0.223,"elig":true},{"n":"Rico Dowdle","rk":13,"cr":0.18,"ctx":0.61,"t25":"CAR","t26":"PIT","moved":true,"age":27,"wt":215,"att":236,"yd":1076,"ypc":4.56,"yac":2.0,"bt":14,"btr":0.059,"rec":39,"ryac":9.0,"box":6.73,"sg":0.271,"elig":true},{"n":"Ashton Jeanty","rk":14,"cr":0.48,"ctx":-0.73,"t25":"LV","t26":"LV","moved":false,"age":22,"wt":208,"att":266,"yd":975,"ypc":3.67,"yac":2.1,"bt":24,"btr":0.09,"rec":55,"ryac":8.2,"box":6.39,"sg":0.312,"elig":true},{"n":"Saquon Barkley","rk":15,"cr":-0.36,"ctx":-1.82,"t25":"PHI","t26":"PHI","moved":false,"age":28,"wt":232,"att":280,"yd":1140,"ypc":4.07,"yac":1.6,"bt":18,"btr":0.064,"rec":37,"ryac":8.0,"box":6.56,"sg":0.479,"elig":true},{"n":"Javonte Williams","rk":16,"cr":0.5,"ctx":-0.18,"t25":"DAL","t26":"DAL","moved":false,"age":25,"wt":220,"att":252,"yd":1201,"ypc":4.77,"yac":2.5,"bt":25,"btr":0.099,"rec":35,"ryac":5.9,"box":6.5,"sg":0.341,"elig":true},{"n":"TreVeyon Henderson","rk":17,"cr":-0.22,"ctx":0.51,"t25":"NE","t26":"NE","moved":false,"age":23,"wt":202,"att":180,"yd":911,"ypc":5.06,"yac":2.0,"bt":11,"btr":0.061,"rec":35,"ryac":7.0,"box":6.91,"sg":0.244,"elig":true},{"n":"Christian McCaffrey","rk":18,"cr":-1.03,"ctx":-0.56,"t25":"SF","t26":"SF","moved":false,"age":29,"wt":210,"att":311,"yd":1202,"ypc":3.86,"yac":1.5,"bt":10,"btr":0.032,"rec":102,"ryac":7.1,"box":6.34,"sg":0.228,"elig":true},{"n":"Travis Etienne Jr.","rk":19,"cr":0.1,"ctx":0.37,"t25":"JAC","t26":"NO","moved":true,"age":26,"wt":215,"att":260,"yd":1107,"ypc":4.26,"yac":2.1,"bt":10,"btr":0.038,"rec":36,"ryac":9.4,"box":6.37,"sg":0.242,"elig":true},{"n":"Omarion Hampton","rk":20,"cr":0.36,"ctx":0.32,"t25":"LAC","t26":"LAC","moved":false,"age":22,"wt":220,"att":124,"yd":545,"ypc":4.4,"yac":1.7,"bt":15,"btr":0.121,"rec":32,"ryac":7.7,"box":6.48,"sg":0.419,"elig":true},{"n":"Jacory Croskey-Merritt","rk":21,"cr":0.37,"ctx":-0.24,"t25":"WAS","t26":"","moved":false,"age":24,"wt":208,"att":175,"yd":805,"ypc":4.6,"yac":2.1,"bt":13,"btr":0.074,"rec":9,"ryac":8.6,"box":6.38,"sg":0.371,"elig":false},{"n":"David Montgomery","rk":22,"cr":-0.26,"ctx":-0.42,"t25":"DET","t26":"HOU","moved":true,"age":28,"wt":230,"att":158,"yd":716,"ypc":4.53,"yac":2.2,"bt":3,"btr":0.019,"rec":24,"ryac":8.3,"box":6.47,"sg":0.171,"elig":true},{"n":"J. Jacobs","rk":23,"cr":0.16,"ctx":-0.16,"t25":"GB","t26":"GB","moved":false,"age":27,"wt":223,"att":234,"yd":929,"ypc":3.97,"yac":2.0,"bt":16,"btr":0.068,"rec":36,"ryac":8.4,"box":6.41,"sg":0.402,"elig":true},{"n":"Cameron Skattebo","rk":24,"cr":0.14,"ctx":0.43,"t25":"NYG","t26":"NYG","moved":false,"age":23,"wt":215,"att":101,"yd":410,"ypc":4.06,"yac":1.9,"bt":7,"btr":0.069,"rec":24,"ryac":8.7,"box":6.58,"sg":0.535,"elig":true},{"n":"Kyren Williams","rk":25,"cr":-0.49,"ctx":-0.22,"t25":"LAR","t26":"LAR","moved":false,"age":25,"wt":207,"att":259,"yd":1252,"ypc":4.83,"yac":2.0,"bt":22,"btr":0.085,"rec":36,"ryac":4.3,"box":6.41,"sg":0.124,"elig":true}];const TETAL=[{"n":"Trey McBride","rk":1,"dom":1.386,"lo":1.134,"hi":1.574,"rmed":1,"rlo":1,"rhi":2,"p5":1.0,"p10":1.0,"p15":1.0,"pel":0.751,"prel":0.976,"d25":1.467,"d25r":5,"dd":-0.843,"yps":1.757,"tps":0.241,"fdps":0.089,"snaps":705,"tg":170,"yd":1239,"fd":63,"age":26,"pick":55,"ecr":1},{"n":"Dalton Kincaid","rk":2,"dom":1.353,"lo":0.996,"hi":1.655,"rmed":2,"rlo":1,"rhi":2,"p5":1.0,"p10":1.0,"p15":1.0,"pel":0.651,"prel":0.841,"d25":2.769,"d25r":1,"dd":1.313,"yps":2.772,"tps":0.243,"fdps":0.131,"snaps":206,"tg":50,"yd":571,"fd":27,"age":26,"pick":25,"ecr":null},{"n":"George Kittle","rk":3,"dom":1.152,"lo":0.859,"hi":1.345,"rmed":3,"rlo":3,"rhi":3,"p5":1.0,"p10":1.0,"p15":1.0,"pel":0.393,"prel":0.876,"d25":1.86,"d25r":3,"dd":-0.068,"yps":1.981,"tps":0.218,"fdps":0.12,"snaps":317,"tg":69,"yd":628,"fd":38,"age":32,"pick":146,"ecr":null},{"n":"Brock Bowers","rk":4,"dom":0.911,"lo":0.71,"hi":1.05,"rmed":4,"rlo":4,"rhi":8,"p5":0.954,"p10":1.0,"p15":1.0,"pel":0.376,"prel":0.954,"d25":1.145,"d25r":9,"dd":-0.664,"yps":1.655,"tps":0.212,"fdps":0.088,"snaps":411,"tg":87,"yd":680,"fd":36,"age":23,"pick":13,"ecr":2},{"n":"Kyle Pitts","rk":5,"dom":0.767,"lo":0.595,"hi":0.915,"rmed":5,"rlo":4,"rhi":8,"p5":0.7,"p10":1.0,"p15":1.0,"pel":0.333,"prel":0.968,"d25":1.2,"d25r":7,"dd":1.037,"yps":1.657,"tps":0.212,"fdps":0.091,"snaps":560,"tg":119,"yd":928,"fd":51,"age":25,"pick":4,"ecr":7},{"n":"Harold Fannin Jr.","rk":6,"dom":0.669,"lo":0.455,"hi":0.849,"rmed":8,"rlo":5,"rhi":13,"p5":0.034,"p10":0.903,"p15":0.991,"pel":0.382,"prel":0.944,"d25":1.023,"d25r":10,"dd":null,"yps":1.586,"tps":0.234,"fdps":0.069,"snaps":461,"tg":108,"yd":731,"fd":32,"age":21,"pick":67,"ecr":5},{"n":"Colston Loveland","rk":7,"dom":0.666,"lo":0.442,"hi":0.856,"rmed":8,"rlo":6,"rhi":12,"p5":0.014,"p10":0.883,"p15":0.994,"pel":0.381,"prel":0.951,"d25":1.168,"d25r":8,"dd":null,"yps":1.752,"tps":0.204,"fdps":0.088,"snaps":407,"tg":83,"yd":713,"fd":36,"age":21,"pick":10,"ecr":3},{"n":"Travis Kelce","rk":8,"dom":0.66,"lo":0.504,"hi":0.786,"rmed":9,"rlo":6,"rhi":12,"p5":0.009,"p10":0.786,"p15":1.0,"pel":0.277,"prel":0.875,"d25":0.601,"d25r":18,"dd":-0.448,"yps":1.418,"tps":0.182,"fdps":0.077,"snaps":600,"tg":109,"yd":851,"fd":46,"age":36,"pick":63,"ecr":9},{"n":"Tyler Warren","rk":9,"dom":0.659,"lo":0.44,"hi":0.853,"rmed":8,"rlo":5,"rhi":15,"p5":0.08,"p10":0.783,"p15":0.98,"pel":0.364,"prel":0.959,"d25":0.9,"d25r":12,"dd":null,"yps":1.51,"tps":0.211,"fdps":0.078,"snaps":541,"tg":114,"yd":817,"fd":42,"age":23,"pick":14,"ecr":4},{"n":"Dallas Goedert","rk":10,"dom":0.629,"lo":0.446,"hi":0.773,"rmed":10,"rlo":5,"rhi":16,"p5":0.074,"p10":0.543,"p15":0.966,"pel":0.191,"prel":0.901,"d25":0.544,"d25r":21,"dd":-1.17,"yps":1.325,"tps":0.184,"fdps":0.076,"snaps":446,"tg":82,"yd":591,"fd":34,"age":30,"pick":49,"ecr":null},{"n":"Greg Dulcich","rk":11,"dom":0.607,"lo":0.32,"hi":0.89,"rmed":11,"rlo":5,"rhi":21,"p5":0.131,"p10":0.483,"p15":0.926,"pel":0.199,"prel":0.565,"d25":1.878,"d25r":2,"dd":null,"yps":2.295,"tps":0.233,"fdps":0.096,"snaps":146,"tg":34,"yd":335,"fd":14,"age":25,"pick":80,"ecr":null},{"n":"Juwan Johnson","rk":12,"dom":0.564,"lo":0.413,"hi":0.688,"rmed":12,"rlo":9,"rhi":16,"p5":0.0,"p10":0.171,"p15":0.971,"pel":0.327,"prel":0.924,"d25":0.717,"d25r":14,"dd":0.354,"yps":1.605,"tps":0.184,"fdps":0.074,"snaps":554,"tg":102,"yd":889,"fd":41,"age":29,"pick":null,"ecr":null},{"n":"Hunter Henry","rk":13,"dom":0.554,"lo":0.414,"hi":0.662,"rmed":13,"rlo":8,"rhi":16,"p5":0.0,"p10":0.074,"p15":0.969,"pel":0.24,"prel":0.914,"d25":0.615,"d25r":17,"dd":-0.195,"yps":1.488,"tps":0.169,"fdps":0.081,"snaps":516,"tg":87,"yd":768,"fd":42,"age":31,"pick":35,"ecr":null},{"n":"Tucker Kraft","rk":14,"dom":0.533,"lo":0.331,"hi":0.715,"rmed":14,"rlo":7,"rhi":18,"p5":0.003,"p10":0.14,"p15":0.829,"pel":0.242,"prel":0.822,"d25":1.312,"d25r":6,"dd":0.762,"yps":2.063,"tps":0.186,"fdps":0.093,"snaps":237,"tg":44,"yd":489,"fd":22,"age":25,"pick":78,"ecr":6},{"n":"Darren Waller","rk":15,"dom":0.532,"lo":0.271,"hi":0.783,"rmed":14,"rlo":6,"rhi":23,"p5":0.0,"p10":0.223,"p15":0.709,"pel":0.045,"prel":0.569,"d25":1.701,"d25r":4,"dd":null,"yps":1.769,"tps":0.219,"fdps":0.119,"snaps":160,"tg":35,"yd":283,"fd":19,"age":33,"pick":204,"ecr":null},{"n":"Dalton Schultz","rk":16,"dom":0.45,"lo":0.315,"hi":0.593,"rmed":16,"rlo":11,"rhi":21,"p5":0.0,"p10":0.003,"p15":0.323,"pel":0.189,"prel":0.922,"d25":0.668,"d25r":15,"dd":0.79,"yps":1.434,"tps":0.197,"fdps":0.072,"snaps":542,"tg":107,"yd":777,"fd":39,"age":29,"pick":137,"ecr":null},{"n":"Sam LaPorta","rk":17,"dom":0.447,"lo":0.273,"hi":0.575,"rmed":17,"rlo":13,"rhi":22,"p5":0.0,"p10":0.009,"p15":0.097,"pel":0.185,"prel":0.87,"d25":0.926,"d25r":11,"dd":0.154,"yps":1.778,"tps":0.178,"fdps":0.084,"snaps":275,"tg":49,"yd":489,"fd":23,"age":24,"pick":34,"ecr":8},{"n":"Brenton Strange","rk":18,"dom":0.405,"lo":0.286,"hi":0.493,"rmed":19,"rlo":17,"rhi":22,"p5":0.0,"p10":0.0,"p15":0.006,"pel":0.149,"prel":0.907,"d25":0.739,"d25r":13,"dd":0.182,"yps":1.579,"tps":0.175,"fdps":0.082,"snaps":342,"tg":60,"yd":540,"fd":28,"age":25,"pick":61,"ecr":null},{"n":"Mark Andrews","rk":19,"dom":0.392,"lo":0.245,"hi":0.521,"rmed":20,"rlo":14,"rhi":23,"p5":0.0,"p10":0.0,"p15":0.094,"pel":0.08,"prel":0.834,"d25":0.36,"d25r":26,"dd":-0.968,"yps":1.163,"tps":0.193,"fdps":0.066,"snaps":363,"tg":70,"yd":422,"fd":24,"age":30,"pick":86,"ecr":null},{"n":"Zach Ertz","rk":20,"dom":0.38,"lo":0.278,"hi":0.463,"rmed":20,"rlo":18,"rhi":22,"p5":0.0,"p10":0.0,"p15":0.0,"pel":0.093,"prel":0.71,"d25":0.547,"d25r":20,"dd":-0.117,"yps":1.358,"tps":0.197,"fdps":0.067,"snaps":371,"tg":73,"yd":504,"fd":25,"age":35,"pick":35,"ecr":null},{"n":"Evan Engram","rk":21,"dom":0.375,"lo":0.245,"hi":0.474,"rmed":21,"rlo":14,"rhi":23,"p5":0.0,"p10":0.0,"p15":0.051,"pel":0.105,"prel":0.752,"d25":0.311,"d25r":30,"dd":-0.843,"yps":1.236,"tps":0.206,"fdps":0.051,"snaps":373,"tg":77,"yd":461,"fd":19,"age":31,"pick":23,"ecr":null},{"n":"Oronde Gadsden II","rk":22,"dom":0.338,"lo":0.16,"hi":0.506,"rmed":22,"rlo":15,"rhi":26,"p5":0.0,"p10":0.0,"p15":0.057,"pel":0.306,"prel":0.922,"d25":0.474,"d25r":23,"dd":null,"yps":1.592,"tps":0.165,"fdps":0.067,"snaps":417,"tg":69,"yd":664,"fd":28,"age":22,"pick":165,"ecr":null},{"n":"Jake Ferguson","rk":23,"dom":0.336,"lo":0.218,"hi":0.446,"rmed":22,"rlo":15,"rhi":24,"p5":0.0,"p10":0.0,"p15":0.037,"pel":0.119,"prel":0.933,"d25":0.221,"d25r":33,"dd":-0.225,"yps":1.132,"tps":0.194,"fdps":0.057,"snaps":530,"tg":103,"yd":600,"fd":30,"age":26,"pick":129,"ecr":null},{"n":"Pat Freiermuth","rk":24,"dom":0.196,"lo":0.1,"hi":0.282,"rmed":25,"rlo":24,"rhi":29,"p5":0.0,"p10":0.0,"p15":0.0,"pel":0.114,"prel":0.828,"d25":0.299,"d25r":31,"dd":-0.308,"yps":1.459,"tps":0.162,"fdps":0.063,"snaps":333,"tg":54,"yd":486,"fd":21,"age":27,"pick":55,"ecr":null},{"n":"Mike Gesicki","rk":25,"dom":0.193,"lo":0.025,"hi":0.32,"rmed":26,"rlo":22,"rhi":33,"p5":0.0,"p10":0.0,"p15":0.0,"pel":0.034,"prel":0.748,"d25":0.356,"d25r":27,"dd":-0.752,"yps":1.218,"tps":0.171,"fdps":0.075,"snaps":252,"tg":43,"yd":307,"fd":19,"age":30,"pick":42,"ecr":null}];const RUSHENV=[{"rk":1,"tm":"BUF","e25":0.08,"rbwr":75,"f26":0.0228,"adj":0.0238},{"rk":2,"tm":"CHI","e25":0.06,"rbwr":74,"f26":0.009,"adj":0.0162},{"rk":3,"tm":"IND","e25":0.07,"rbwr":73,"f26":0.0023,"adj":0.0064},{"rk":4,"tm":"LAR","e25":-0.01,"rbwr":74,"f26":-0.0075,"adj":0.0215},{"rk":5,"tm":"DEN","e25":-0.02,"rbwr":74,"f26":-0.0099,"adj":0.0223},{"rk":6,"tm":"MIN","e25":-0.03,"rbwr":74,"f26":-0.0123,"adj":0.023},{"rk":7,"tm":"BAL","e25":0.08,"rbwr":71,"f26":-0.0134,"adj":-0.0125},{"rk":8,"tm":"JAC","e25":-0.01,"rbwr":73,"f26":-0.0166,"adj":0.0125},{"rk":9,"tm":"CIN","e25":0.02,"rbwr":72,"f26":-0.0186,"adj":0.0011},{"rk":10,"tm":"PIT","e25":0.01,"rbwr":72,"f26":-0.0209,"adj":0.0019},{"rk":11,"tm":"NYG","e25":0.03,"rbwr":71,"f26":-0.0253,"adj":-0.0087},{"rk":12,"tm":"DAL","e25":-0.02,"rbwr":72,"f26":-0.028,"adj":0.0042},{"rk":13,"tm":"NE","e25":-0.03,"rbwr":72,"f26":-0.0304,"adj":0.0049},{"rk":14,"tm":"SEA","e25":-0.07,"rbwr":73,"f26":-0.0308,"adj":0.017},{"rk":15,"tm":"SF","e25":-0.04,"rbwr":72,"f26":-0.0328,"adj":0.0057},{"rk":16,"tm":"KC","e25":0.02,"rbwr":70,"f26":-0.0367,"adj":-0.017},{"rk":17,"tm":"PHI","e25":-0.02,"rbwr":71,"f26":-0.0371,"adj":-0.0049},{"rk":18,"tm":"WAS","e25":0.01,"rbwr":70,"f26":-0.0391,"adj":-0.0162},{"rk":18,"tm":"TB","e25":0.01,"rbwr":70,"f26":-0.0391,"adj":-0.0162},{"rk":20,"tm":"GB","e25":-0.03,"rbwr":71,"f26":-0.0395,"adj":-0.0042},{"rk":21,"tm":"ARI","e25":-0.06,"rbwr":71,"f26":-0.0466,"adj":-0.0019},{"rk":21,"tm":"DET","e25":-0.06,"rbwr":71,"f26":-0.0466,"adj":-0.0019},{"rk":23,"tm":"MIA","e25":-0.03,"rbwr":70,"f26":-0.0485,"adj":-0.0132},{"rk":24,"tm":"NYJ","e25":-0.07,"rbwr":71,"f26":-0.049,"adj":-0.0011},{"rk":25,"tm":"CAR","e25":-0.04,"rbwr":70,"f26":-0.0509,"adj":-0.0125},{"rk":25,"tm":"ATL","e25":-0.04,"rbwr":70,"f26":-0.0509,"adj":-0.0125},{"rk":27,"tm":"CLE","e25":-0.05,"rbwr":70,"f26":-0.0533,"adj":-0.0117},{"rk":28,"tm":"LAC","e25":-0.02,"rbwr":69,"f26":-0.0552,"adj":-0.023},{"rk":29,"tm":"TEN","e25":-0.07,"rbwr":70,"f26":-0.058,"adj":-0.0102},{"rk":30,"tm":"NO","e25":-0.12,"rbwr":70,"f26":-0.0699,"adj":-0.0064},{"rk":31,"tm":"HOU","e25":-0.09,"rbwr":68,"f26":-0.0809,"adj":-0.0268},{"rk":32,"tm":"LV","e25":-0.26,"rbwr":70,"f26":-0.103,"adj":0.0042}];
+const OFFBASE=[{"rk":1,"tm":"LAR","e25":0.13,"f26":0.045},{"rk":1,"tm":"NE","e25":0.13,"f26":0.045},{"rk":3,"tm":"BUF","e25":0.12,"f26":0.0412},{"rk":4,"tm":"GB","e25":0.1,"f26":0.0335},{"rk":5,"tm":"DAL","e25":0.08,"f26":0.0259},{"rk":6,"tm":"CHI","e25":0.07,"f26":0.022},{"rk":6,"tm":"DET","e25":0.07,"f26":0.022},{"rk":6,"tm":"IND","e25":0.07,"f26":0.022},{"rk":6,"tm":"SF","e25":0.07,"f26":0.022},{"rk":10,"tm":"DEN","e25":0.04,"f26":0.0105},{"rk":11,"tm":"BAL","e25":0.03,"f26":0.0067},{"rk":11,"tm":"JAC","e25":0.03,"f26":0.0067},{"rk":11,"tm":"KC","e25":0.03,"f26":0.0067},{"rk":14,"tm":"PIT","e25":0.02,"f26":0.0029},{"rk":14,"tm":"SEA","e25":0.02,"f26":0.0029},{"rk":16,"tm":"NYG","e25":0.01,"f26":-0.001},{"rk":16,"tm":"PHI","e25":0.01,"f26":-0.001},{"rk":18,"tm":"WAS","e25":0.0,"f26":-0.0048},{"rk":19,"tm":"CIN","e25":-0.01,"f26":-0.0086},{"rk":19,"tm":"TB","e25":-0.01,"f26":-0.0086},{"rk":21,"tm":"ARI","e25":-0.02,"f26":-0.0125},{"rk":21,"tm":"ATL","e25":-0.02,"f26":-0.0125},{"rk":21,"tm":"HOU","e25":-0.02,"f26":-0.0125},{"rk":21,"tm":"MIA","e25":-0.02,"f26":-0.0125},{"rk":25,"tm":"CAR","e25":-0.04,"f26":-0.0202},{"rk":25,"tm":"LAC","e25":-0.04,"f26":-0.0202},{"rk":27,"tm":"NO","e25":-0.09,"f26":-0.0393},{"rk":28,"tm":"MIN","e25":-0.12,"f26":-0.0508},{"rk":29,"tm":"NYJ","e25":-0.13,"f26":-0.0547},{"rk":30,"tm":"TEN","e25":-0.16,"f26":-0.0662},{"rk":31,"tm":"CLE","e25":-0.19,"f26":-0.0777},{"rk":32,"tm":"LV","e25":-0.21,"f26":-0.0853}];
+const AUDIT=[{"c":"Overall offense forecast","s":"Current EPA/play only; Huber","st":"LOCKED BASELINE","ev":"Out-of-sample 2024-25, n=64: R\u00b2=0.067, MAE=0.071, Spearman=0.369. Regularized structural decompositions did not improve it.","i":"Current offensive efficiency is close to a sufficient statistic for the structural inputs available publicly."},{"c":"Passing offense forecast","s":"Current pass EPA only; Huber","st":"LOCKED BASELINE","ev":"Full structural challenger was worse out-of-sample (R\u00b2=-0.221 vs baseline 0.016, matched n=60).","i":"Independent QB, O-line and style inputs do not reliably add once current pass efficiency is known."},{"c":"Rushing offense forecast","s":"Ridge \u03b1=30: current rush EPA + standardized RBWR","st":"RETAINED","ev":"4 expanding folds 2022-25, n=128: R\u00b2=0.141 vs 0.103 current-only. Rank improved in all four folds. Clustered RBWR coefficient p=0.003.","i":"Run-block win rate is the one structural component with replicated next-season signal. Use shrunk; do not read causally."},{"c":"Pass-block win rate","s":"Prior team PBWR","st":"REJECTED","ev":"Does not improve next-season pass EPA once current pass EPA is known. Year-to-year stability has weakened recently.","i":"Do not carry an offensive line's pass-protection grade forward blind."},{"c":"Nominal OC continuity","s":"OC-change indicator","st":"REJECTED","ev":"Worsens next-season EPA forecast after current offense is known.","i":"A nominal coordinator change is not the same thing as a change of playcaller."},{"c":"True playcaller value","s":"Cross-fitted coach residual","st":"UNIDENTIFIED","ev":"No complete reproducible playcaller mapping with adequate personnel controls.","i":"Cannot be estimated honestly from public data. This is not the same as concluding coaching has no value."},{"c":"Scramble rate","s":"Current team scramble rate","st":"NOT RETAINED","ev":"Adds rank signal in two homogeneous seasons only; clustered p=0.129 controlling for rush EPA and RBWR.","i":"Use as a sensitivity check, not a central input."},{"c":"QB scalar","s":"Historical adjusted QBR forecast","st":"PLAYER FACTOR ONLY","ev":"The QB forecast is valid on its own, but incremental gain over current team EPA is small and next-pass gain is negative.","i":"Keep for quarterback analysis; do not force it into a team offense number."},{"c":"Projected WR1","s":"Receiver forecast assigned to next roster","st":"REJECTED","ev":"Direction unstable across folds; roster reassignment did not rescue it.","i":"Weapon reputation does not belong in a team forecast."},{"c":"Scheme ADoT","s":"Average depth of target","st":"REJECTED","ev":"Persistent style marker with no held-out gain on next-season offense.","i":"Style persistence is not the same as forecasting value."},{"c":"TE / weapon depth","s":"Cross-fitted team aggregation","st":"EXCLUDED","ev":"The historical panel was not reproducibly available.","i":"Excluded rather than guessed. Not treated as zero."},{"c":"Additive system score","s":"QB + weapons + OL + coach + scheme","st":"REJECTED","ev":"Full structural models underperform current EPA for overall and passing offense.","i":"The result is asymmetric: efficiency wins for overall and passing; rushing keeps one narrow structural exception."}];
 
 /* ================= shared ================= */
 const $=id=>document.getElementById(id);
@@ -260,6 +474,10 @@ const CATS=[
   {k:'rt',    label:'Rush TDs',   unit:'season O/U'},
   {k:'pt',    label:'Pass TDs',   unit:'season O/U'},
   {k:'value', label:'Market vs ECR',unit:'rank delta, elite tier only'},
+  {k:'talent',label:'WR talent',   unit:'2026 forecast dominance'},
+  {k:'rbtal', label:'RB talent',   unit:'creation vs team context'},
+  {k:'runfit',label:'Run fit',     unit:'creation × run blocking'},
+  {k:'tetal', label:'TE talent',   unit:'forecast with uncertainty'},
 ];
 const YDP=[{k:'py',label:'Pass',c:'var(--s-py)'},{k:'ry',label:'Rush',c:'var(--s-ry)'},{k:'cy',label:'Rec',c:'var(--s-cy)'}];
 const TDP=[{k:'pt',label:'Pass',c:'var(--s-py)'},{k:'rt',label:'Rush',c:'var(--s-ry)'},{k:'ct',label:'Rec',c:'var(--s-cy)'}];
@@ -279,7 +497,37 @@ function buildValue(){
     list.forEach(r=>VAL.set(r.n,{d:E.get(r.n)-M.get(r.n),m:M.get(r.n),e:E.get(r.n),n:list.length}));
   });
 }
-function metric(l){
+/* Creation is a property of the back and travels with him. Run blocking is a
+   property of the 2026 team he actually plays for. Pairing them asks: is a back
+   who produced above his situation about to land in a better one? */
+let RUNFIT=new Map();
+function runFitFor(name){ if(!RUNFIT.size)buildRunFit(); return RUNFIT.get(name)||null; }
+function runFit(){
+  const crs=RBTAL.map(x=>x.cr).sort((a,b)=>a-b);
+  return RBTAL.map(x=>{
+    const tm=x.t26||x.t25, o=olOf.get(tm), r=rankOf.get(x.n), sc=schemeOf.get(tm);
+    const f=rushOf.get(tm);
+    if(!f)return null;
+    const pct=crs.filter(c=>c<x.cr).length/crs.length;
+    const rb=(32-f.rk)/31;                      // 2026 forecast, not last year's result
+    const flags=[];
+    if(x.moved)flags.push({t:'moved '+x.t25+'→'+tm,c:'amber'});
+    if(f.adj>0.015)flags.push({t:'blocking lifts the forecast',c:'up'});
+    if(f.adj<-0.015)flags.push({t:'blocking drags the forecast',c:'amber'});
+    if(o&&Math.abs(f.rk-o.arby)>=10)flags.push({t:'2025 run-block rank was '+o.arby,c:'amber'});
+    if(r&&r.p==='RB'&&Math.abs(r.pr-x.rk)>=7)flags.push({t:(r.pr-x.rk>0?'+':'')+(r.pr-x.rk)+' vs ECR',c:'amber'});
+    return {x,o,f,r,tm,sc,score:(pct+rb)/2,pct,rb,flags};
+  }).filter(Boolean).sort((a,b)=>b.score-a.score);
+}
+function buildRunFit(){
+  RUNFIT=new Map();
+  const list=runFit();
+  list.forEach((z,i)=>{z.pos=i+1;z.of=list.length;RUNFIT.set(z.x.n,z);});
+  return list;
+}
+function metric(l){  if(cat==='talent'){const t=talOf.get(l.n);return t?t.dom:null;}
+  if(cat==='rbtal'){const t=rbOf.get(l.n);return t?t.cr:null;}
+  if(cat==='tetal'){const t=teOf.get(l.n);return t?t.dom:null;}
   if(cat==='value'){const v=VAL.get(l.n);return v?v.d:null;}
   if(cat==='totYds')return totYds(l);
   if(cat==='totTd') return totTd(l);
@@ -307,6 +555,101 @@ function renderLines(){
     ? `<div class="callout"><strong>Scoped on purpose.</strong> A sportsbook posts a line because there's betting interest, not to rank a position — so a market rank over all priced players has an arbitrary denominator. This compares only the consensus top ${depth} at each position, where essentially everyone relevant carries a line and the two rankings cover the same field. Read it as a tie-break among players both sides already rate, not as a value screen.</div>`
     : '';
 
+
+  if(cat==='tetal'){
+    const rows=TETAL.slice().sort((a,b)=>a.rk-b.rk);
+    $('scopeNote').innerHTML='<div class="callout"><strong>This model shows its uncertainty.</strong> '
+      +'The bar is the forecast range, not a point estimate — where it is wide, the model is not confident. '
+      +'A tight bar high on the board is a different asset from a wide one with the same midpoint.<br><br>'
+      +'<strong>Two caveats.</strong> Snap counts under about 300 mean the rate stats come from a small sample and can be flattering — flagged inline. '
+      +'And this is receiving talent only; blocking is not modelled, so a tight end who plays because he blocks will be underrated here. '
+      +'2026 rookies without a 2025 sample are intentionally absent.</div>';
+    const mx=Math.max(...rows.map(t=>t.hi));
+    $('board').innerHTML=rows.map(t=>{
+      const small=t.snaps<300;
+      const w=(t.hi/mx)*100, lo=(t.lo/mx)*100, mid=(t.dom/mx)*100;
+      const bits=[t.ecr?'ECR TE'+t.ecr:'unranked',
+        'rank '+t.rlo+'–'+t.rhi,
+        (t.p10*100).toFixed(0)+'% top-10',
+        t.snaps+' snaps'].filter(Boolean);
+      const gap=t.ecr?(t.ecr-t.rk):null;
+      return `<div class="row" data-player="${esc(t.n)}"><div class="rk">${t.rk}</div>
+        <div><div class="nm">${esc(t.n)}</div><div class="tags">${bits.map(esc).join(' · ')}${
+          small?' · <span style="color:var(--amber)">small sample</span>':''}${
+          gap!==null&&Math.abs(gap)>=4?' · <span style="color:var(--amber)">'+(gap>0?'+':'')+gap+' vs ECR</span>':''}${
+          !t.ecr&&t.rk<=15?' · <span style="color:var(--up)">off the consensus board</span>':''}</div></div>
+        <div class="val">${t.dom.toFixed(2)}</div>
+        <div class="track" style="width:${w.toFixed(1)}%">
+          <i style="width:${lo.toFixed(1)}%;background:var(--ink3)"></i>
+          <i style="width:${Math.max(mid-lo,1.5).toFixed(1)}%;background:var(--te)"></i>
+          <i style="width:${Math.max(100-mid,0).toFixed(1)}%;background:rgba(176,139,196,.35)"></i>
+        </div>
+        <div class="legend"><span>floor ${t.lo.toFixed(2)} · forecast ${t.dom.toFixed(2)} · ceiling ${t.hi.toFixed(2)}</span></div></div>`;
+    }).join('');
+    return;
+  }
+  if(cat==='runfit'){
+    const rows=buildRunFit();
+    $('scopeNote').innerHTML='<div class="callout"><strong>Creation is portable. Blocking is not.</strong> '
+      +'Creation measures what a back produced beyond his situation, so it travels with him. The team half is the <strong>2026 rushing environment forecast</strong> — current rush EPA plus shrunk run-block win rate, the one structural blocking feature that survived out-of-sample testing.<br><br>'
+      +'This replaced last season\u2019s raw run-block rank, which was a result rather than a projection. Where the two disagree by ten places or more the row shows the old number, so you can see what changed.</div>';
+    $('board').innerHTML=rows.map((z,i)=>{
+      const both=z.x.cr>0&&z.f.rk<=12;
+      const rn=z.sc&&z.sc.runNote?z.sc.runNote:null;
+      return `<div class="row" data-player="${esc(z.x.n)}"><div class="rk">${i+1}</div>
+        <div><div class="nm">${esc(z.x.n)}${both?' <span style="color:var(--up)">◆</span>':''}</div>
+        <div class="tags">${esc(z.tm)} · creation ${z.x.cr>0?'+':''}${z.x.cr.toFixed(2)} · rushing env ${z.f.rk}${
+          z.r&&z.r.p==='RB'?' · ECR RB'+z.r.pr:''}${
+          z.flags.map(f=>' · <span style="color:var(--'+(f.c==='up'?'up':'amber')+')">'+esc(f.t)+'</span>').join('')}</div></div>
+        <div class="val" style="color:${z.score>=0.7?'var(--up)':z.score<=0.3?'var(--down)':'var(--amber)'}">${z.score.toFixed(2)}</div>
+        <div class="track" style="width:${(z.score*100).toFixed(1)}%"><i style="width:${(z.pct/(z.pct+z.rb)*100).toFixed(1)}%;background:var(--rb)"></i><i style="width:${(z.rb/(z.pct+z.rb)*100).toFixed(1)}%;background:var(--s-ry)"></i></div>
+        ${rn?'<div class="legend"><span style="line-height:1.5">'+esc(rn)+'</span></div>':''}
+        ${i<3?'<div class="legend"><span><b style="background:var(--rb)"></b>creation</span><span><b style="background:var(--s-ry)"></b>run blocking</span></div>':''}</div>`;
+    }).join('');
+    return;
+  }
+  if(cat==='rbtal'){
+    const rows=RBTAL.slice().sort((a,b)=>a.rk-b.rk);
+    $('scopeNote').innerHTML='<div class="callout"><strong>Creation vs context.</strong> '
+      +'<b>Creation</b> is what the back produced beyond what the situation gave him. '
+      +'<b>Context</b> is how much his 2025 team helped. High creation with negative context is a back carrying a bad situation — '
+      +'the profile most likely to be underpriced. The reverse is a back inheriting production. '
+      +'Context is a <em>2025</em> figure, so it is stale for anyone who changed teams; those rows are flagged.</div>';
+    const mx=Math.max(...rows.map(t=>Math.abs(t.cr)));
+    $('board').innerHTML=rows.map((t,i)=>{
+      const r=rankOf.get(t.n), gap=r?(r.pr-t.rk):null;
+      const solo=t.cr>0.4&&t.ctx<0;
+      const bits=[r?'ECR RB'+r.pr:'unranked','ctx '+(t.ctx>0?'+':'')+t.ctx.toFixed(2),
+                  t.ypc+' ypc',t.btr.toFixed(3)+' brk/att'].filter(Boolean);
+      return `<div class="row" data-player="${esc(t.n)}"><div class="rk">${t.rk}</div>
+        <div><div class="nm">${esc(t.n)}${t.moved?' <span style="color:var(--amber);font-size:9px">'+esc(t.t25)+'→'+esc(t.t26)+'</span>':''}</div>
+        <div class="tags">${bits.map(esc).join(' · ')}${solo?' · <span style="color:var(--up)">carrying it</span>':''}${
+          gap!==null&&Math.abs(gap)>=7?' · <span style="color:var(--amber)">'+(gap>0?'+':'')+gap+' vs ECR</span>':''}</div></div>
+        <div class="val" style="color:${t.cr>0?'var(--up)':'var(--down)'}">${t.cr>0?'+':''}${t.cr.toFixed(2)}</div>
+        <div class="track" style="width:${(Math.abs(t.cr)/mx*100).toFixed(1)}%"><i style="width:100%;background:${t.cr>0?'var(--up)':'var(--down)'}"></i></div></div>`;
+    }).join('');
+    return;
+  }
+  if(cat==='talent'){
+    const rows=TALENT.slice().sort((a,b)=>b.dom-a.dom);
+    $('scopeNote').innerHTML='<div class="callout"><strong>Your model, not the market.</strong> '
+      +'Forecast dominance blends 2025 route-level production with age and year-over-year change. '
+      +'It only covers the 25 receivers you modelled, so treat it as a lens on that group rather than a full board. '
+      +'Where it disagrees with consensus is where it earns its keep.</div>';
+    $('board').innerHTML=rows.map((t,i)=>{
+      const r=rankOf.get(t.n);
+      const w=(t.dom/rows[0].dom)*100;
+      const gap=r?(r.pr-(i+1)):null;
+      const bits=[r?'ECR WR'+r.pr:'unranked',(t.p15*100).toFixed(0)+'% top-15',t.yprr+' yprr',
+                  t.chg!==null?((t.chg>0?'+':'')+t.chg.toFixed(2)+' vs 2024'):''].filter(Boolean);
+      return `<div class="row" data-player="${esc(t.n)}"><div class="rk">${i+1}</div>
+        <div><div class="nm">${esc(t.n)}</div><div class="tags">${bits.map(esc).join(' · ')}${
+          gap!==null&&Math.abs(gap)>=6?' · <span style="color:var(--amber)">'+(gap>0?'+':'')+gap+' vs ECR</span>':''}</div></div>
+        <div class="val">${t.dom.toFixed(2)}</div>
+        <div class="track" style="width:${w.toFixed(1)}%"><i style="width:100%;background:var(--wr)"></i></div></div>`;
+    }).join('');
+    return;
+  }
   let list=LINES.filter(l=>lpos==='ALL'||l.p===lpos)
                 .filter(l=>{const m=metric(l);return m!==null&&(isVal||m>0);});
   list.sort((a,b)=>metric(b)-metric(a));
@@ -328,7 +671,7 @@ function renderLines(){
     }else{
       bar=`<div class="track" style="width:${((m/max)*100).toFixed(1)}%"><i style="width:100%;background:var(--${l.p.toLowerCase()})"></i></div>`;
     }
-    return `<div class="row"><div class="rk">${i+1}</div>
+    return `<div class="row" data-player="${esc(l.n)}"><div class="rk">${i+1}</div>
       <div><div class="nm">${esc(l.n)}</div>
         <div class="tags"><span class="pos ${l.p}">${l.p}</span>${r?' · '+esc(r.tm)+' · ECR '+r.rk:''}</div></div>
       <div class="val">${isVal&&m>0?'+':''}${m.toLocaleString('en-US',{minimumFractionDigits:isVal?0:1,maximumFractionDigits:isVal?0:1})}</div>
@@ -337,41 +680,141 @@ function renderLines(){
 }
 
 /* ================= RANKINGS ================= */
-const KEY='cc:lists:v1';
-/* Storage backend. Inside a Claude artifact window.storage exists; hosted
-   standalone it does not, so fall back to the device store, then memory. */
-const SS=(()=>{
-  if(typeof window!=='undefined'&&window.storage&&typeof window.storage.get==='function'){
-    return {kind:'claude',label:'synced to your Claude account',
-      get:async k=>{const r=await window.storage.get(k);return r&&r.value?r.value:null;},
-      set:async(k,v)=>{const r=await window.storage.set(k,v);
-        if(r===null||r===undefined)throw new Error('no ack');return true;}};
+/* ---------- storage backend ---------- */
+const BACKENDS=[
+  {kind:'claude',label:'Claude storage',
+   ok:()=>typeof window!=='undefined'&&window.storage&&typeof window.storage.get==='function',
+   get:async k=>{const r=await window.storage.get(k,false);return r&&r.value!=null?r.value:null;},
+   set:async(k,v)=>{await window.storage.set(k,v,false);},
+   del:async k=>{try{await window.storage.delete(k,false);}catch(e){}}},
+  {kind:'device',label:'saved on this device',
+   ok:()=>{try{localStorage.setItem('__p','1');localStorage.removeItem('__p');return true;}catch(e){return false;}},
+   get:async k=>localStorage.getItem(k),
+   set:async(k,v)=>{localStorage.setItem(k,v);},
+   del:async k=>localStorage.removeItem(k)},
+  {kind:'memory',label:'MEMORY ONLY — nothing will be saved',
+   ok:()=>true, _m:{},
+   get:async function(k){return k in this._m?this._m[k]:null;},
+   set:async function(k,v){this._m[k]=v;},
+   del:async function(k){delete this._m[k];}},
+];
+let SS=BACKENDS[BACKENDS.length-1];
+/* Pick a backend by actually writing to it. Availability != working. */
+async function pickBackend(){
+  for(const b of BACKENDS){
+    try{
+      if(!b.ok())continue;
+      await b.set('cc:__probe','1');
+      const v=await b.get('cc:__probe');
+      if(v!=='1')continue;
+      await b.del('cc:__probe');
+      SS=b; return b;
+    }catch(e){ /* try the next one */ }
   }
-  try{const t='__probe';localStorage.setItem(t,'1');localStorage.removeItem(t);
-    return {kind:'device',label:'saved on this device',
-      get:async k=>localStorage.getItem(k),
-      set:async(k,v)=>{localStorage.setItem(k,v);return true;}};
-  }catch(e){}
-  let mem={};
-  return {kind:'memory',label:'MEMORY ONLY — will not survive a reload',
-    get:async k=>(k in mem?mem[k]:null), set:async(k,v)=>{mem[k]=v;return true;}};
-})();
+  SS=BACKENDS[BACKENDS.length-1]; return SS;
+}
+
+/* ---------- schema v2: season -> week -> dataset ----------
+   Each week is its own key so a bad write damages one week, not the archive. */
+const K={
+  meta:  'cc:meta:v2',
+  lists: (s,w)=>`cc:lists:${s}:${w}`,
+  ranks: (s,w)=>`cc:ranks:${s}:${w}`,
+  ol:    s=>`cc:ol:${s}`,
+  lines: (s,w)=>`cc:lines:${s}:${w}`,
+};
+const BASE_SEASON=2026;
+let META={v:2,season:BASE_SEASON,week:0,seasons:{}};
+const wkLabel=w=>w===0?'Draft':'Wk '+w;
+
+async function jget(k){try{const v=await SS.get(k);return v?JSON.parse(v):null;}catch(e){return null;}}
+let lastWriteErr=null;
+async function jset(k,o){
+  try{ await SS.set(k,JSON.stringify(o)); lastWriteErr=null; return true; }
+  catch(e){ lastWriteErr=(e&&e.message)||String(e); try{setStat('err','NOT SAVED — '+lastWriteErr);}catch(_){} return false; }
+}
+
+function seasonRec(y){
+  META.seasons[y]=META.seasons[y]||{weeks:{}};
+  return META.seasons[y];
+}
+async function saveMeta(){await jset(K.meta,META);}
+
+/* one-time migration from the flat v1 keys */
+async function migrateV1(){
+  if(META.migrated)return;
+  const oldLists=await jget('cc:lists:v1');
+  const oldData =await jget('cc:data:v1');
+  const y=BASE_SEASON, rec=seasonRec(y);
+  if(oldData&&(oldData.ranks||oldData.lines)){
+    if(oldData.ranks){await jset(K.ranks(y,0),oldData.ranks.rows);}
+    if(oldData.lines){await jset(K.lines(y,0),oldData.lines.rows);}
+  }
+  if(oldLists&&Array.isArray(oldLists.lists)){await jset(K.lists(y,0),oldLists);}
+  rec.weeks['0']=rec.weeks['0']||{ts:Date.now()};
+  META.migrated=true;
+  await saveMeta();
+}
+
+/* resolve the dataset for the active season/week, falling back to built-in seed */
+let OL=[];
+/* Pristine copies of the built-in seed. The live arrays get replaced on every
+   season/week switch, so the seed must never be mutated in place. */
+const RANKS_SEED=RANKS.slice(), LINES_SEED=LINES.slice();
+async function loadActive(){
+  const {season:y,week:w}=META;
+  const isSeed=(y===BASE_SEASON&&w===0);
+
+  const o=await jget(K.ol(y));
+  OL=(o&&o.length)?o.slice():(y===BASE_SEASON?OL_SEED.slice():[]);
+  olOf.clear();OL.forEach(x=>olOf.set(x.tm,x));
+
+  const r=await jget(K.ranks(y,w));
+  const nextR=(r&&r.length)?r:(isSeed?RANKS_SEED:[]);
+  RANKS.length=0; nextR.forEach(x=>RANKS.push(x));
+
+  const l=await jget(K.lines(y,w));
+  const nextL=(l&&l.length)?l:(isSeed?LINES_SEED:[]);
+  LINES.length=0; nextL.forEach(x=>LINES.push(x));
+
+  reindex();
+}
+function reindex(){
+  RUNFIT=new Map();
+  LINES.forEach(x=>{if(!x.p)x.p=derivePos(x);});
+  lineOf.clear();LINES.forEach(x=>lineOf.set(x.n,x));
+  rankOf.clear();ecrOf.clear();RANKS.forEach(x=>{rankOf.set(x.n,x);ecrOf.set(x.n,x);});
+  CONSENSUS.length=0;RANKS.slice().sort((a,b)=>a.rk-b.rk).forEach(x=>CONSENSUS.push(x.n));
+}
 const CONSENSUS=RANKS.slice().sort((a,b)=>a.rk-b.rk).map(r=>r.n);
 const rankOf=new Map(RANKS.map(r=>[r.n,r]));
 let store={active:null,lists:[]}, rpos='ALL', dirty=false;
 
 const uid=()=>'l'+Math.random().toString(36).slice(2,9);
 function activeList(){return store.lists.find(l=>l.id===store.active)||store.lists[0];}
+/* Keep every saved list valid when the underlying rankings change:
+   drop names that no longer exist, preserve your order for those that do,
+   append anything new at the bottom in consensus order. */
+function reconcileLists(){
+  if(!store.lists)return;
+  store.lists.forEach(l=>{
+    const kept=l.order.filter(n=>rankOf.has(n));
+    const seen=new Set(kept);
+    CONSENSUS.forEach(n=>{if(!seen.has(n))kept.push(n);});
+    l.order=kept;
+  });
+}
 let saveOK=null;
 function setStat(state,msg){
   const el=$('saveStat'); if(!el)return;
   el.className='status'+(state==='ok'?' ok':state==='err'?' err':'');
   el.querySelector('span').textContent=msg;
 }
-async function persist(){
+async function persistLists(){
   setStat('','Saving…');
   try{
-    await SS.set(KEY,JSON.stringify(store));
+    const ok=await jset(K.lists(META.season,META.week),store);
+    if(!ok) throw new Error(lastWriteErr||'write rejected');
     saveOK=true;
     const t=new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
     setStat(SS.kind==='memory'?'err':'ok','Saved '+t+' · '+SS.label);
@@ -381,17 +824,15 @@ async function persist(){
   }
 }
 async function restore(){
-  try{const v=await SS.get(KEY); if(v) store=JSON.parse(v);}catch(e){}
+  const v=await jget(K.lists(META.season,META.week)); if(v) store=v;
   if(!store.lists||!store.lists.length){
-    store={active:null,lists:[{id:uid(),name:'My board',order:CONSENSUS.slice()}]};
+    store={active:null,lists:[{id:uid(),
+      name:META.week===0?'Draft board':wkLabel(META.week)+' board',
+      order:CONSENSUS.slice()}]};
     store.active=store.lists[0].id;
+    await persistLists();
   }
-  // reconcile: keep known names, append anything new from the source
-  store.lists.forEach(l=>{
-    const seen=new Set(l.order.filter(n=>rankOf.has(n)));
-    l.order=l.order.filter(n=>rankOf.has(n));
-    CONSENSUS.forEach(n=>{if(!seen.has(n))l.order.push(n);});
-  });
+  reconcileLists();
   if(!activeList()) store.active=store.lists[0].id;
   setStat(SS.kind==='memory'?'err':'', SS.kind==='memory'
     ? 'MEMORY ONLY — back up before you close this'
@@ -424,11 +865,11 @@ function renderRanks(){
   $('rlist').innerHTML=vis.map((n,i)=>{
     const r=rankOf.get(n), drift=consIdx.get(n)-i;
     const dTxt=drift===0?'':`<span class="drift ${drift>0?'u':'d'}">${drift>0?'▲':'▼'}${Math.abs(drift)}</span>`;
-    return `<li class="rrow" data-n="${esc(n)}">
+    return `<li class="rrow" data-n="${esc(n)}" data-player="${esc(n)}">
       <div class="rno">${i+1}</div>
       <div class="rmid">
         <div class="rnm">${esc(n)}</div>
-        <div class="rmeta"><span class="pos ${r.p}">${r.p}${r.pr}</span> · ${esc(r.tm)} · bye ${esc(r.b)} · ECR ${r.rk} ${dTxt}${olOf.get(r.tm)?' · OL '+olOf.get(r.tm).rk:''} · ${lineSnippet(n)}</div>
+        <div class="rmeta"><span class="pos ${r.p}">${r.p}${r.pr}</span> · ${esc(r.tm)} · bye ${esc(r.b)} · ECR ${r.rk} ${dTxt}${olOf.get(r.tm)?' · OL '+olOf.get(r.tm).rk:''}${talOf.get(n)?' · <span style="color:var(--wr)">TAL WR'+talOf.get(n).rk+'</span>':''}${rbOf.get(n)?' · <span style="color:var(--rb)">TAL RB'+rbOf.get(n).rk+'</span>':''}${teOf.get(n)?' · <span style="color:var(--te)">TAL TE'+teOf.get(n).rk+'</span>':''} · ${lineSnippet(n)}</div>
       </div>
       <div class="grip" data-grip aria-label="Drag to reorder" role="button" tabindex="0">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -448,7 +889,7 @@ function commit(newVis){
   const L=activeList(), master=L.order;
   const slots=[]; master.forEach((n,i)=>{ if(rpos==='ALL'||rankOf.get(n).p===rpos) slots.push(i); });
   slots.forEach((slot,k)=>{ master[slot]=newVis[k]; });
-  dirty=true; persist(); renderRanks();
+  dirty=true; persistLists(); renderRanks();
 }
 
 /* ---------- pointer drag: transform-based, rAF-batched ---------- */
@@ -542,24 +983,43 @@ $('rlist').addEventListener('keydown',e=>{
 });
 
 /* list management */
-$('listSel').onchange=e=>{store.active=e.target.value;dirty=false;persist();renderRanks();};
-$('newList').onclick=()=>{
-  const name=prompt('Name this list','Board '+(store.lists.length+1)); if(!name)return;
-  const l={id:uid(),name:name.slice(0,40),order:activeList().order.slice()};
-  store.lists.push(l);store.active=l.id;persist();renderRanks();
+$('listSel').onchange=e=>{store.active=e.target.value;dirty=false;persistLists();renderRanks();};
+/* prompt() is blocked in iOS standalone web apps — use an inline field */
+let nameMode=null;
+function openName(mode,seed){
+  nameMode=mode;
+  $('nameBar').classList.remove('hide');
+  $('nameInput').value=seed||'';
+  $('nameInput').focus();
+}
+function closeName(){nameMode=null;$('nameBar').classList.add('hide');$('nameInput').value='';}
+$('newList').onclick=()=>openName('new','Board '+(store.lists.length+1));
+$('renameList').onclick=()=>openName('rename',activeList().name);
+$('nameCancel').onclick=closeName;
+$('nameOk').onclick=async()=>{
+  const v=$('nameInput').value.trim().slice(0,40);
+  if(!v){$('rNote').textContent='Give the list a name first.';return;}
+  if(nameMode==='new'){
+    const l={id:uid(),name:v,order:activeList().order.slice()};
+    store.lists.push(l);store.active=l.id;
+  } else if(nameMode==='rename'){ activeList().name=v; }
+  closeName(); await persistLists(); renderRanks();
 };
-$('renameList').onclick=()=>{
-  const L=activeList(),name=prompt('Rename list',L.name); if(!name)return;
-  L.name=name.slice(0,40);persist();renderRanks();
-};
-$('delList').onclick=()=>{
-  if(store.lists.length<2){alert('Keep at least one list.');return;}
-  const L=activeList(); if(!confirm('Delete "'+L.name+'"? This cannot be undone.'))return;
-  store.lists=store.lists.filter(x=>x.id!==L.id);store.active=store.lists[0].id;persist();renderRanks();
+$('nameInput').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();$('nameOk').click();}});
+let delArmed=false;
+$('delList').onclick=async()=>{
+  if(store.lists.length<2){$('rNote').textContent='Keep at least one list.';return;}
+  const L=activeList();
+  if(!delArmed){delArmed=true;$('delList').textContent='Tap again';
+    $('rNote').textContent='Tap Delete again to remove "'+L.name+'".';
+    setTimeout(()=>{delArmed=false;$('delList').textContent='Delete';},4000);return;}
+  delArmed=false;$('delList').textContent='Delete';
+  store.lists=store.lists.filter(x=>x.id!==L.id);store.active=store.lists[0].id;
+  await persistLists();renderRanks();$('rNote').textContent='Deleted.';
 };
 $('resetList').onclick=()=>{
   const L=activeList(); if(!confirm('Reset "'+L.name+'" to consensus order?'))return;
-  L.order=CONSENSUS.slice();dirty=true;persist();renderRanks();
+  L.order=CONSENSUS.slice();dirty=true;persistLists();renderRanks();
 };
 $('copyList').onclick=async()=>{
   const txt=activeList().order.map((n,i)=>{const r=rankOf.get(n);return `${i+1}. ${n} (${r.p}${r.pr}, ${r.tm})`;}).join('\n');
@@ -586,16 +1046,117 @@ $('bkIn').onclick=()=>{
     CONSENSUS.forEach(n=>{if(!seen.has(n))l.order.push(n);});
   });
   if(!activeList())store.active=store.lists[0].id;
-  persist();renderRanks();$('rNote').textContent='Restored '+store.lists.length+' list(s).';
+  persistLists();renderRanks();$('rNote').textContent='Restored '+store.lists.length+' list(s).';
 };
 
 
 /* ================= O-LINE ================= */
-const olOf=new Map(OL.map(o=>[o.tm,o]));
+const olOf=new Map();
 let olSort='rk';
-const OLS=[{k:'rk',l:'Composite'},{k:'poe',l:'Pass protect'},{k:'arby',l:'Run block'},{k:'gap',l:'Disagreement'}];
+const OLS=[{k:'off',l:'Offense 26'},{k:'rush',l:'Rushing 26'},{k:'rk',l:'Trenches'},
+           {k:'poe',l:'Pass protect'},{k:'arby',l:'Run block'},
+           {k:'scheme',l:'Scheme'},{k:'fit',l:'Stale data'},{k:'method',l:'Method'}];
+const rushOf=new Map(RUSHENV.map(x=>[x.tm,x]));
+const offOf=new Map(OFFBASE.map(x=>[x.tm,x]));
+const schemeOf=new Map(SCHEME.map(x=>[x.tm,x]));
+/* How far 2025 results sit from the 2026 projection on the metric the scheme
+   actually leans on. Large positive = last season understates this unit
+   (usually injury or personnel turnover) and 2025 numbers should not be trusted. */
+function staleness(tm){
+  const s=schemeOf.get(tm), o=olOf.get(tm);
+  if(!s||!o)return null;
+  const key = s.needP>=s.needR ? o.poe : o.arby;
+  return key - o.rk;
+}
+function schemeCard(x,extra){
+  const o=olOf.get(x.tm);
+  const fr=staleness(x.tm);
+  const tierCls=x.tier==='overhaul'?'ov':x.tier==='high'?'hi':'';
+  const dep=x.needP>x.needR?'leans on pass protection':x.needR>x.needP?'leans on run blocking':'balanced demands';
+  return `<div class="tm" data-team="${esc(x.tm)}">
+    <div class="tmTop"><div>
+      <div class="tmNm">${esc(o?o.nm:x.tm)}</div>
+      <div class="tmSub"><span class="pill2 ${tierCls}">${esc(x.tier)}</span>${esc(x.fam)}</div>
+    </div><div class="tmVal" style="color:${extra&&fr!==null?(fr>=12?'var(--amber)':fr<=-8?'var(--down)':'var(--dim)'):'var(--dim)'}">${
+      extra&&fr!==null?(fr>0?'+':'')+fr:(o?'OL '+o.rk:'')}</div></div>
+    <div class="tmBody">
+      <b>${esc(x.hc)}</b> · OC ${esc(x.oc)}<br>
+      ${esc(x.note)}<br>
+      ${o?`<b>Trenches:</b> 2026 projection ${o.rk} · 2025 pass-pro ${o.poe} · 2025 run-block ${o.arby} — scheme ${dep}.<br>`:''}
+      ${x.txt?`<b>${x.kind==='reset'?'Why 2025 misleads'
+          :x.kind==='confirmed'?'2025 and 2026 agree'
+          :x.kind==='fade'?'Projected to decline'
+          :x.kind==='split'?'Splits by position':'Context'}:</b> ${esc(x.txt)}<br>`:''}
+      ${x.watch?`<b>Watch:</b> ${esc(x.watch)}<br>`:''}
+      <span class="tmUp">▲ ${esc(x.up)}</span><br>
+      <span class="tmRisk">▼ ${esc(x.risk)}</span>
+    </div></div>`;
+}
 function renderOL(){
   chips($('olSortBar'),OLS,olSort,k=>{olSort=k;renderOL();},o=>o.k,o=>o.l);
+  if(olSort==='method'){
+    $('olTitle').textContent='Model audit';
+    $('olUnit').textContent='what survived out-of-sample testing';
+    $('olBoard').innerHTML=AUDIT.map(a=>{
+      const cls=/REJECTED/.test(a.st)?'ov':/RETAINED|LOCKED/.test(a.st)?'':'hi';
+      const col=/REJECTED/.test(a.st)?'var(--down)':/RETAINED/.test(a.st)?'var(--up)':/LOCKED/.test(a.st)?'var(--paper)':'var(--amber)';
+      return `<div class="tm"><div class="tmTop"><div>
+        <div class="tmNm">${esc(a.c)}</div><div class="tmSub">${esc(a.s)}</div></div>
+        <div class="tmVal" style="color:${col};font-size:10px;letter-spacing:.06em">${esc(a.st)}</div></div>
+        <div class="tmBody">${esc(a.ev)}<br><b>${esc(a.i)}</b></div></div>`;
+    }).join('');
+    $('scopeNote2').innerHTML='<div class="callout"><strong>This audit constrains the rest of this tab.</strong> '
+      +'Two of its findings cut against features built here from published rankings and coaching write-ups:<br><br>'
+      +'<b>Pass-block win rate was rejected</b> as a forward input — an offensive line\u2019s pass-protection grade should not be carried into next season blind. Treat the Pass protect and Stale data views as description of what happened, not projection.<br><br>'
+      +'<b>Nominal coordinator change was rejected</b> and actively worsened forecasts. The Scheme view is a narrative aid for reading usage, not a predictor of team efficiency.<br><br>'
+      +'<b>Run-block win rate survived</b> and is the one structural feature retained — which is why the rushing forecast, not last year\u2019s run-block rank, now drives Run fit.</div>';
+    return;
+  }
+  if(olSort==='off'||olSort==='rush'){
+    const isRush=olSort==='rush';
+    const src=isRush?RUSHENV:OFFBASE;
+    $('olTitle').textContent=isRush?'2026 rushing environment':'2026 offense baseline';
+    $('olUnit').textContent=isRush?'rush EPA + shrunk RBWR':'forecast EPA per play';
+    const list=[...src].sort((a,b)=>a.rk-b.rk);
+    const mx=Math.max(...list.map(x=>Math.abs(x.f26)));
+    $('olBoard').innerHTML=list.map(x=>{
+      const o=olOf.get(x.tm), sc=schemeOf.get(x.tm);
+      const bits=[x.e25>=0?'2025 EPA +'+x.e25:'2025 EPA '+x.e25,
+        isRush?'RBWR '+x.rbwr:'', o?'OL '+o.rk:''].filter(Boolean);
+      return `<div class="row" data-team="${esc(x.tm)}"><div class="rk">${x.rk}</div>
+        <div><div class="nm">${esc(o?o.nm:x.tm)}</div><div class="tags">${bits.map(esc).join(' · ')}${
+          isRush&&x.adj>0.015?' · <span style="color:var(--up)">blocking lifts it</span>':''}${
+          isRush&&x.adj<-0.015?' · <span style="color:var(--down)">blocking drags it</span>':''}</div></div>
+        <div class="val" style="color:${x.f26>0?'var(--up)':'var(--down)'}">${x.f26>0?'+':''}${x.f26.toFixed(3)}</div>
+        <div class="track" style="width:${(Math.abs(x.f26)/mx*100).toFixed(1)}%"><i style="width:100%;background:${x.f26>0?'var(--up)':'var(--down)'}"></i></div></div>`;
+    }).join('');
+    $('scopeNote2').innerHTML=isRush
+      ? '<div class="callout"><strong>The one structural exception.</strong> Rushing is the only place where a blocking metric survived out-of-sample testing — a ridge model on current rush EPA plus shrunk run-block win rate beat efficiency alone across all four folds. Teams flagged as lifted or dragged are those where the blocking term moved the forecast most. Do not read it causally.</div>'
+      : '<div class="callout"><strong>Efficiency is close to sufficient here.</strong> Current EPA per play forecasts next season\u2019s offense about as well as any structural decomposition of quarterback, line, weapons and scheme that public data supports. Adding those parts made it worse, not better. This is the honest baseline the rest of the tab has to beat.</div>';
+    return;
+  }
+  if(olSort==='scheme'||olSort==='fit'){
+    $('olTitle').textContent = olSort==='fit'?'Where 2025 misleads':'Offensive systems';
+    $('olUnit').textContent = olSort==='fit'
+      ? '2025 result vs 2026 projection' : '2026 coaching & system';
+    const list=[...SCHEME].filter(x=>olSort!=='fit'||staleness(x.tm)!==null)
+      .sort((a,b)=> olSort==='fit'
+        ? (staleness(b.tm)-staleness(a.tm))
+        : (a.tier===b.tier?0:(a.tier==='overhaul'?-1:b.tier==='overhaul'?1:a.tier==='high'?-1:1)));
+    $('olBoard').innerHTML=list.map(x=>schemeCard(x,olSort==='fit')).join('');
+    $('scopeNote2').innerHTML = olSort==='fit'
+      ? `<div class="callout"><strong>Read this before trusting last year's numbers.</strong> POE and ARBY are 2025 <em>results</em>; the composite is a 2026 <em>projection</em>. When they diverge sharply, last season measured something that no longer exists — usually an injury or a rebuilt unit. The number is the 2025 rank on the metric the scheme leans on, minus the 2026 projection. <strong>Large positive means 2025 understates the unit</strong> and should be discounted. Negative means the panels expect a decline from what you saw. Near zero means the two agree and last year's tape is fair evidence.</div>`
+      : `<div class="callout"><strong style="color:var(--down)">Read with the audit in mind.</strong> A nominal coordinator change was <em>rejected</em> as a forecast input — it made next-season projections worse. Use this to reason about who gets targeted and how, not to predict team efficiency.<br><br><strong>21 of 32 teams changed offensive coordinators</strong> and 10 changed head coaches — tied for the most in a single offseason. Play-callers decide who gets motioned open, who eats screens, and who touches it at the goal line, so usage can move faster than draft boards. Only teams with a genuine change or a league-leading tendency are listed.</div>`;
+    return;
+  }
+  $('scopeNote2').innerHTML='';
+  $('olTitle').textContent='2026 offensive lines';
+  if(!OL.length){
+    $('olUnit').textContent='no data for '+META.season;
+    $('olBoard').innerHTML='<div class="empty"><h3>No O-line data for '+META.season+'.</h3>'
+      +'<p>Ask Claude to pull that season\u2019s rankings, then paste them under Data \u2192 Import \u2192 O-Line CSV.</p></div>';
+    return;
+  }
   $('olUnit').textContent = olSort==='rk'?'composite of 2 rankings'
     : olSort==='poe'?'2025 pressure rate over expected'
     : olSort==='arby'?'2025 adjusted run-block yards':'spread between the two sources';
@@ -616,25 +1177,76 @@ function renderOL(){
 
 /* ================= DATA ================= */
 let impKind='ranks', pending=null;
-const IMPS=[{k:'ranks',l:'Rankings CSV'},{k:'lines',l:'Lines CSV'}];
-const DS_KEY='cc:data:v1';
-let overrides={ranks:null,lines:null};
+const IMPS=[{k:'ranks',l:'Rankings CSV'},{k:'lines',l:'Lines CSV'},{k:'ol',l:'O-Line CSV'}];
+
+function weeksOf(y){
+  const rec=META.seasons[y]||{weeks:{}};
+  return Object.keys(rec.weeks).map(Number).sort((a,b)=>a-b);
+}
+function updatePill(){
+  const p=$('seasonPill'); if(p)p.textContent=META.season+' · '+wkLabel(META.week).toUpperCase();
+}
+function renderSeasonBar(){
+  const ys=Object.keys(META.seasons).map(Number).sort((a,b)=>b-a);
+  if(!ys.length)ys.push(BASE_SEASON);
+  $('seasonSel').innerHTML=ys.map(y=>`<option value="${y}"${y===META.season?' selected':''}>${y} season</option>`).join('');
+  const ws=weeksOf(META.season); if(!ws.length)ws.push(0);
+  $('weekSel').innerHTML=ws.map(w=>`<option value="${w}"${w===META.week?' selected':''}>${wkLabel(w)}</option>`).join('');
+}
+async function switchTo(y,w){
+  META.season=y;META.week=w;await saveMeta();
+  await loadActive(); await loadTeam(); await loadDraft(); store={active:null,lists:[]}; await restore();
+  renderSeasonBar();renderData();renderLines();renderRanks();renderTeam();renderDraft();renderOL();updatePill();
+  $('impOut').innerHTML=`<div class="note ok">Now on ${y} · ${wkLabel(w)}.</div>`;
+}
+$('seasonSel').onchange=e=>{const y=+e.target.value;const ws=weeksOf(y);switchTo(y,ws.length?ws[ws.length-1]:0);};
+$('weekSel').onchange=e=>switchTo(META.season,+e.target.value);
+$('newWeek').onclick=async()=>{
+  const ws=weeksOf(META.season);const next=ws.length?Math.max(...ws)+1:1;
+  if(!confirm('Create '+wkLabel(next)+' for '+META.season+'? It starts empty — import rankings into it.'))return;
+  seasonRec(META.season).weeks[String(next)]={ts:Date.now()};
+  await saveMeta();await switchTo(META.season,next);
+};
+$('newSeason').onclick=async()=>{
+  const ys=Object.keys(META.seasons).map(Number);const next=(ys.length?Math.max(...ys):BASE_SEASON)+1;
+  if(!confirm('Start the '+next+' season? Previous seasons stay in the archive.'))return;
+  seasonRec(next).weeks['0']={ts:Date.now()};
+  await saveMeta();await switchTo(next,0);
+};
 
 function dsInfo(){
   return [
-    {n:'Rankings', c:RANKS.length, src:overrides.ranks?'imported '+overrides.ranks.when:'FantasyPros PPR consensus (built in)'},
-    {n:'Lines',    c:LINES.length, src:overrides.lines?'imported '+overrides.lines.when:'DraftKings season O/U, Aug 9 (built in)'},
-    {n:'O-Line',   c:OL.length,    src:'Sharp Football + StatRankings composite (built in)'},
+    {n:'Rankings',c:RANKS.length,src:RANKS.length?'active for '+META.season+' · '+wkLabel(META.week):'empty — import a FantasyPros export'},
+    {n:'Lines',   c:LINES.length,src:LINES.length?'active for '+META.season+' · '+wkLabel(META.week):'empty — import a lines CSV'},
+    {n:'O-Line',  c:OL.length,   src:OL.length?(META.season===BASE_SEASON?'Sharp + StatRankings composite':'imported for '+META.season):'none for '+META.season+' — import below'},
   ];
+}
+async function renderDur(){
+  let bits=[`Backend: ${SS.label}`];
+  try{
+    if(navigator.storage&&navigator.storage.persisted){
+      const p=await navigator.storage.persisted();
+      bits.push(p?'Persistent: granted — the browser will not evict this':'Persistent: not granted — tap Export file regularly');
+    }
+    if(navigator.storage&&navigator.storage.estimate){
+      const e=await navigator.storage.estimate();
+      if(e.usage!=null)bits.push('Using '+(e.usage/1024).toFixed(0)+' KB');
+    }
+  }catch(e){}
+  $('durCard').innerHTML=`<div class="callout">${bits.map(esc).join('<br>')}</div>`;
 }
 function renderData(){
   chips($('impBar'),IMPS,impKind,k=>{impKind=k;pending=null;$('impOut').innerHTML='';renderData();},i=>i.k,i=>i.l);
   $('impBox').placeholder = impKind==='ranks'
-    ? 'Paste a FantasyPros export.\nHeader row expected, e.g.\nRK,TIERS,PLAYER NAME,TEAM,POS,BYE,...'
-    : 'Paste lines as CSV.\nname,pass_yds,pass_td,rush_yds,rush_td,rec_yds,rec_td';
+    ? 'Paste a FantasyPros export.\nRK,TIERS,PLAYER NAME,TEAM,POS,BYE,...'
+    : impKind==='lines'
+    ? 'Paste lines as CSV.\nname,pass_yds,pass_td,rush_yds,rush_td,rec_yds,rec_td'
+    : 'Paste O-line ranks as CSV.\nrank,team,name,srcA,srcB,pressure,poe,arby';
+  renderSeasonBar();
   $('dsCards').innerHTML=dsInfo().map(d=>
     `<div class="row"><div class="rk"></div><div><div class="nm">${d.n}</div>
       <div class="tags">${esc(d.src)}</div></div><div class="val">${d.c}</div></div>`).join('');
+  renderDur();
 }
 function splitRow(line){
   if(line.includes('\t'))return line.split('\t');
@@ -654,6 +1266,21 @@ function parseRanksCSV(txt){
   });
   return {rows,bad};
 }
+function parseOLCSV(txt){
+  const rows=[],bad=[];const n=v=>{const x=parseInt(v,10);return Number.isFinite(x)?x:null;};
+  txt.split(/\r?\n/).forEach((line,i)=>{
+    if(!line.trim())return;
+    const c=splitRow(line).map(x=>x.trim().replace(/^"|"$/g,''));
+    if(i===0&&/rank|team/i.test((c[0]||'')+(c[1]||'')))return;
+    const rk=n(c[0]), tm=(c[1]||'').toUpperCase();
+    if(!rk||!tm){bad.push(line.slice(0,40));return;}
+    const s1=n(c[3]), s2=n(c[4]), f=(v)=>v==null?rk:v;
+    rows.push({rk:rk,tm:tm,nm:c[2]||tm,s:f(s1),r:f(s2),
+      gap:(s1!=null&&s2!=null)?Math.abs(s1-s2):0,
+      pr:f(n(c[5])),poe:f(n(c[6])),arby:f(n(c[7])),avg:rk});
+  });
+  return {rows,bad};
+}
 function parseLinesCSV(txt){
   const rows=[],bad=[];const num=v=>{const n=parseFloat(v);return Number.isFinite(n)?n:null;};
   txt.split(/\r?\n/).forEach((line,i)=>{
@@ -670,71 +1297,508 @@ function parseLinesCSV(txt){
 $('impPrev').onclick=()=>{
   const txt=$('impBox').value.trim();
   if(!txt){$('impOut').innerHTML='<div class="note err">Paste something first.</div>';return;}
-  const res = impKind==='ranks'?parseRanksCSV(txt):parseLinesCSV(txt);
-  if(!res.rows.length){$('impOut').innerHTML='<div class="note err">No usable rows found. Check the header row and column order.</div>';pending=null;return;}
+  const res=impKind==='ranks'?parseRanksCSV(txt):impKind==='lines'?parseLinesCSV(txt):parseOLCSV(txt);
+  if(!res.rows.length){$('impOut').innerHTML='<div class="note err">No usable rows. Check the header row and column order.</div>';pending=null;return;}
   pending={kind:impKind,rows:res.rows};
-  let html=`<div class="note ok">${res.rows.length} rows parsed. Tap Apply to use them.</div>`;
-  if(res.bad.length) html+=`<div class="note err">${res.bad.length} skipped: ${esc(res.bad.slice(0,4).join(' / '))}${res.bad.length>4?' …':''}</div>`;
-  if(impKind==='ranks'){
-    const miss=res.rows.filter(r=>!lineOf.has(r.n)).length;
-    html+=`<div class="note">${res.rows.length-miss} match a player with a Vegas line · ${miss} will show "no line".</div>`;
-  }else{
-    const un=res.rows.filter(r=>!rankOf.has(r.n)).length;
-    html+=`<div class="note">${res.rows.length-un} match a ranked player · ${un} carry no consensus rank.</div>`;
+  let html=`<div class="note ok">${res.rows.length} rows parsed for ${META.season} · ${wkLabel(META.week)}. Tap Apply.</div>`;
+  if(res.bad.length)html+=`<div class="note err">${res.bad.length} skipped: ${esc(res.bad.slice(0,4).join(' / '))}${res.bad.length>4?' …':''}</div>`;
+  if(impKind==='ol'){ html+=`<div class="note">${res.rows.length} teams · applies to all of ${META.season}.</div>`; }
+  else{
+    const other=impKind==='ranks'?lineOf:rankOf;
+    const miss=res.rows.filter(r=>!other.has(r.n)).length;
+    html+=`<div class="note">${res.rows.length-miss} join to the other dataset · ${miss} will not.</div>`;
   }
   $('impOut').innerHTML=html;
 };
 $('impApply').onclick=async()=>{
   if(!pending){$('impOut').innerHTML='<div class="note err">Preview first.</div>';return;}
-  const when=new Date().toLocaleDateString([],{month:'short',day:'numeric'});
-  overrides[pending.kind]={when,rows:pending.rows};
-  try{await SS.set(DS_KEY,JSON.stringify(overrides));}catch(e){}
-  applyOverrides();
-  $('impOut').innerHTML='<div class="note ok">Applied. Reopen the Lines or Ranks tab to see it.</div>';
+  const y=META.season,w=META.week;
+  await jset(pending.kind==='ranks'?K.ranks(y,w):pending.kind==='lines'?K.lines(y,w):K.ol(y),pending.rows);
+  seasonRec(y).weeks[String(w)]={ts:Date.now()};await saveMeta();
+  if(pending.kind==='ranks'){RANKS.length=0;pending.rows.forEach(r=>RANKS.push(r));}
+  else if(pending.kind==='lines'){LINES.length=0;pending.rows.forEach(r=>LINES.push(r));}
+  else{OL=pending.rows.slice();olOf.clear();OL.forEach(x=>olOf.set(x.tm,x));}
+  reindex();
+  if(pending.kind==='ranks'){ reconcileLists(); await persistLists(); }
+  renderData();renderLines();renderRanks();renderTeam();renderOL();
+  $('impOut').innerHTML='<div class="note ok">Saved to '+y+' · '+wkLabel(w)+'.</div>';
   $('impBox').value='';pending=null;
 };
 $('impClear').onclick=()=>{$('impBox').value='';pending=null;$('impOut').innerHTML='';};
 $('dsReset').onclick=async()=>{
-  if(!confirm('Reset Rankings and Lines to the built-in data? Your saved lists are not affected.'))return;
-  overrides={ranks:null,lines:null};
-  try{await SS.set(DS_KEY,JSON.stringify(overrides));}catch(e){}
+  if(!confirm('Clear imported data for '+META.season+' · '+wkLabel(META.week)+'? Saved lists are not affected.'))return;
+  await SS.del(K.ranks(META.season,META.week));await SS.del(K.lines(META.season,META.week));
   location.reload();
 };
-function applyOverrides(){
-  if(overrides.lines){LINES.length=0;overrides.lines.rows.forEach(r=>LINES.push(r));
-    LINES.forEach(l=>{if(!l.p)l.p=derivePos(l);});
-    lineOf.clear();LINES.forEach(l=>lineOf.set(l.n,l));}
-  if(overrides.ranks){RANKS.length=0;overrides.ranks.rows.forEach(r=>RANKS.push(r));
-    rankOf.clear();RANKS.forEach(r=>rankOf.set(r.n,r));
-    ecrOf.clear();RANKS.forEach(r=>ecrOf.set(r.n,r));}
-  renderData();renderLines();renderRanks();
+
+/* ---------- file export / import ---------- */
+async function fullDump(){
+  const out={v:2,exported:new Date().toISOString(),meta:META,blobs:{}};
+  for(const y of Object.keys(META.seasons)){
+    for(const w of weeksOf(+y)){
+      const li=await jget(K.lists(+y,w)); if(li)out.blobs[K.lists(+y,w)]=li;
+      const r=await jget(K.ranks(+y,w)); if(r)out.blobs[K.ranks(+y,w)]=r;
+      const l=await jget(K.lines(+y,w)); if(l)out.blobs[K.lines(+y,w)]=l;
+    }
+  }
+  return out;
 }
+$('exportFile').onclick=async()=>{
+  const data=await fullDump();
+  const blob=new Blob([JSON.stringify(data)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;a.download=`draft-hq-${META.season}-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),4000);
+  $('durOut').innerHTML='<div class="note ok">Export started — save it to Files or iCloud.</div>';
+};
+$('importFile').onchange=async e=>{
+  const f=e.target.files&&e.target.files[0]; if(!f)return;
+  try{
+    const txt=await f.text(); const d=JSON.parse(txt);
+    if(!d||!d.meta||!d.blobs)throw new Error('not a Draft HQ export');
+    if(!confirm('Replace all seasons and lists with this file?'))return;
+    for(const [k,v] of Object.entries(d.blobs)) await jset(k,v);
+    META=d.meta; META.migrated=true; await saveMeta();
+    $('durOut').innerHTML='<div class="note ok">Restored. Reloading…</div>';
+    setTimeout(()=>location.reload(),700);
+  }catch(err){ $('durOut').innerHTML='<div class="note err">Could not read that file: '+esc(err.message)+'</div>'; }
+  e.target.value='';
+};
+$('sleeperTest').onclick=async()=>{
+  $('durOut').innerHTML='<div class="note">Testing…</div>';
+  try{
+    const r=await fetch('https://api.sleeper.app/v1/state/nfl',{mode:'cors'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    $('durOut').innerHTML=`<div class="note ok">Sleeper reachable — season ${esc(String(j.season))}, week ${esc(String(j.week))}, ${esc(String(j.season_type))}. Roster sync is viable.</div>`;
+  }catch(err){
+    $('durOut').innerHTML=`<div class="note err">Sleeper blocked from this page (${esc(err.message)}). Roster entry stays manual.</div>`;
+  }
+};
+
+
+/* ================= MY TEAM ================= */
+const SLOT_ORDER=['QB','RB','WR','TE','FLEX','K','DST'];
+const FLEX_OK={RB:1,WR:1,TE:1};
+const DEFAULT_SLOTS={QB:1,RB:2,WR:2,TE:1,FLEX:1,K:1,DST:1,BN:6};
+let TEAM={slots:{...DEFAULT_SLOTS},roster:[]};   // roster: [{n,pos,slot}]
+let teamMode='roster';
+const TMODES=[{k:'roster',l:'Lineup'},{k:'bye',l:'Bye weeks'},{k:'set',l:'Slots'}];
+
+async function loadTeam(){
+  const t=await jget('cc:team:'+META.season);
+  TEAM=t&&t.roster?{slots:{...DEFAULT_SLOTS,...(t.slots||{})},roster:t.roster}:{slots:{...DEFAULT_SLOTS},roster:[]};
+}
+async function saveTeam(){ await jset('cc:team:'+META.season,TEAM); }
+
+function playerInfo(n){
+  const r=rankOf.get(n), l=lineOf.get(n);
+  return {n,rk:r?r.rk:null,pr:r?r.pr:null,pos:r?r.p:(l?l.p:null),
+          tm:r?r.tm:'',bye:r&&r.b?+r.b:null,ol:r&&olOf.get(r.tm)?olOf.get(r.tm).rk:null,line:l||null};
+}
+function posOf(n,fallback){ const i=playerInfo(n); return i.pos||fallback||'FLEX'; }
+
+/* best available by consensus; unranked sort last */
+const byEcr=(a,b)=>{
+  const ra=playerInfo(a.n).rk, rb=playerInfo(b.n).rk;
+  if(ra===null&&rb===null)return 0; if(ra===null)return 1; if(rb===null)return -1;
+  return ra-rb;
+};
+function optimalLineup(){
+  const pool=[...TEAM.roster].sort(byEcr);
+  const used=new Set(), out=[];
+  SLOT_ORDER.forEach(sl=>{
+    const n=TEAM.slots[sl]||0;
+    for(let i=0;i<n;i++){
+      const pick=pool.find(p=>!used.has(p.n)&&(sl==='FLEX'?FLEX_OK[p.pos]:p.pos===sl));
+      if(pick)used.add(pick.n);
+      out.push({slot:sl,player:pick||null});
+    }
+  });
+  return {lineup:out,bench:pool.filter(p=>!used.has(p.n))};
+}
+function rowFor(slot,p,isStart){
+  if(!p)return `<div class="slot empty"><div class="slotTag ${isStart?'start':''}">${slot}</div>
+    <div><div class="snm">empty</div><div class="smeta">no eligible player rostered</div></div><div></div></div>`;
+  const i=playerInfo(p.n);
+  const bits=[i.pos+(i.pr?i.pr:''),i.tm,i.bye?'bye '+i.bye:'',i.rk?'ECR '+i.rk:'unranked',i.ol?'OL '+i.ol:''].filter(Boolean);
+  return `<div class="slot" data-player="${esc(p.n)}"><div class="slotTag ${isStart?'start':''}">${slot}</div>
+    <div><div class="snm">${esc(p.n)}</div><div class="smeta">${bits.map(esc).join(' · ')}</div></div>
+    <button class="mini" data-drop="${esc(p.n)}">Drop</button></div>`;
+}
+function renderTeam(){
+  chips($('teamModeBar'),TMODES,teamMode,k=>{teamMode=k;renderTeam();},t=>t.k,t=>t.l);
+  $('teamRosterWrap').classList.toggle('hide',teamMode!=='roster');
+  $('teamByeWrap').classList.toggle('hide',teamMode!=='bye');
+  $('teamSetWrap').classList.toggle('hide',teamMode!=='set');
+
+  const {lineup,bench}=optimalLineup();
+  if(teamMode==='roster'){
+    const filled=lineup.filter(x=>x.player).length;
+    $('teamUnit').textContent=filled+'/'+lineup.length+' slots filled';
+    $('lineupBoard').innerHTML=lineup.map(x=>rowFor(x.slot,x.player,true)).join('')
+      || '<div class="note">Add players below to build a lineup.</div>';
+    $('benchUnit').textContent=bench.length+' of '+(TEAM.slots.BN||0);
+    $('benchBoard').innerHTML=bench.length
+      ? bench.map(p=>rowFor('BN',p,false)).join('')
+      : '<div class="note">Bench is empty.</div>';
+    renderHits($('teamSearch').value);
+  }
+  if(teamMode==='bye'){
+    const wk={};
+    lineup.forEach(x=>{ if(!x.player)return; const b=playerInfo(x.player.n).bye;
+      if(b)(wk[b]=wk[b]||[]).push(x.player.n); });
+    const weeks=Object.keys(wk).map(Number).sort((a,b)=>a-b);
+    $('byeGrid').innerHTML=weeks.length?weeks.map(w=>{
+      const n=wk[w].length, cls=n>=3?'bad':n===2?'warn':'';
+      return `<div class="bye ${cls}"><b>${n}</b>wk ${w}</div>`;
+    }).join(''):'<div class="note">No byes among your starters yet.</div>';
+    const worst=weeks.sort((a,b)=>wk[b].length-wk[a].length)[0];
+    $('byeNote').innerHTML=worst
+      ? `<strong>Week ${worst} is your thinnest:</strong> ${wk[worst].map(esc).join(', ')} ${wk[worst].length>1?'are':'is'} out. Plan a bench or a waiver add before then.`
+      : 'Bye weeks appear here once you roster ranked players.';
+  }
+  if(teamMode==='set'){
+    $('slotEditor').innerHTML=[...SLOT_ORDER,'BN'].map(sl=>
+      `<div class="slot"><div class="slotTag">${sl}</div>
+        <div><div class="snm">${sl==='FLEX'?'RB / WR / TE':sl==='BN'?'Bench':sl}</div></div>
+        <select data-slot="${sl}">${[0,1,2,3,4,5,6,7,8].map(n=>
+          `<option value="${n}"${(TEAM.slots[sl]||0)===n?' selected':''}>${n}</option>`).join('')}</select></div>`).join('');
+  }
+}
+function renderHits(q){
+  q=(q||'').trim().toLowerCase();
+  const box=$('searchHits'); if(!box)return;
+  if(!q){box.innerHTML='<div class="note">Type at least two letters.</div>';return;}
+  const have=new Set(TEAM.roster.map(p=>p.n));
+  const pool=[...new Set([...RANKS.map(r=>r.n),...LINES.map(l=>l.n)])];
+  const hits=pool.filter(n=>!have.has(n)&&n.toLowerCase().includes(q))
+    .sort((a,b)=>{const ra=playerInfo(a).rk??9999,rb=playerInfo(b).rk??9999;return ra-rb;})
+    .slice(0,12);
+  let html=hits.map(n=>{
+    const i=playerInfo(n);
+    const bits=[i.pos||'?',i.tm,i.rk?'ECR '+i.rk:'unranked',i.bye?'bye '+i.bye:''].filter(Boolean);
+    return `<div class="hit" data-add="${esc(n)}"><div><div class="snm">${esc(n)}</div>
+      <div class="smeta">${bits.map(esc).join(' · ')}</div></div><div class="add">+</div></div>`;
+  }).join('');
+  if(!hits.length){
+    html=`<div class="hit" data-add="${esc($('teamSearch').value.trim())}" data-custom="1">
+      <div><div class="snm">${esc($('teamSearch').value.trim())}</div>
+      <div class="smeta">not in the data — add as a custom player (K/DST)</div></div><div class="add">+</div></div>`;
+  }
+  box.innerHTML=html;
+}
+$('teamSearch').addEventListener('input',e=>renderHits(e.target.value));
+$('searchHits').addEventListener('click',async e=>{
+  const el=e.target.closest('[data-add]'); if(!el)return;
+  const n=el.dataset.add; if(!n)return;
+  const cap=Object.values(TEAM.slots).reduce((a,b)=>a+b,0);
+  if(TEAM.roster.length>=cap){$('teamNote').textContent='Roster is full ('+cap+'). Drop someone or add slots.';return;}
+  const info=playerInfo(n);
+  TEAM.roster.push({n,pos:info.pos||(el.dataset.custom?'K':'FLEX')});
+  await saveTeam(); $('teamSearch').value=''; $('teamNote').textContent=n+' added.';
+  renderTeam();
+});
+document.addEventListener('click',async e=>{
+  const d=e.target.closest('[data-drop]'); if(!d)return;
+  const n=d.dataset.drop;
+  TEAM.roster=TEAM.roster.filter(p=>p.n!==n);
+  /* a drop must also release the draft pick, or the player is stranded:
+     off the draft board and off your roster at the same time */
+  let freed=false;
+  if(typeof DRAFT!=='undefined'&&DRAFT.picks.some(p=>p.n===n&&p.mine)){
+    DRAFT.picks=DRAFT.picks.filter(p=>p.n!==n); freed=true; await saveDraft();
+  }
+  await saveTeam();
+  $('teamNote').textContent=n+' dropped'+(freed?' and returned to the draft board.':'.');
+  renderTeam(); if(typeof renderDraft==='function')renderDraft();
+});
+document.addEventListener('change',async e=>{
+  const sel=e.target.closest('[data-slot]'); if(!sel)return;
+  TEAM.slots[sel.dataset.slot]=+sel.value; await saveTeam(); renderTeam();
+});
+$('clearRoster').onclick=async()=>{
+  if(!confirm('Remove every player from your '+META.season+' roster?'))return;
+  TEAM.roster=[]; await saveTeam(); renderTeam();
+};
+
+
+/* ================= DRAFT ROOM ================= */
+let DRAFT={picks:[]};        // [{n,mine}]
+let dPos='ALL';
+async function loadDraft(){ const d=await jget('cc:draft:'+META.season); DRAFT=d&&d.picks?d:{picks:[]}; }
+async function saveDraft(){ await jset('cc:draft:'+META.season,DRAFT); }
+const takenSet=()=>new Set(DRAFT.picks.map(p=>p.n));
+
+/* board order = your custom list if you have one, else consensus */
+function boardOrder(){
+  const L=activeList();
+  return (L&&L.order&&L.order.length)?L.order:CONSENSUS;
+}
+function available(){
+  const gone=takenSet();
+  return boardOrder().filter(n=>!gone.has(n)&&rankOf.has(n));
+}
+/* how many players remain in the best available tier at each position */
+function cliffs(){
+  const avail=available(), out=[];
+  ['QB','RB','WR','TE'].forEach(p=>{
+    const list=avail.filter(n=>rankOf.get(n).p===p);
+    if(!list.length){out.push({p,left:0,tier:null});return;}
+    const tier=rankOf.get(list[0]).t;
+    out.push({p,tier,left:list.filter(n=>rankOf.get(n).t===tier).length});
+  });
+  return out;
+}
+/* positional run over the last 8 picks */
+function runAlert(){
+  const last=DRAFT.picks.slice(-8);
+  if(last.length<4)return null;
+  const c={};
+  last.forEach(p=>{const r=rankOf.get(p.n);if(r)c[r.p]=(c[r.p]||0)+1;});
+  const hot=Object.entries(c).filter(([,v])=>v>=3).sort((a,b)=>b[1]-a[1])[0];
+  return hot?{pos:hot[0],n:hot[1],of:last.length}:null;
+}
+function renderDraft(){
+  chips($('dPosBar'),POSES,dPos,k=>{dPos=k;renderDraft();},p=>p,p=>p);
+  const avail=available();
+  const mine=DRAFT.picks.filter(p=>p.mine).length;
+  $('dUnit').textContent=DRAFT.picks.length+' off the board · '+mine+' mine';
+  const L=activeList();
+  $('dTitle').textContent=(L&&L.order&&L.order.length)?'Best available · '+L.name:'Best available · consensus';
+
+
+  const run=runAlert();
+  $('runNote').innerHTML=run
+    ? `<div class="run"><strong>${run.pos} run:</strong> ${run.n} of the last ${run.of} picks were ${run.pos}s. If you need one, the tier above may not survive to your next turn.</div>`
+    : '';
+
+  const last=DRAFT.picks[DRAFT.picks.length-1];
+  if(last){
+    const r=rankOf.get(last.n);
+    $('lastPick').classList.add('on');
+    $('lpName').textContent=last.n;
+    $('lpWho').textContent=(last.mine?'added to your roster':'off the board')
+      +(r?' · '+r.p+r.pr+' · '+r.tm:'');
+  } else $('lastPick').classList.remove('on');
+
+  const log=DRAFT.picks.slice().reverse();
+  $('pickLog').innerHTML=log.length?log.map(p=>{
+    const r=rankOf.get(p.n);
+    return `<div class="pick"><div class="pn">${p.mine?'★':''}</div>
+      <div><div class="snm">${esc(p.n)}</div>
+      <div class="smeta">${r?esc(r.p+r.pr+' · '+r.tm):''}${p.mine?' · your pick':''}</div></div>
+      <button class="btn2" data-restore="${esc(p.n)}">✕ PUT BACK</button></div>`;
+  }).join(''):'<div class="note">No picks yet.</div>';
+
+  const list=avail.filter(n=>dPos==='ALL'||rankOf.get(n).p===dPos).slice(0,40);
+  $('draftBoard').innerHTML=list.length?list.map((n,i)=>{
+    const r=rankOf.get(n), l=lineOf.get(n), ol=olOf.get(r.tm);
+    const bits=[r.p+r.pr,r.tm,'tier '+r.t,'bye '+r.b,ol?'OL '+ol.rk:'',l?'has line':''].filter(Boolean);
+    return `<div class="pick" data-player="${esc(n)}"><div class="pn">${i+1}</div>
+      <div><div class="snm">${esc(n)}</div><div class="smeta">${bits.map(esc).join(' · ')}</div></div>
+      <div style="white-space:nowrap">
+        <button class="btn2" data-took="${esc(n)}">TAKEN</button>
+        <button class="btn2 mine" data-mine="${esc(n)}">MINE</button></div></div>`;
+  }).join('') : '<div class="note">Nothing left at this position.</div>';
+}
+document.addEventListener('click',async e=>{
+  const t=e.target.closest('[data-took]'), m=e.target.closest('[data-mine]');
+  if(!t&&!m)return;
+  const n=(t||m).dataset.took||(t||m).dataset.mine;
+  DRAFT.picks.push({n,mine:!!m});
+  if(m){
+    const info=playerInfo(n);
+    if(!TEAM.roster.some(p=>p.n===n)){TEAM.roster.push({n,pos:info.pos||'FLEX'});await saveTeam();}
+  }
+  await saveDraft();
+  $('draftNote').textContent=n+(m?' — added to your roster.':' — off the board.');
+  renderDraft(); renderTeam();
+});
+document.addEventListener('click',async e=>{
+  const b=e.target.closest('[data-restore]'); if(!b)return;
+  const n=b.dataset.restore;
+  const was=DRAFT.picks.find(p=>p.n===n);
+  DRAFT.picks=DRAFT.picks.filter(p=>p.n!==n);
+  if(was&&was.mine)TEAM.roster=TEAM.roster.filter(p=>p.n!==n);
+  await saveDraft();await saveTeam();
+  $('draftNote').textContent=n+' is back on the board.';
+  renderDraft();renderTeam();
+});
+$('undoBig').onclick=()=>$('undoPick').click();
+$('undoPick').onclick=async()=>{
+  const last=DRAFT.picks.pop();
+  if(!last){$('draftNote').textContent='Nothing to undo.';return;}
+  if(last.mine)TEAM.roster=TEAM.roster.filter(p=>p.n!==last.n);
+  await saveDraft();await saveTeam();
+  $('draftNote').textContent='Undid '+last.n+'.';
+  renderDraft();renderTeam();
+};
+$('resetDraft').onclick=async()=>{
+  if(!confirm('Clear all '+DRAFT.picks.length+' picks for '+META.season+'? Your roster is kept.'))return;
+  DRAFT={picks:[]};await saveDraft();renderDraft();
+};
+
+
+/* ================= PLAYER SHEET ================= */
+const talOf=new Map(TALENT.map(t=>[t.n,t]));
+const rbOf=new Map(RBTAL.map(t=>[t.n,t]));
+const teOf=new Map(TETAL.map(t=>[t.n,t]));
+const stars=n=>n?'★'.repeat(n)+'☆'.repeat(5-n):'—';
+function kv(k,v,cls){return `<div class="kv ${cls||''}"><span>${k}</span><span>${v}</span></div>`;}
+function openSheet(name){
+  const r=rankOf.get(name), l=lineOf.get(name), t=talOf.get(name);
+  const ol=r?olOf.get(r.tm):null;
+  let h=`<div class="sheetHead"><div><h3>${esc(name)}</h3>
+    <div class="sub2">${r?esc(r.p+r.pr+' · '+r.tm+' · bye '+r.b):'not in the rankings'}</div></div>
+    <button class="xbtn" id="sheetX">CLOSE</button></div>`;
+
+  if(r){
+    h+=`<div class="grp"><h4>Consensus</h4>`
+      +kv('Overall rank','#'+r.rk)+kv('Position rank',r.p+r.pr)+kv('Tier',r.t)
+      +(r.sos?kv('Strength of schedule','<span class="stars">'+stars(r.sos)+'</span>'):'')
+      +(r.up?kv('Upside','<span class="stars">'+stars(r.up)+'</span>'):'')
+      +(r.bu?kv('Bust risk','<span class="stars">'+stars(r.bu)+'</span>'):'')
+      +(r.e?kv('ECR vs ADP',r.e,(parseFloat(r.e)>0?'pos2':parseFloat(r.e)<0?'neg':'')):'')
+      +`</div>`;
+  }
+  if(l){
+    const rows=[['Passing yards',l.py],['Passing TDs',l.pt],['Rushing yards',l.ry],
+                ['Rushing TDs',l.rt],['Receiving yards',l.cy],['Receiving TDs',l.ct]]
+      .filter(x=>x[1]!==null&&x[1]!==undefined);
+    const ty=totYds(l), td=totTd(l);
+    h+=`<div class="grp"><h4>Vegas season O/U</h4>`
+      +rows.map(x=>kv(x[0],x[1])).join('')
+      +(ty?kv('Total yards',ty.toLocaleString()):'')
+      +(td?kv('Total TDs',td):'')+`</div>`;
+  }
+  const off=r?offOf.get(r.tm):null, rush=r?rushOf.get(r.tm):null;
+  if(off||rush){
+    h+=`<div class="grp"><h4>Team forecast · ${esc(r.tm)}</h4>`
+      +(off?kv('2026 offense','#'+off.rk+' of 32  ('+(off.f26>0?'+':'')+off.f26.toFixed(3)+' EPA/play)',off.rk<=10?'pos2':off.rk>=23?'neg':''):'')
+      +(rush?kv('2026 rushing','#'+rush.rk+' of 32  ('+(rush.f26>0?'+':'')+rush.f26.toFixed(3)+')',rush.rk<=10?'pos2':rush.rk>=23?'neg':''):'')
+      +(rush?kv('2025 run-block win rate',rush.rbwr+(rush.adj>0.015?' — lifts forecast':rush.adj<-0.015?' — drags forecast':'')):'')
+      +`</div>`;
+  }
+  if(ol){
+    h+=`<div class="grp"><h4>Offensive line · ${esc(ol.nm)}</h4>`
+      +kv('Composite rank','#'+ol.rk+' of 32')
+      +kv('Pass protection (POE)','#'+ol.poe)
+      +kv('Run blocking (ARBY)','#'+ol.arby)
+      +kv('Pressure allowed','#'+ol.pr)
+      +(ol.gap>=4?kv('Source disagreement','±'+ol.gap+' spots'):'')+`</div>`;
+  }
+  const te=teOf.get(name);
+  if(te){
+    h+=`<div class="grp"><h4>Talent model · TE${te.rk}</h4>`
+      +kv('Forecast',te.dom.toFixed(2)+'  ['+te.lo.toFixed(2)+' – '+te.hi.toFixed(2)+']')
+      +kv('Likely finish','TE'+te.rlo+' – TE'+te.rhi+' (median TE'+te.rmed+')')
+      +kv('Top-5 / top-10',(te.p5*100).toFixed(0)+'% / '+(te.p10*100).toFixed(0)+'%',te.p10>=0.7?'pos2':'')
+      +kv('Elite / relevant',(te.pel*100).toFixed(0)+'% / '+(te.prel*100).toFixed(0)+'%')
+      +kv('2025 dominance',te.d25.toFixed(2)+' (TE'+te.d25r+')')
+      +(te.dd!==null?kv('Change vs 2024',(te.dd>0?'+':'')+te.dd.toFixed(2),te.dd>0?'pos2':'neg'):'')
+      +kv('Yards / pass snap',te.yps)
+      +kv('Targets / pass snap',te.tps)
+      +kv('First downs / pass snap',te.fdps)
+      +kv('Pass snaps',te.snaps+(te.snaps<300?' — small sample':''),te.snaps<300?'neg':'')
+      +kv('Targets / yards',te.tg+' / '+te.yd.toLocaleString())
+      +kv('Age',te.age)
+      +(te.pick?kv('Draft pick','#'+te.pick):'')
+      +`<div style="font-size:11px;line-height:1.6;color:var(--dim);padding:8px 0 2px">Receiving talent only — blocking is not modelled.</div>`
+      +`</div>`;
+  }
+  const rf=runFitFor(name);
+  if(rf){
+    const clean=rf.x.cr>0&&rf.o.arby<=12;
+    h+=`<div class="grp"><h4>Run fit · ${clean?'◆ ':''}${rf.pos} of ${rf.of}</h4>`
+      +kv('Score',rf.score.toFixed(2),rf.score>=0.7?'pos2':rf.score<=0.3?'neg':'')
+      +kv('Creation (portable)',(rf.x.cr>0?'+':'')+rf.x.cr.toFixed(2),rf.x.cr>0?'pos2':'neg')
+      +kv('2026 rushing environment',esc(rf.tm)+' · #'+rf.f.rk,rf.f.rk<=12?'pos2':rf.f.rk>=22?'neg':'')
+      +(rf.o?kv('2025 run-block rank','#'+rf.o.arby+(Math.abs(rf.f.rk-rf.o.arby)>=10?' — big shift':'')):'')
+      +(clean?kv('Read','both halves agree','pos2'):'')
+      +(rf.flags.length?`<div class="kv"><span>Flags</span><span style="color:var(--amber);text-align:right">${
+          rf.flags.map(f=>esc(f.t)).join(' · ')}</span></div>`:'')
+      +(rf.sc&&rf.sc.runNote?`<div style="font-size:11px;line-height:1.6;color:var(--dim);padding:8px 0 2px">${esc(rf.sc.runNote)}</div>`:'')
+      +`</div>`;
+  }
+  const rb=rbOf.get(name);
+  if(rb){
+    h+=`<div class="grp"><h4>Talent model · RB${rb.rk}</h4>`
+      +kv('Creation (above situation)',(rb.cr>0?'+':'')+rb.cr.toFixed(2),rb.cr>0?'pos2':'neg')
+      +kv('2025 team context',(rb.ctx>0?'+':'')+rb.ctx.toFixed(2)+(rb.moved?' ('+rb.t25+' — stale)':''),rb.ctx>0?'pos2':'neg')
+      +kv('Yards per carry',rb.ypc)
+      +kv('Yards after contact / att',rb.yac)
+      +kv('Broken tackles',rb.bt+' ('+rb.btr.toFixed(3)+'/att)')
+      +kv('Receptions',rb.rec)
+      +kv('Rec yards after catch',rb.ryac)
+      +kv('Defenders in box',rb.box)
+      +kv('Shotgun share',(rb.sg*100).toFixed(0)+'%')
+      +kv('Carries / yards',rb.att+' / '+rb.yd.toLocaleString())
+      +kv('Age / weight',rb.age+' · '+rb.wt+' lb')
+      +(rb.elig?'':kv('Sample','below 75 att / 10 rec threshold'))
+      +`</div>`;
+  }
+  if(t){
+    h+=`<div class="grp"><h4>Talent model · WR${t.rk}</h4>`
+      +kv('2026 forecast dominance',t.dom.toFixed(3))
+      +kv('Top-15 probability',(t.p15*100).toFixed(0)+'%')
+      +kv('2025 dominance',t.d25.toFixed(2)+' (WR'+t.d25r+')')
+      +(t.chg!==null?kv('Change vs 2024',(t.chg>0?'+':'')+t.chg.toFixed(2),t.chg>0?'pos2':'neg'):'')
+      +kv('Yards per route run',t.yprr)
+      +kv('Targets per route run',t.tprr)
+      +kv('First downs per route',t.fdr.toFixed(3))
+      +kv('Routes run (2025)',t.rt.toLocaleString())
+      +kv('Targets / yards',t.tg+' / '+t.ry.toLocaleString())
+      +kv('Age',t.age)+`</div>`;
+  }
+  if(!r&&!l&&!t&&!rb&&!rf&&!te&&!off)h+='<div class="note">No data on this player yet.</div>';
+  $('sheetCard').innerHTML=h;
+  $('sheet').classList.add('on');
+  $('sheetX').onclick=closeSheet;
+}
+function closeSheet(){$('sheet').classList.remove('on');}
+$('sheet').addEventListener('click',e=>{if(e.target.id==='sheet')closeSheet();});
+document.addEventListener('click',e=>{
+  if(e.target.closest('[data-took],[data-mine],[data-drop],[data-restore],[data-grip],[data-add],button,select'))return;
+  const host=e.target.closest('[data-player]'); if(!host)return;
+  openSheet(host.dataset.player);
+});
 
 /* ================= section switch ================= */
 const TABS=[['lines','secLines','tabLines'],['ranks','secRanks','tabRanks'],
+             ['draft','secDraft','tabDraft'],['team','secTeam','tabTeam'],
              ['ol','secOL','tabOL'],['data','secData','tabData']];
 function show(which){
   TABS.forEach(([k,sec,tab])=>{
     $(sec).classList.toggle('hide',k!==which);
     $(tab).setAttribute('aria-selected',k===which);
   });
+  if(which==='draft')renderDraft();
+  if(which==='team')renderTeam();
   if(which==='ol')renderOL();
   if(which==='data')renderData();
   window.scrollTo(0,0);
 }
 TABS.forEach(([k,,tab])=>$(tab).onclick=()=>show(k));
 
+/* offline support deliberately disabled until the app is confirmed working */
 (async()=>{
-  try{const v=await SS.get(DS_KEY); if(v)overrides=JSON.parse(v);}catch(e){}
-  if(overrides.lines||overrides.ranks){
-    if(overrides.lines){LINES.length=0;overrides.lines.rows.forEach(r=>LINES.push(r));
-      LINES.forEach(l=>{if(!l.p)l.p=derivePos(l);});lineOf.clear();LINES.forEach(l=>lineOf.set(l.n,l));}
-    if(overrides.ranks){RANKS.length=0;overrides.ranks.rows.forEach(r=>RANKS.push(r));}
-  }
-  CONSENSUS.length=0;RANKS.slice().sort((a,b)=>a.rk-b.rk).forEach(n=>CONSENSUS.push(n.n));
-  rankOf.clear();RANKS.forEach(r=>rankOf.set(r.n,r));
-  ecrOf.clear();RANKS.forEach(r=>ecrOf.set(r.n,r));
-  await restore(); renderLines(); renderRanks(); renderData();
+  try{ if(navigator.storage&&navigator.storage.persist) await navigator.storage.persist(); }catch(e){}
+  await pickBackend();
+  const m=await jget(K.meta); if(m&&m.v===2) META=m;
+  seasonRec(META.season).weeks[String(META.week)]=seasonRec(META.season).weeks[String(META.week)]||{ts:Date.now()};
+  await migrateV1();
+  await loadActive();
+  await loadTeam();
+  await loadDraft();
+  await restore();
+  renderLines(); renderRanks(); renderData(); updatePill();
+  window.__ccBooted=true;
+  const st=$('buildStamp');
+  if(st) st.textContent='build 11 · '+RANKS.length+' ranked · '+LINES.length+' lines · '+SS.kind
+    +(lastWriteErr?' · save error':'');
 })();
 </script>
 </body>
